@@ -21,6 +21,19 @@
     --transition: 0.3s ease-in-out;
 }
 
+        .catalogue img {
+            width: 250px;           /* fixed width */
+            height: 150px;          /* fixed height */
+            object-fit: cover;      /* fill without distortion */
+            border-radius: 8px;     /* rounded corners */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .catalogue img:hover {
+            transform: scale(1.05); /* hover effect */
+        }
+    
 /* Reset & Base */
 
 * {margin:0;padding:0;box-sizing:border-box;}
