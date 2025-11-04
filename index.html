@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Birce SARI | Data & BI Portfolio</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<!-- Font Awesome for Icons -->
+
+<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 <style>
 :root {
-    --primary: #4dd0e1; /* turquoise */
-    --secondary: #b39ddb; /* lilac */
+    --primary: #4dd0e1;
+    --secondary: #b39ddb;
     --bg-light: #ffffff;
     --bg-dark: #1e1e2f;
     --text-light: #1e1e2f;
@@ -21,68 +24,60 @@
     --transition: 0.3s ease-in-out;
 }
 
-        .catalogue img {
-            width: 250px;           /* fixed width */
-            height: 150px;          /* fixed height */
-            object-fit: cover;      /* fill without distortion */
-            border-radius: 8px;     /* rounded corners */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .catalogue img:hover {
-            transform: scale(1.05); /* hover effect */
-        }
-    
-/* Reset & Base */
-
 * {margin:0;padding:0;box-sizing:border-box;}
-  body {font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--text-light);transition:background var(--transition),color var(--transition);}
-  a {text-decoration:none;color:inherit;}
-  button {cursor:pointer;transition:all var(--transition);}
-  img {max-width:100%;border-radius:50%;}
+body {font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--text-light);transition:background var(--transition),color var(--transition);}
+a {text-decoration:none;color:inherit;}
+button {cursor:pointer;transition:all var(--transition);}
+img {max-width:100%;}
 
 /* Dark Theme */
 body.dark {background:var(--bg-dark);color:var(--text-dark);}
 
 /* Hero Section */
 .hero {
-display:flex; flex-wrap:wrap; align-items:center; justify-content:center; padding:4rem 2rem;
-background:linear-gradient(135deg, var(--primary), var(--secondary));
-color:#fff; border-radius:1rem; box-shadow:0 10px 20px var(--shadow);
-margin:2rem;
+    display:flex; flex-wrap:wrap; flex-direction:column; align-items:center; justify-content:center;
+    height:100vh; text-align:center;
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    color:#fff; border-radius:0; box-shadow:0 10px 20px var(--shadow);
 }
-.hero .profile {flex:0 0 150px; margin-right:2rem;}
-.hero .info {flex:1; min-width:250px;}
-.hero h1 {font-size:2.5rem; margin-bottom:0.5rem;}
+.hero .profile img {border-radius:50%; width:180px; height:180px; object-fit:cover; margin-bottom:1rem;}
+.hero h1 {font-size:3rem; margin-bottom:0.5rem;}
 .hero p {font-size:1.2rem; margin-bottom:1rem;}
-.hero .buttons {display:flex; gap:1rem;}
+.hero .buttons {display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;}
 .hero .buttons a {padding:0.7rem 1.2rem; border-radius:0.5rem; background:#fff; color:var(--primary); font-weight:500; display:flex; align-items:center; gap:0.5rem; box-shadow:0 5px 15px var(--shadow);}
 .hero .buttons a:hover {transform:translateY(-2px);}
 
 /* Sections */
-section {padding:4rem 2rem; max-width:1200px; margin:auto;}
-h2 {color:var(--primary); margin-bottom:2rem; font-size:2rem; text-align:center;}
+section {padding:4rem 2rem; max-width:1200px; margin:auto; text-align:center;}
+h2 {color:var(--primary); margin-bottom:2rem; font-size:2rem;}
 
 /* Catalogue of Works Grid */
-.catalogue {
-display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;
-}
-.catalogue img {border-radius:1rem; box-shadow:0 5px 15px var(--shadow); transition:transform var(--transition);}
+.catalogue {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;}
+.catalogue img {width:250px;height:150px;object-fit:cover;border-radius:1rem; box-shadow:0 5px 15px var(--shadow);transition:transform var(--transition);}
 .catalogue img:hover {transform:scale(1.05);}
 
-/* Skills & Certificates */
+/* Cards */
 .cards {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; text-align:center;}
 .card {padding:2rem; background:linear-gradient(135deg,var(--secondary),var(--primary)); color:#fff; border-radius:1rem; box-shadow:0 5px 15px var(--shadow);}
 
-/* Dark/Light Toggle Button */
-.theme-toggle {position:fixed; bottom:2rem; right:2rem; background:var(--primary); color:#fff; border:none; padding:1rem 1.2rem; border-radius:50%; box-shadow:0 5px 15px var(--shadow);} </style>
+/* Experience Timeline */
+.timeline {position:relative; max-width:800px; margin:auto;}
+.timeline::after {content:''; position:absolute; width:6px; background:var(--primary); top:0; bottom:0; left:50%; margin-left:-3px;}
+.timeline-item {padding:1rem 2rem; position:relative; width:50%;}
+.timeline-item.left {left:0;}
+.timeline-item.right {left:50%;}
+.timeline-item::after {content:''; position:absolute; width:20px; height:20px; right:-10px; background:var(--primary); border-radius:50%; top:1rem; z-index:1;}
+.timeline-item.right::after {left:-10px;}
+.timeline-item div {background:#f5f5f5; padding:1rem; border-radius:8px; box-shadow:0 5px 15px var(--shadow);}
+body.dark .timeline-item div {background:#2a2a3d;}
 
+/* Dark/Light Toggle Button */
+.theme-toggle {position:fixed; bottom:2rem; right:2rem; background:var(--primary); color:#fff; border:none; padding:1rem 1.2rem; border-radius:50%; box-shadow:0 5px 15px var(--shadow);}
+</style>
 </head>
 <body>
 
 <!-- Hero Section -->
-
 <section class="hero">
     <div class="profile">
         <img src="profile.jpg" alt="Birce SARI">
@@ -91,32 +86,30 @@ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem
         <h1>Birce SARI</h1>
         <p>Business Intelligence & Data Analytics Specialist | Data Storytelling Enthusiast</p>
         <div class="buttons">
-            <a href="Birce_SARI_CV.pdf" download><i class="fas fa-download"></i> Download CV</a>
+            <a href="Birce_SARI_CV.pdf" download><i class="fas fa-download"></i> CV</a>
             <a href="https://github.com/bircesari" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/birce-sari" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
 </section>
 
-<!-- Data Storytelling & Thesis Project -->
-
-<section id="thesis">
-    <h2>Data Storytelling & Thesis Project</h2>
-    <p>During my MSc in Data Analytics, I focused on enhancing project management through AI-driven predictive analytics. I developed a dashboard system that visualizes project KPIs, reduces uncertainty, and improves stakeholder decision-making. The work integrated advanced machine learning models, interactive data visualization, and centralized knowledge repositories.</p>
+<!-- About Me Section -->
+<section id="about">
+<h2>About Me</h2>
+<p>I am a Business Intelligence Specialist with over 8 years of experience in data analytics, dashboard design, and project management. Passionate about transforming complex data into actionable insights and empowering teams to make informed decisions.</p>
 </section>
 
-<!-- Catalogue of Works -->
-
-<section id="catalogue">
-    <h2>Catalogue of Works</h2>
-    <div class="catalogue">
-        <img src="Revenue_dashboard.png" alt="Revenue">
-        <img src="Sales_performance_dashboard.png" alt="Sales Performance">
-        <img src="Budget_overview_dashboard.png" alt="Budget">
-        <img src="Customer_analysis_dashboard.png" alt="Customer">
-        <img src="Executive_dashboard.png" alt="Executive">
-        <img src="Executive_dashboard_by_revenue.png" alt="Executive"> 
-    </div>
+<!-- Service Catalogue -->
+<section id="services">
+<h2>Service Catalogue</h2>
+<ul style="text-align:left; max-width:800px; margin:auto; font-size:1.1rem; line-height:1.8;">
+<li>Data Analytics & Visualization (Power BI, Tableau)</li>
+<li>Predictive Analytics & Machine Learning</li>
+<li>Business Intelligence Consulting</li>
+<li>Project Management & Agile Coaching</li>
+<li>Dashboard & KPI Design</li>
+<li>Data Storytelling Workshops</li>
+</ul>
 </section>
 
 <!-- Skills & Achievements -->
@@ -132,15 +125,59 @@ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem
     </div>
 </section>
 
-<!-- Dark/Light Theme Toggle -->
+<!-- Projects / Catalogue -->
+<section id="catalogue">
+<h2>Catalogue of Works</h2>
+<div class="catalogue">
+    <img src="Revenue_dashboard.png" alt="Revenue Dashboard">
+    <img src="Sales_performance_dashboard.png" alt="Sales Performance">
+    <img src="Budget_overview_dashboard.png" alt="Budget Overview">
+    <img src="Customer_analysis_dashboard.png" alt="Customer Analysis">
+    <img src="Executive_dashboard.png" alt="Executive Dashboard">
+</div>
+<p>Click the dashboards for more detailed project descriptions or interactive views.</p>
+</section>
 
+<!-- Tableau / Publications -->
+<section id="external-links">
+<h2>Explore More</h2>
+<p><a href="https://public.tableau.com/app/profile/birce.sari" target="_blank">Interactive Tableau Dashboards</a></p>
+<p><a href="https://scholar.google.com/citations?user=XXXXXX" target="_blank">Google Scholar Publications</a></p>
+<p><a href="certifications.html" target="_blank">Certifications</a></p>
+</section>
+
+<!-- Experience Timeline -->
+<section id="experience">
+<h2>Experience</h2>
+<div class="timeline">
+    <div class="timeline-item left">
+        <div>
+            <h3>Business Intelligence Specialist</h3>
+            <p>Zorlu Holding | 2022-2025</p>
+            <p>Improved KPI tracking across 50+ locations and reduced delays by 12%.</p>
+        </div>
+    </div>
+    <div class="timeline-item right">
+        <div>
+            <h3>Freelance Data Analyst</h3>
+            <p>2020-2022</p>
+            <p>Delivered dashboards and predictive analytics solutions for clients in multiple industries.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Call to Action -->
+<section id="contact">
+<h2>Get in Touch</h2>
+<p>Interested in working together or discussing a project? <strong><a href="mailto:birce@example.com">Let's work together!</a></strong></p>
+</section>
+
+<!-- Theme Toggle -->
 <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
 
 <script>
-// Theme Toggle
-function toggleTheme() {
-    document.body.classList.toggle('dark');
-}
+function toggleTheme() {document.body.classList.toggle('dark');}
 </script>
 
 </body>
