@@ -554,46 +554,61 @@ body.dark footer {background:#0a0a0a;}
 <!-- Experience Timeline -->
 <section id="experience">
   <h2>Experience</h2>
+  <div class="timeline">
 
-  <div class="experience-item">
-    <h3>Strategic Data Consultant & BI Specialist <span>(Freelancer)</span></h3>
-    <p class="exp-meta">Apr 2025 – Present | Berlin, Germany</p>
-    <ul>
-      <li>Designed automated BI dashboards achieving <strong>30% fewer ad-hoc requests</strong> for C-level decision-makers.</li>
-      <li>Guided executive teams in healthcare, femtech, and e-commerce to implement strategic analytics frameworks.</li>
-      <li>Delivered international workshops on experimental design and data visualization, improving analytics literacy by <strong>40%</strong>.</li>
-      <li>Introduced compliance-driven data validation protocols ensuring <strong>GDPR adherence</strong>.</li>
-    </ul>
-  </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Strategic Data Consultant & BI Specialist <span>(Freelancer)</span></h3>
+        <p class="exp-meta">Apr 2025 – Present | Berlin, Germany</p>
+        <ul>
+          <li>Designed automated BI dashboards achieving <strong>30% fewer ad-hoc requests</strong> for C-level decision-makers.</li>
+          <li>Guided executive teams in healthcare, femtech, and e-commerce to implement strategic analytics frameworks.</li>
+          <li>Delivered international workshops on experimental design and data visualization, improving analytics literacy by <strong>40%</strong>.</li>
+          <li>Introduced compliance-driven data validation protocols ensuring <strong>GDPR adherence</strong>.</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="experience-item">
-    <h3>Senior Business and Data Analyst <span>– Zorlu Holding</span></h3>
-    <p class="exp-meta">Jan 2020 – Sep 2023 | Manisa, Türkiye</p>
-    <ul>
-      <li>Led enterprise data warehouse transformation, eliminating <strong>30% manual processes</strong> and boosting efficiency by <strong>20%</strong>.</li>
-      <li>Architected scalable analytics infrastructure using Azure, MSSQL, and Power BI for multinational operations.</li>
-      <li>Created and deployed 50+ interactive executive dashboards, saving <strong>10+ hours/month</strong> per department.</li>
-      <li>Partnered with finance, operations, and IT leadership to align data strategy with corporate goals.</li>
-    </ul>
-  </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Senior Business and Data Analyst – Zorlu Holding</h3>
+        <p class="exp-meta">Jan 2020 – Sep 2023 | Manisa, Türkiye</p>
+        <ul>
+          <li>Led enterprise data warehouse transformation, eliminating <strong>30% manual processes</strong> and boosting efficiency by <strong>20%</strong>.</li>
+          <li>Architected scalable analytics infrastructure using Azure, MSSQL, and Power BI for multinational operations.</li>
+          <li>Created and deployed 50+ executive dashboards, saving <strong>10+ hours/month</strong> per department.</li>
+          <li>Partnered with finance, operations, and IT leadership to align data strategy with corporate goals.</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="experience-item">
-    <h3>BI & Reporting Specialist <span>– Zorlu Holding</span></h3>
-    <p class="exp-meta">Aug 2015 – Jan 2020 | Istanbul, Türkiye</p>
-    <ul>
-      <li>Designed C-level KPI visualization solutions improving decision-making speed by <strong>20%</strong>.</li>
-      <li>Built SQL-driven reporting systems supporting HR, Finance, IT, and Production departments.</li>
-      <li>Established governance frameworks to ensure audit readiness and compliance.</li>
-    </ul>
-  </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>BI & Reporting Specialist – Zorlu Holding</h3>
+        <p class="exp-meta">Aug 2015 – Jan 2020 | Istanbul, Türkiye</p>
+        <ul>
+          <li>Designed C-level KPI visualization solutions improving decision-making speed by <strong>20%</strong>.</li>
+          <li>Built SQL-driven reporting systems supporting HR, Finance, IT, and Production departments.</li>
+          <li>Established governance frameworks to ensure audit readiness and compliance.</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="experience-item">
-    <h3>SME ERP Solutions Consultant <span>(Freelancer)</span></h3>
-    <p class="exp-meta">Aug 2014 – Jul 2015 | Izmir, Türkiye</p>
-    <ul>
-      <li>Directed SAP B1 ERP selection and implementation for SMEs, boosting efficiency and reducing operational errors.</li>
-      <li>Delivered change management programs that accelerated system adoption.</li>
-    </ul>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>SME ERP Solutions Consultant <span>(Freelancer)</span></h3>
+        <p class="exp-meta">Aug 2014 – Jul 2015 | Izmir, Türkiye</p>
+        <ul>
+          <li>Directed SAP B1 ERP selection and implementation for SMEs, boosting efficiency and reducing operational errors.</li>
+          <li>Delivered change management programs that accelerated system adoption.</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -601,40 +616,74 @@ body.dark footer {background:#0a0a0a;}
 #experience {
   max-width: 900px;
   margin: 0 auto;
+  padding: 20px;
 }
 #experience h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  color: #4b0082;
 }
-.experience-item {
-  background: #f7f5ff;
-  border-radius: 10px;
+
+/* Timeline structure */
+.timeline {
+  position: relative;
+  margin-left: 25px;
+  padding-left: 25px;
+  border-left: 3px solid #a66df1;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #c8a2ff, #7b2cbf);
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-dot {
+  position: absolute;
+  left: -31px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background-color: #7b2cbf;
+  border-radius: 50%;
+  border: 3px solid #e8defe;
+  box-shadow: 0 0 0 2px #fff;
+}
+.timeline-content {
+  background: #f8f6ff;
   padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
-.experience-item:hover {
-  transform: translateY(-3px);
-}
-.experience-item h3 {
-  font-size: 1.2em;
+.timeline-content h3 {
+  font-size: 1.1em;
   color: #4b0082;
   margin-bottom: 5px;
 }
-.experience-item h3 span {
-  font-weight: normal;
+.timeline-content h3 span {
   color: #555;
+  font-weight: normal;
 }
 .exp-meta {
-  color: #777;
   font-size: 0.95em;
+  color: #666;
   margin-bottom: 10px;
 }
-.experience-item ul {
-  list-style: disc;
+.timeline-content ul {
   margin-left: 20px;
   line-height: 1.5;
+  color: #333;
+}
+.timeline-content li {
+  margin-bottom: 6px;
 }
 </style>
 </section>
