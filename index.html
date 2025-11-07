@@ -555,59 +555,86 @@ body.dark footer {background:#0a0a0a;}
 <section id="experience">
   <h2>Experience</h2>
 
-  <details open>
-    <summary><strong>Strategic Data Consultant & BI Specialist (Freelancer)</strong> — Berlin, Germany | Apr 2025 – Present</summary>
+  <div class="experience-item">
+    <h3>Strategic Data Consultant & BI Specialist <span>(Freelancer)</span></h3>
+    <p class="exp-meta">Apr 2025 – Present | Berlin, Germany</p>
     <ul>
       <li>Designed automated BI dashboards achieving <strong>30% fewer ad-hoc requests</strong> for C-level decision-makers.</li>
       <li>Guided executive teams in healthcare, femtech, and e-commerce to implement strategic analytics frameworks.</li>
       <li>Delivered international workshops on experimental design and data visualization, improving analytics literacy by <strong>40%</strong>.</li>
       <li>Introduced compliance-driven data validation protocols ensuring <strong>GDPR adherence</strong>.</li>
     </ul>
-  </details>
+  </div>
 
-  <details>
-    <summary><strong>Senior Business and Data Analyst – Zorlu Holding</strong> — Manisa, Türkiye | Jan 2020 – Sep 2023</summary>
+  <div class="experience-item">
+    <h3>Senior Business and Data Analyst <span>– Zorlu Holding</span></h3>
+    <p class="exp-meta">Jan 2020 – Sep 2023 | Manisa, Türkiye</p>
     <ul>
       <li>Led enterprise data warehouse transformation, eliminating <strong>30% manual processes</strong> and boosting efficiency by <strong>20%</strong>.</li>
       <li>Architected scalable analytics infrastructure using Azure, MSSQL, and Power BI for multinational operations.</li>
-      <li>Created and deployed 50+ executive dashboards, saving <strong>10+ hours/month</strong> per department.</li>
+      <li>Created and deployed 50+ interactive executive dashboards, saving <strong>10+ hours/month</strong> per department.</li>
       <li>Partnered with finance, operations, and IT leadership to align data strategy with corporate goals.</li>
     </ul>
-  </details>
+  </div>
 
-  <details>
-    <summary><strong>BI & Reporting Specialist – Zorlu Holding</strong> — Istanbul, Türkiye | Aug 2015 – Jan 2020</summary>
+  <div class="experience-item">
+    <h3>BI & Reporting Specialist <span>– Zorlu Holding</span></h3>
+    <p class="exp-meta">Aug 2015 – Jan 2020 | Istanbul, Türkiye</p>
     <ul>
       <li>Designed C-level KPI visualization solutions improving decision-making speed by <strong>20%</strong>.</li>
       <li>Built SQL-driven reporting systems supporting HR, Finance, IT, and Production departments.</li>
       <li>Established governance frameworks to ensure audit readiness and compliance.</li>
     </ul>
-  </details>
+  </div>
 
-  <details>
-    <summary><strong>SME ERP Solutions Consultant (Freelancer)</strong> — Izmir, Türkiye | Aug 2014 – Jul 2015</summary>
+  <div class="experience-item">
+    <h3>SME ERP Solutions Consultant <span>(Freelancer)</span></h3>
+    <p class="exp-meta">Aug 2014 – Jul 2015 | Izmir, Türkiye</p>
     <ul>
       <li>Directed SAP B1 ERP selection and implementation for SMEs, boosting efficiency and reducing operational errors.</li>
       <li>Delivered change management programs that accelerated system adoption.</li>
     </ul>
-  </details>
+  </div>
 </section>
 
 <style>
-details {
-  background: #f8f6ff;
+#experience {
+  max-width: 900px;
+  margin: 0 auto;
+}
+#experience h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.experience-item {
+  background: #f7f5ff;
   border-radius: 10px;
-  padding: 10px 15px;
-  margin-bottom: 15px;
-  transition: all 0.3s ease;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
-summary {
-  cursor: pointer;
-  font-size: 1.05em;
+.experience-item:hover {
+  transform: translateY(-3px);
+}
+.experience-item h3 {
+  font-size: 1.2em;
   color: #4b0082;
+  margin-bottom: 5px;
 }
-details[open] {
-  background: #efeaff;
+.experience-item h3 span {
+  font-weight: normal;
+  color: #555;
+}
+.exp-meta {
+  color: #777;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+.experience-item ul {
+  list-style: disc;
+  margin-left: 20px;
+  line-height: 1.5;
 }
 </style>
 </section>
