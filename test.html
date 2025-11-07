@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Portfolio</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header/Nav */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links li {
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    }
+
+    /* About Section */
+    section {
+      padding: 70px 0;
+    }
+    #about {
+      background: #fff;
+      text-align: center;
+    }
+    #about h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    #about p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #666;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+      background: #fefefe;
+    }
+    #portfolio h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px 20px;
+      flex-grow: 1;
+    }
+    .card-content h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+      color: #222;
+    }
+    .card-content p {
+      color: #555;
+      font-size: 1rem;
+    }
+    .card-footer {
+      padding: 10px 20px;
+      background: #fafafa;
+      text-align: right;
+    }
+    .card-footer a {
+      font-weight: 600;
+      color: #3498db;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #fff;
+      text-align: center;
+    }
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .contact-info {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    form input:focus, form textarea:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+    form button {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #2980b9;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Nav menu button for small screens */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background: #222;
+        flex-direction: column;
+        width: 200px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        padding-top: 60px;
+      }
+      .nav-links.open {
+        transform: translateX(0);
+      }
+      .nav-links li {
+        margin: 20px 0;
+        font-size: 1.2rem;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <div class="logo" aria-label="Portfolio Logo">MyPortfolio</div>
+    <ul class="nav-links" id="nav-links" role="menu">
+      <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
+      <li role="none"><a href="#portfolio" role="menuitem" tabindex="-1">Portfolio</a></li>
+      <li role="none"><a href="#contact" role="menuitem" tabindex="-1">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Introduction hero section">
+  <div>
+    <h1>Hello, I'm John Doe</h1>
+    <p>Web Developer | Designer | Programmer</p>
+  </div>
+</section>
+
+<section id="about" class="container" aria-labelledby="about-title">
+  <h2 id="about-title">About Me</h2>
+  <p>
+    Passionate web developer with 5+ years of experience creating responsive, user-friendly websites and applications. I specialize in HTML, CSS, JavaScript and love turning ideas into reality through clean, efficient code.
+  </p>
+</section>
+
+<section id="portfolio" aria-labelledby="portfolio-title">
+  <h2 id="portfolio-title">My Work</h2>
+  <div class="grid">
+    <article class="card" tabindex="0" aria-label="Project: Responsive Blog Website">
+      <img src="https://images.unsplash.com/photo-1504691342899-00e7a2888f38?auto=format&fit=crop&w=600&q=80" alt="Screenshot of Responsive Blog Website" />
+      <div class="card-content">
+        <h3>Responsive Blog Website</h3>
+        <p>A clean blog layout optimized for mobile and desktop screens.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+    </article>
+
+    <article class="card" tabindex="0" aria-label="Project: E-commerce Landing Page">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Screenshot of E-commerce Landing Page" />
+      <div class="card-content">
+        <h3>E-commerce Landing Page</h3>
+        <p>Modern and sleek landing page design for online store.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+    </article>
+
+    <article class="card" tabindex="0" aria-label="Project: Portfolio Website">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Screenshot of Portfolio Website" />
+      <div class="card-content">
+        <h3>Portfolio Website</h3>
+        <p>Clean and modern portfolio to showcase work and skills.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="contact" class="container" aria-labelledby="contact-title">
+  <h2 id="contact-title">Get In Touch</h2>
+  <p class="contact-info">
+    Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a> | Phone: <a href="tel:+1234567890">+1 234 567 890</a>
+  </p>
+  <form action="mailto:john.doe@example.com" method="post" enctype="text/plain" aria-label="Contact form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name" placeholder="Your name" required />
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="Email" placeholder="Your email" required />
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="Message" placeholder="Your message" rows="5" required></textarea>
+    
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2024 John Doe. All rights reserved.
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    navLinks.classList.toggle('open');
+  });
+
+  // Accessibility: toggle menu with keyboard (Enter/Space)
+  menuToggle.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      menuToggle.click();
+    }
+  });
+
+  // Close nav menu when clicking a link (small screen)
+  [...navLinks.querySelectorAll('a')].forEach(link => {
+    link.addEventListener('click', () => {
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
