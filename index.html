@@ -34,7 +34,7 @@ img {max-width:100%;}
 body.dark {background:var(--bg-dark);color:var(--text-dark);}
 
 /* Top Spacer */
-.top-spacer {height:60px;background:linear-gradient(135deg, var(--primary), var(--secondary));}
+.top-spacer {height:10px;background:linear-gradient(135deg, var(--primary), var(--secondary));}
 
 /* Hero Section */
 .hero {
@@ -59,8 +59,28 @@ h2 {color:var(--primary); margin-bottom:1.5rem; font-size:2rem;}
 /* About Me - Paragraphs */
 #about p {text-align:left;margin-bottom:1rem;line-height:1.8;font-size:1.05rem;}
 
-/* Core Competencies */
-#competencies ul {text-align:left; font-size:1.05rem; line-height:1.8;list-style-position:inside;}
+/* Education Section - Table Style */
+.education-container {max-width:900px;margin:0 auto;}
+.education-table {width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:0.5rem;box-shadow:0 5px 15px var(--shadow);}
+.education-table thead {background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;}
+.education-table th {padding:1rem;text-align:left;font-weight:500;}
+.education-table tbody tr {background:#f9f9f9;border-bottom:1px solid #e0e0e0;}
+body.dark .education-table tbody tr {background:#2a2a3d;border-bottom:1px solid #444;}
+.education-table tbody tr:last-child {border-bottom:none;}
+.education-table td {padding:1rem;line-height:1.6;}
+.education-table .degree {font-weight:500;color:var(--primary);margin-bottom:0.3rem;}
+.education-table .university {color:var(--text-light);margin-bottom:0.3rem;}
+body.dark .education-table .university {color:var(--text-dark);}
+.education-table .thesis {font-style:italic;font-size:0.95rem;color:#666;}
+body.dark .education-table .thesis {color:#aaa;}
+
+/* Skills & Certificates - Updated */
+.skills-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;}
+.skill-card {padding:1.5rem; background:linear-gradient(135deg,var(--secondary),var(--primary)); color:#fff; border-radius:1rem; box-shadow:0 5px 15px var(--shadow);}
+.skill-card h3 {margin-bottom:0.8rem;font-size:1.1rem;display:flex;align-items:center;gap:0.5rem;}
+.skill-card ul {list-style:none;padding:0;}
+.skill-card li {padding:0.3rem 0;font-size:0.95rem;padding-left:1rem;position:relative;}
+.skill-card li:before {content:"•";position:absolute;left:0;}
 
 /* Service Catalogue - 3 Levels */
 .service-catalogue {max-width:900px;margin:0 auto;}
@@ -170,17 +190,103 @@ body.dark footer {background:#0a0a0a;}
 <p>Fluent in English (C1) and German (B1), and a native Turkish speaker, I bring an international perspective, strategic mindset, and collaborative spirit to every project.</p>
 </section>
 
-<!-- Core Competencies -->
-<section id="competencies">
-<h2>Core Competencies</h2>
-<ul>
-<li>Executive BI & Data Strategy (Tableau, Power BI, Data Warehousing, ETL/ELT, SAP Analytics Cloud)</li>
-<li>Advanced Analytics & Visualization (Dashboard Innovation, SQL, Python, Statistical Analysis, Dataiku)</li>
-<li>Data Governance & Compliance (GDPR, Master Data Management, Data Quality)</li>
-<li>Strategic Project Leadership (Stakeholder Relations, Change Management, Cross-Border Collaboration)</li>
-</ul>
+<!-- Education Section -->
+<section id="education">
+<h2>Education</h2>
+<div class="education-container">
+    <table class="education-table">
+        <thead>
+            <tr>
+                <th>Degree</th>
+                <th>Institution & Period</th>
+                <th>Highlights</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="degree">MSc in Data Analytics</div>
+                </td>
+                <td>
+                    <div class="university">University for the Creative Arts (UCA)</div>
+                    <div>Berlin, Germany</div>
+                    <div>2023–2025</div>
+                </td>
+                <td>
+                    <div class="thesis">Thesis: Enhancing Project Management through Machine Learning and Predictive Analytics</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="degree">BSc in Industrial Engineering</div>
+                </td>
+                <td>
+                    <div class="university">Koç University</div>
+                    <div>Istanbul, Türkiye</div>
+                    <div>2009–2014</div>
+                </td>
+                <td>
+                    <div class="thesis">Best Senior Project Award – Logistics Optimization for Auto Gas Facilities</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </section>
 
+<!-- Skills & Certificates -->
+<section id="skills">
+    <h2>Skills & Certificates</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>📊 Data Analytics & BI</h3>
+            <ul>
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>SAP Analytics Cloud</li>
+                <li>Data Warehousing</li>
+                <li>ETL/ELT</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>🧠 Machine Learning & Data Science</h3>
+            <ul>
+                <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                <li>Statistical Analysis</li>
+                <li>Predictive Analytics</li>
+                <li>Dataiku</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>☁️ Data Infrastructure</h3>
+            <ul>
+                <li>Azure</li>
+                <li>MSSQL</li>
+                <li>Data Lakes</li>
+                <li>Real-time Streaming</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>🐍 Development</h3>
+            <ul>
+                <li>SQL (Advanced)</li>
+                <li>Python Development</li>
+                <li>APIs & Integration</li>
+                <li>Automation Scripts</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>📈 Business & Strategy</h3>
+            <ul>
+                <li>Project Management</li>
+                <li>Stakeholder Management</li>
+                <li>Change Management</li>
+                <li>GDPR Compliance</li>
+                <li>Lean Six Sigma</li>
+            </ul>
+        </div>
+    </div>
+</section>
 <!-- Service Catalogue -->
 <section id="services">
 <h2>Service Catalogue</h2>
@@ -431,17 +537,6 @@ body.dark footer {background:#0a0a0a;}
 </div>
 </section>
 
-<!-- Skills & Achievements -->
-<section id="skills">
-    <h2>Skills & Certificates</h2>
-    <div class="cards">
-        <div class="card">📊 Data Analytics & Business Intelligence (BI)</div>
-        <div class="card">🧠 Machine Learning & Data Science</div>
-        <div class="card">☁️ Data Infrastructure & Engineering</div>
-        <div class="card">🐍 Python & SQL Development Services</div>
-        <div class="card">📈 Business Strategy & Consulting</div>
-    </div>
-</section>
 
 <!-- Projects / Catalogue -->
 <section id="catalogue">
