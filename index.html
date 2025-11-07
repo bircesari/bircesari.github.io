@@ -54,7 +54,7 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
 
 /* Sections */
 section {padding:3rem 2rem; max-width:1200px; margin:0 auto;}
-h2 {color:var(--primary); margin-bottom:1.5rem; font-size:2rem;}
+h2 {color:var(--primary); margin-bottom:1rem; font-size:2rem;}
 
 /* About Me - Paragraphs */
 #about p {text-align:left;margin-bottom:1rem;line-height:1.8;font-size:1.05rem;}
@@ -106,7 +106,7 @@ body.dark .subcategory {border-bottom:1px solid #444;}
 .card {padding:2rem; background:linear-gradient(135deg,var(--secondary),var(--primary)); color:#fff; border-radius:1rem; box-shadow:0 5px 15px var(--shadow);}
 
 /* Catalogue of Works Grid */
-#catalogue p.intro {margin-bottom:1.5rem;text-align:center;font-size:1.05rem;color:var(--text-light);}
+#catalogue p.intro {margin-bottom:1rem;text-align:center;font-size:1.05rem;color:var(--text-light);}
 body.dark #catalogue p.intro {color:var(--text-dark);}
 .catalogue {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;justify-items:center;}
 .catalogue img {width:250px;height:150px;object-fit:cover;border-radius:1rem; box-shadow:0 5px 15px var(--shadow);transition:transform var(--transition);}
@@ -553,26 +553,63 @@ body.dark footer {background:#0a0a0a;}
 
 <!-- Experience Timeline -->
 <section id="experience">
-<h2>Experience</h2>
-<div class="timeline-container">
-    <div class="timeline-line"></div>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div>
-                <h3>Business Intelligence Specialist</h3>
-                <p><strong>Zorlu Holding | 2022-2025</strong></p>
-                <p>Improved KPI tracking across 50+ locations and reduced delays by 12%.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div>
-                <h3>Freelance Data Analyst</h3>
-                <p><strong>2020-2022</strong></p>
-                <p>Delivered dashboards and predictive analytics solutions for clients in multiple industries.</p>
-            </div>
-        </div>
-    </div>
-</div>
+  <h2>Experience</h2>
+
+  <details open>
+    <summary><strong>Strategic Data Consultant & BI Specialist (Freelancer)</strong> — Berlin, Germany | Apr 2025 – Present</summary>
+    <ul>
+      <li>Designed automated BI dashboards achieving <strong>30% fewer ad-hoc requests</strong> for C-level decision-makers.</li>
+      <li>Guided executive teams in healthcare, femtech, and e-commerce to implement strategic analytics frameworks.</li>
+      <li>Delivered international workshops on experimental design and data visualization, improving analytics literacy by <strong>40%</strong>.</li>
+      <li>Introduced compliance-driven data validation protocols ensuring <strong>GDPR adherence</strong>.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary><strong>Senior Business and Data Analyst – Zorlu Holding</strong> — Manisa, Türkiye | Jan 2020 – Sep 2023</summary>
+    <ul>
+      <li>Led enterprise data warehouse transformation, eliminating <strong>30% manual processes</strong> and boosting efficiency by <strong>20%</strong>.</li>
+      <li>Architected scalable analytics infrastructure using Azure, MSSQL, and Power BI for multinational operations.</li>
+      <li>Created and deployed 50+ executive dashboards, saving <strong>10+ hours/month</strong> per department.</li>
+      <li>Partnered with finance, operations, and IT leadership to align data strategy with corporate goals.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary><strong>BI & Reporting Specialist – Zorlu Holding</strong> — Istanbul, Türkiye | Aug 2015 – Jan 2020</summary>
+    <ul>
+      <li>Designed C-level KPI visualization solutions improving decision-making speed by <strong>20%</strong>.</li>
+      <li>Built SQL-driven reporting systems supporting HR, Finance, IT, and Production departments.</li>
+      <li>Established governance frameworks to ensure audit readiness and compliance.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary><strong>SME ERP Solutions Consultant (Freelancer)</strong> — Izmir, Türkiye | Aug 2014 – Jul 2015</summary>
+    <ul>
+      <li>Directed SAP B1 ERP selection and implementation for SMEs, boosting efficiency and reducing operational errors.</li>
+      <li>Delivered change management programs that accelerated system adoption.</li>
+    </ul>
+  </details>
+</section>
+
+<style>
+details {
+  background: #f8f6ff;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+summary {
+  cursor: pointer;
+  font-size: 1.05em;
+  color: #4b0082;
+}
+details[open] {
+  background: #efeaff;
+}
+</style>
 </section>
 
 <!-- Contact -->
