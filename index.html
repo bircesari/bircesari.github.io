@@ -13,29 +13,58 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-:root {
-    --primary: #4dd0e1;
-    --secondary: #b39ddb;
-    --bg-light: #ffffff;
-    --bg-dark: #1e1e2f;
-    --text-light: #1e1e2f;
-    --text-dark: #f5f5f5;
-    --shadow: rgba(0,0,0,0.1);
-    --transition: 0.3s ease-in-out;
+:root{
+  --primary:#4dd0e1;
+  --secondary:#b39ddb;
+  --bg-light:#ffffff;
+  --bg-dark:#1e1e2f;
+  --text-light:#1e1e2f;
+  --text-dark:#f5f5f5;
+  --shadow:rgba(0,0,0,0.1);
+  --transition:0.3s ease-in-out;
+  --nav-height:68px;
 }
 
-* {margin:0;padding:0;box-sizing:border-box;}
-body {font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--text-light);transition:background var(--transition),color var(--transition);padding-top:60px;}
-a {text-decoration:none;color:inherit;}
-button {cursor:pointer;transition:all var(--transition);}
-img {max-width:100%;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;} /* smooth scrolling */
+body{font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--text-light);transition:background var(--transition),color var(--transition);}
+
 
 /* Dark Theme */
 body.dark {background:var(--bg-dark);color:var(--text-dark);}
 
-/* Top Spacer */
-.top-spacer {height:10px;background:linear-gradient(135deg, var(--primary), var(--secondary));}
+/* NAV STAND (separate section the navbar stands on) */
+#nav-stand{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  position:sticky;
+  top:0;
+  z-index:9999;
+  width:100%;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+/* Keep nav stand slightly taller so navbar has breathing room */
+#nav-stand .nav-container{
+  max-width:1200px;
+  margin:0 auto;
+  height:var(--nav-height);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 1rem;
+}
 
+/* Navbar */
+.navbar{display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;}
+.navbar a{
+  color:#fff;
+  background:rgba(255,255,255,0.12);
+  padding:0.5rem 0.8rem;
+  border-radius:0.5rem;
+  font-weight:500;
+  transition:background var(--transition), transform var(--transition);
+}
+.navbar a:hover{background:rgba(255,255,255,0.18);transform:translateY(-3px);}
+    
 /* Hero Section */
 .hero {
     display:flex; 
@@ -58,8 +87,7 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
     text-align:left;
 }
 
-.hero .profile {
-    flex-shrink:0;
+.hero .profile {flex-shrink:0;
 }
 
 .hero .profile img {
@@ -112,8 +140,8 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
 }
 
 /* Sections */
-section {padding:3rem 2rem; max-width:1200px; margin:0 auto;}
-h2 {color:var(--primary); margin-bottom:0.5rem; font-size:2rem;}
+section{padding:3rem 2rem;max-width:1200px;margin:0 auto;}
+h2{color:var(--primary);margin-bottom:0.5rem;font-size:2rem;text-align:center;} /* center all section titles */
 
 /* About Me - Paragraphs with equal spacing */
 #about p {
@@ -121,10 +149,6 @@ h2 {color:var(--primary); margin-bottom:0.5rem; font-size:2rem;}
     margin-bottom:1rem;
     line-height:1.8;
     font-size:1.05rem;
-}
-
-#about p:last-child {
-    margin-bottom:0;
 }
 
 /* Education Section - Enlarged Width */
@@ -204,6 +228,23 @@ body.dark .timeline-content ul {color:var(--text-dark);}
 .social-links a {color:var(--primary);transition:transform 0.3s;}
 .social-links a:hover {transform:scale(1.2);}
 
+    /* Contact Form (Email section) */
+.contact-form{max-width:800px;margin:1.5rem auto 0;display:flex;flex-direction:column;gap:0.75rem;text-align:left;}
+.contact-form label{font-weight:500;margin-bottom:0.25rem;color:var(--text-light);}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{
+    width:100%;
+    padding:0.75rem 1rem;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,0.08);
+    background:#fff;
+    font-size:1rem;
+    transition:box-shadow var(--transition), border-color var(--transition);
+}
+body.dark .contact-form input, body.dark .contact-form textarea{background:#222834;border:1px solid rgba(255,255,255,0.06); color:var(--text-dark);}
+.contact-form textarea{min-height:140px;resize:vertical;}
+.contact-form .btn-send{align-self:flex-end;padding:0.6rem 1rem;border-radius:0.6rem;background:var(--primary);color:#fff;border:none;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.12);}
+.contact-form .btn-send:hover{transform:translateY(-3px);}
+    
 /* Footer - Reduced margin */
 footer {
     background:var(--bg-dark);
@@ -221,35 +262,34 @@ body.dark footer {
 .theme-toggle {position:fixed; bottom:2rem; right:2rem; background:var(--primary); color:#fff; border:none; padding:1rem 1.2rem; border-radius:50%; box-shadow:0 5px 15px var(--shadow);z-index:1000;}
 
 /* Responsive */
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction:column;
-        text-align:center;
-    }
-    
-    .hero .profile img {
-        width:140px;
-        height:140px;
-    }
-    
-    .hero h1 {
-        font-size:1.8rem;
-    }
-    
-    .hero p {
-        font-size:0.95rem;
-    }
-    
-    section {
-        padding:2rem 1rem;
-    }
+@media (max-width:768px){
+  .hero-content{flex-direction:column;text-align:center;}
+  .hero .profile img{width:140px;height:140px;}
+  .hero h1{font-size:1.8rem;}
+  .hero p{font-size:0.95rem;}
+  section{padding:2rem 1rem;}
+  #nav-stand .nav-container{height:auto;padding:0.5rem 1rem;}
+  .navbar{justify-content:center;}
+  .contact-form .btn-send{width:100%;}
 }
 </style>
 </head>
 <body>
 
-<!-- Top Spacer -->
-<div class="top-spacer"></div>
+<!-- NAV STAND: separate section that the navbar sits on; sticky -->
+<header id="nav-stand" aria-hidden="false">
+  <div class="nav-container">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#catalogue">Works</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -265,8 +305,8 @@ body.dark footer {
                 <a href="https://github.com/bircesari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/birce-sari" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://public.tableau.com/app/profile/birce.sari" target="_blank" title="Tableau"><i class="fas fa-chart-line"></i></a>
-                <a href="https://scholar.google.com/citations?user=XXXXXX" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="certifications.html" target="_blank" title="Certifications"><i class="fas fa-certificate"></i></a>
+                <a href="https://scholar.google.com/citations?hl=en&user=B_BTYSsAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/birce-sari/details/certifications/" target="_blank" title="Certifications"><i class="fas fa-certificate"></i></a>
             </div>
         </div>
     </div>
@@ -915,7 +955,6 @@ body.dark footer {
         </div>
     </div>
 </section>
-
 <footer>
     <div class="container">
         <p>&copy; 2025 Birce SARI. All rights reserved.</p>
@@ -924,7 +963,7 @@ body.dark footer {
 </footer>
 
 <!-- Theme Toggle -->
-<button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"><i class="fas fa-adjust"></i></button>
 
 <script>
 function toggleTheme() {
@@ -964,7 +1003,9 @@ function toggleSubcategory(title) {
         list.classList.add('active');
         icon.style.transform = 'rotate(90deg)';
     }
+    
 }
+document.querySelectorAll('section').forEach(s => s.style.scrollMarginTop = '80px');
 </script>
 
 </body>
