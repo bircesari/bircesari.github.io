@@ -1,389 +1,947 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Portfolio</title>
-  <style>
-    /* Reset & base */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birce SARI | Data & BI Analyst Portfolio</title>
+<link rel="icon" href="BS_Logo.png" type="image/png">
 
-    /* Container */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    /* Header/Nav */
-    header {
-      background: #222;
-      color: #fff;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-    .nav-links li {
-      font-weight: 600;
-    }
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    /* Hero Section */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-      padding: 0 20px;
+<style>
+:root {
+    --primary: #4dd0e1;
+    --secondary: #b39ddb;
+    --bg-light: #ffffff;
+    --bg-dark: #1e1e2f;
+    --text-light: #1e1e2f;
+    --text-dark: #f5f5f5;
+    --shadow: rgba(0,0,0,0.1);
+    --transition: 0.3s ease-in-out;
+}
+
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--text-light);transition:background var(--transition),color var(--transition);padding-top:0;}
+a {text-decoration:none;color:inherit;}
+button {cursor:pointer;transition:all var(--transition);}
+img {max-width:100%;}
+
+/* Dark Theme */
+body.dark {background:var(--bg-dark);color:var(--text-dark);}
+
+/* Hero Section */
+.hero {
+    display:flex; 
+    flex-wrap:wrap; 
+    align-items:center; 
+    justify-content:center;
+    min-height:35vh; 
+    padding:2rem 1.5rem;
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    color:#fff;
+    position:relative;
+}
+
+.hero-content {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:2rem;
+    max-width:1200px;
+    width:100%;
+    text-align:left;
+}
+
+/* Navigation in the colored upper section */
+.navbar {
+    position:absolute;
+    top:16px;
+    right:24px;
+    display:flex;
+    gap:1rem;
+    align-items:center;
+    z-index:10;
+}
+.navbar a {
+    color:#fff;
+    background: rgba(255,255,255,0.12);
+    padding:0.45rem 0.75rem;
+    border-radius:0.5rem;
+    font-weight:500;
+    transition:background var(--transition), transform var(--transition);
+}
+.navbar a:hover { background: rgba(255,255,255,0.18); transform:translateY(-3px); }
+
+/* Profile */
+.hero .profile {
+    flex-shrink:0;
+}
+
+.hero .profile img {
+    border-radius:50%; 
+    width:180px; 
+    height:180px; 
+    object-fit:cover;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.hero .info {
+    flex:1;
+}
+
+.hero h1 {
+    font-size:2.2rem; 
+    margin-bottom:0.5rem;
+}
+
+.hero p {
+    font-size:1.1rem; 
+    margin-bottom:1rem;
+}
+
+.hero .buttons {
+    display:flex; 
+    gap:0.8rem; 
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.hero .buttons a {
+    padding:0.6rem 1rem; 
+    border-radius:0.5rem; 
+    background:#fff; 
+    color:var(--primary); 
+    font-weight:500; 
+    display:flex; 
+    align-items:center; 
+    gap:0.5rem; 
+    box-shadow:0 5px 15px var(--shadow);
+}
+
+.hero .buttons a:hover {
+    transform:translateY(-2px);
+}
+
+.hero .buttons a i {
+    font-size:1.1rem;
+}
+
+/* Sections */
+section {padding:3rem 2rem; max-width:1200px; margin:0 auto;}
+h2 {color:var(--primary); margin-bottom:0.5rem; font-size:2rem; text-align:center;} /* center all section titles */
+
+/* About Me - Paragraphs with equal spacing */
+#about p {
+    text-align:left;
+    margin-bottom:1rem;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+#about p:last-child {
+    margin-bottom:0;
+}
+
+/* Education Section - Enlarged Width */
+.education-container {max-width:1100px;margin:0 auto;}
+.education-table {width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:0.5rem;box-shadow:0 5px 15px var(--shadow);}
+.education-table thead {background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;}
+.education-table th {padding:1rem;text-align:left;font-weight:500;}
+.education-table tbody tr {background:#f9f9f9;border-bottom:1px solid #e0e0e0;}
+body.dark .education-table tbody tr {background:#2a2a3d;border-bottom:1px solid #444;}
+.education-table tbody tr:last-child {border-bottom:none;}
+.education-table td {padding:1rem;line-height:1.6;}
+.education-table .degree {font-weight:500;color:var(--primary);margin-bottom:0.3rem;}
+.education-table .university {color:var(--text-light);margin-bottom:0.3rem;}
+body.dark .education-table .university {color:var(--text-dark);}
+.education-table .thesis {font-style:italic;font-size:0.95rem;color:#666;}
+body.dark .education-table .thesis {color:#aaa;}
+
+/* Skills & Certificates */
+.skills-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;}
+.skill-card {padding:1.5rem; background:linear-gradient(135deg,var(--secondary),var(--primary)); color:#fff; border-radius:1rem; box-shadow:0 5px 15px var(--shadow);}
+.skill-card h3 {margin-bottom:0.8rem;font-size:1.1rem;display:flex;align-items:center;gap:0.5rem;}
+.skill-card ul {list-style:none;padding:0;}
+.skill-card li {padding:0.3rem 0;font-size:0.95rem;padding-left:1rem;position:relative;}
+.skill-card li:before {content:"•";position:absolute;left:0;}
+
+/* Service Catalogue & Documents - 3 Levels */
+.service-catalogue {max-width:900px;margin:0 auto;}
+.service-category {margin-bottom:1.5rem;border-radius:0.5rem;overflow:hidden;box-shadow:0 3px 10px var(--shadow);}
+.category-header {background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;padding:1rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:1.2rem;font-weight:500;}
+.category-header:hover {opacity:0.9;}
+.category-content {max-height:0;overflow:hidden;transition:max-height 0.4s ease;background:#f9f9f9;}
+body.dark .category-content {background:#2a2a3d;}
+.category-content.active {max-height:3000px;}
+.subcategory {border-bottom:1px solid #e0e0e0;padding:1rem 1.5rem;}
+body.dark .subcategory {border-bottom:1px solid #444;}
+.subcategory:last-child {border-bottom:none;}
+.subcategory-title {font-weight:500;color:var(--primary);margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.subcategory-title:hover {opacity:0.8;}
+.service-list {max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding-left:1rem;}
+.service-list.active {max-height:1500px;margin-top:0.5rem;}
+.service-list ul {list-style:none;padding:0;}
+.service-list li {padding:0.4rem 0;padding-left:1.2rem;position:relative;line-height:1.6;}
+.service-list li:before {content:"•";position:absolute;left:0;color:var(--secondary);}
+
+/* Catalogue of Works Grid */
+#catalogue p.intro {margin-bottom:1rem;text-align:center;font-size:1.05rem;color:var(--text-light);}
+body.dark #catalogue p.intro {color:var(--text-dark);}
+.catalogue {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;justify-items:center;}
+.catalogue img {width:250px;height:150px;object-fit:cover;border-radius:1rem; box-shadow:0 5px 15px var(--shadow);transition:transform var(--transition);}
+.catalogue img:hover {transform:scale(1.05);}
+
+/* Experience Timeline - Vertical from Recent to Older */
+#experience {max-width:900px;margin:0 auto;padding:3rem 2rem;}
+#experience h2 {text-align:center;margin-bottom:40px;color:var(--primary);}
+.timeline {position:relative;margin-left:25px;padding-left:25px;border-left:3px solid var(--primary);}
+/* gradient bar already in ::before */
+.timeline::before {content:"";position:absolute;left:-1px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--secondary),var(--primary));}
+.timeline-item {position:relative;margin-bottom:30px;}
+.timeline-dot {position:absolute;left:-31px;top:6px;width:14px;height:14px;background-color:var(--primary);border-radius:50%;border:3px solid #e8defe;box-shadow:0 0 0 2px #fff;}
+body.dark .timeline-dot {border-color:var(--bg-dark);box-shadow:0 0 0 2px var(--bg-dark);}
+.timeline-content {background:#f8f6ff;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
+body.dark .timeline-content {background:#2a2a3d;}
+.timeline-content h3 {font-size:1.1em;color:var(--primary);margin-bottom:5px;}
+.timeline-content h3 span {color:#555;font-weight:normal;}
+body.dark .timeline-content h3 span {color:#aaa;}
+.exp-meta {font-size:0.95em;color:#666;margin-bottom:10px;}
+body.dark .exp-meta {color:#bbb;}
+.timeline-content ul {margin-left:20px;line-height:1.5;color:#333;}
+body.dark .timeline-content ul {color:var(--text-dark);}
+.timeline-content li {margin-bottom:6px;}
+
+/* Contact */
+.contact-content {text-align:center;}
+.contact-info {margin:2rem 0;display:flex;flex-direction:column;gap:1rem;align-items:center;}
+.contact-item {font-size:1.1rem;}
+.contact-item a {color:var(--primary);font-weight:500;}
+.social-links {display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;}
+.social-links a {color:var(--primary);transition:transform 0.3s;}
+.social-links a:hover {transform:scale(1.2);}
+
+/* Contact Form (Email section) */
+.contact-form {max-width:800px;margin:1.5rem auto 0;display:flex;flex-direction:column;gap:0.75rem;text-align:left;}
+.contact-form label {font-weight:500;margin-bottom:0.25rem;color:var(--text-light);}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+    width:100%;
+    padding:0.75rem 1rem;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,0.08);
+    background:#fff;
+    font-size:1rem;
+    transition:box-shadow var(--transition), border-color var(--transition);
+}
+body.dark .contact-form input, body.dark .contact-form textarea {background:#222834; border:1px solid rgba(255,255,255,0.06); color:var(--text-dark);}
+.contact-form textarea {min-height:140px; resize:vertical;}
+.contact-form .btn-send {align-self:flex-end;padding:0.6rem 1rem;border-radius:0.6rem;background:var(--primary);color:#fff;border:none;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.12);}
+.contact-form .btn-send:hover {transform:translateY(-3px);}
+
+/* Footer - Reduced height/length */
+footer {
+    background:var(--bg-dark);
+    color:var(--text-dark);
+    padding:1rem 2rem;
+    text-align:center;
+    margin-top:1rem;
+    font-size:14px;
+}
+
+body.dark footer {
+    background:#0a0a0a;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {position:fixed; bottom:2rem; right:2rem; background:var(--primary); color:#fff; border:none; padding:1rem 1.2rem; border-radius:50%; box-shadow:0 5px 15px var(--shadow);z-index:1000;}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction:column;
+        text-align:center;
     }
+    
+    .hero .profile img {
+        width:140px;
+        height:140px;
+    }
+    
     .hero h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        font-size:1.8rem;
     }
+    
     .hero p {
-      font-size: 1.25rem;
-      margin-top: 10px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+        font-size:0.95rem;
     }
-
-    /* About Section */
+    
     section {
-      padding: 70px 0;
+        padding:2rem 1rem;
     }
-    #about {
-      background: #fff;
-      text-align: center;
+    
+    .navbar {
+        position:static;
+        justify-content:center;
+        margin-bottom:1rem;
     }
-    #about h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-    #about p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #666;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    /* Portfolio Section */
-    #portfolio {
-      background: #fefefe;
-    }
-    #portfolio h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 15px 20px;
-      flex-grow: 1;
-    }
-    .card-content h3 {
-      margin-bottom: 8px;
-      font-size: 1.25rem;
-      color: #222;
-    }
-    .card-content p {
-      color: #555;
-      font-size: 1rem;
-    }
-    .card-footer {
-      padding: 10px 20px;
-      background: #fafafa;
-      text-align: right;
-    }
-    .card-footer a {
-      font-weight: 600;
-      color: #3498db;
-    }
-
-    /* Contact Section */
-    #contact {
-      background: #fff;
-      text-align: center;
-    }
-    #contact h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .contact-info {
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-      color: #555;
-    }
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      resize: vertical;
-      transition: border-color 0.3s ease;
-    }
-    form input:focus, form textarea:focus {
-      border-color: #3498db;
-      outline: none;
-    }
-    form button {
-      display: inline-block;
-      background: #3498db;
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    form button:hover {
-      background: #2980b9;
-    }
-
-    /* Footer */
-    footer {
-      background: #222;
-      color: #bbb;
-      text-align: center;
-      padding: 15px 20px;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Nav menu button for small screens */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-    }
-    .menu-toggle span {
-      width: 25px;
-      height: 3px;
-      background: white;
-      border-radius: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        background: #222;
-        flex-direction: column;
-        width: 200px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        padding-top: 60px;
-      }
-      .nav-links.open {
-        transform: translateX(0);
-      }
-      .nav-links li {
-        margin: 20px 0;
-        font-size: 1.2rem;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-    }
-  </style>
+    
+    .contact-form .btn-send {width:100%;}
+}
+</style>
 </head>
 <body>
 
-<header>
-  <nav class="container">
-    <div class="logo" aria-label="Portfolio Logo">MyPortfolio</div>
-    <ul class="nav-links" id="nav-links" role="menu">
-      <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
-      <li role="none"><a href="#portfolio" role="menuitem" tabindex="-1">Portfolio</a></li>
-      <li role="none"><a href="#contact" role="menuitem" tabindex="-1">Contact</a></li>
-    </ul>
-    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" role="button" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
+<!-- Hero Section with Navigation -->
+<section class="hero">
+    <nav class="navbar" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#catalogue">Works</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero-content">
+        <div class="profile">
+            <img src="profile.jpg" alt="Birce SARI">
+        </div>
+        <div class="info">
+            <h1>Birce SARI</h1>
+            <p>Business Intelligence & Data Analytics Specialist | Data Storytelling Enthusiast</p>
+            <div class="buttons">
+                <a href="Birce_SARI_CV.pdf" download><i class="fas fa-download"></i> CV</a>
+                <a href="https://github.com/bircesari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/birce-sari" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://public.tableau.com/app/profile/birce.sari" target="_blank" title="Tableau"><i class="fas fa-chart-line"></i></a>
+                <a href="https://scholar.google.com/citations?user=XXXXXX" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="certifications.html" target="_blank" title="Certifications"><i class="fas fa-certificate"></i></a>
+            </div>
+        </div>
     </div>
-  </nav>
-</header>
+</section>
 
-<section class="hero" aria-label="Introduction hero section">
-  <div>
-    <h1>Hello, I'm John Doe</h1>
-    <p>Web Developer | Designer | Programmer</p>
+<!-- About Me Section -->
+<section id="about">
+<h2>About Me</h2>
+<p><strong>From Analysis to Actionable Intelligence:</strong> I don't just analyze data, I architect complete BI solutions that drive business success.</p>
+<p>As a Business Intelligence Specialist, Business Analyst, and Project Manager, I deliver the full spectrum: from strategic design to flawless execution. With 9 years of experience across healthcare, e-commerce, and enterprise organizations, I transform data complexity into competitive advantage.</p>
+<p><strong>What Sets Me Apart</strong></p>
+<p><strong>End-to-End Ownership:</strong> I design the strategy, build the solution, and manage delivery; ensuring every piece works together seamlessly.</p>
+<p><strong>Data Storytelling:</strong> Complex data becomes compelling visual narratives that stakeholders immediately understand and trust.</p>
+<p><strong>Guaranteed Results:</strong> My project management discipline ensures on-time delivery with measurable ROI; improved forecasting, reduced uncertainty.</p>
+<p><strong>International Expertise:</strong> Fluent in English, German, and Turkish, I bring global perspective and proven execution to every engagement.</p>
+<p>Ready to turn your data into growth? Let's connect.</p>
+</section>
+
+<!-- Skills & Certificates -->
+<section id="skills">
+    <h2>Skills & Certificates</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>📊 Data Analytics & BI</h3>
+            <ul>
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>SAP Analytics Cloud</li>
+                <li>Data Warehousing</li>
+                <li>ETL/ELT</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>🧠 Machine Learning & Data Science</h3>
+            <ul>
+                <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                <li>Statistical Analysis</li>
+                <li>Predictive Analytics</li>
+                <li>Dataiku</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>☁️ Data Infrastructure</h3>
+            <ul>
+                <li>Azure</li>
+                <li>MSSQL</li>
+                <li>Data Lakes</li>
+                <li>Real-time Streaming</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>🐍 Development</h3>
+            <ul>
+                <li>SQL (Advanced)</li>
+                <li>Python Development</li>
+                <li>APIs & Integration</li>
+                <li>Automation Scripts</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>📈 Business & Strategy</h3>
+            <ul>
+                <li>Project Management</li>
+                <li>Stakeholder Management</li>
+                <li>Change Management</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Projects / Catalogue -->
+<section id="catalogue">
+<h2>Catalogue of Works</h2>
+<div class="catalogue">
+    <img src="Revenue_dashboard.png" alt="Revenue Dashboard">
+    <img src="Sales_performance_dashboard.png" alt="Sales Performance">
+    <img src="Budget_overview_dashboard.png" alt="Budget Overview">
+    <img src="Customer_analysis_dashboard.png" alt="Customer Analysis">
+</div>
+</section>
+
+<!-- Experience Timeline -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Strategic Data Consultant & BI Specialist <span>(Freelancer)</span></h3>
+        <p class="exp-meta">Apr 2025 – Present | Berlin, Germany</p>
+        <ul>
+          <li>Architected automated BI dashboards that reduced ad-hoc reporting requests by 30%, enabling C-level executives to access real-time insights independently.</li>
+          <li>Partnered with executive teams across healthcare, femtech, and e-commerce to design and implement strategic analytics frameworks aligned with business objectives.</li>
+          <li>Led international workshops on experimental design and data visualization, elevating organizational analytics literacy by 40%.</li>
+          <li>Established compliance-driven data validation protocols ensuring full GDPR adherence across enterprise systems.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Senior Business and Data Analyst – Zorlu Holding</h3>
+        <p class="exp-meta">Jan 2020 – Sep 2023 | Izmir, Türkiye</p>
+        <ul>
+          <li>Spearheaded enterprise data warehouse transformation, eliminating 30% of manual processes and increasing operational efficiency by 20%.</li>
+          <li>Designed and deployed scalable analytics infrastructure on Azure, MSSQL, and Power BI for seamless multinational operations.</li>
+          <li>Developed 50+ executive dashboards that streamlined reporting processes, saving each department 10+ hours monthly.</li>
+          <li>Collaborated with finance, operations, and IT leadership to ensure data strategy directly supported corporate objectives.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>BI & Reporting Specialist – Zorlu Holding</h3>
+        <p class="exp-meta">Aug 2015 – Jan 2020 | Istanbul, Türkiye</p>
+        <ul>
+          <li>Designed C-level KPI visualization solutions improving decision-making speed by 20%.</li>
+          <li>Built SQL-driven reporting systems supporting HR, Finance, IT, and Production departments.</li>
+          <li>Established governance frameworks to ensure audit readiness and compliance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>SME ERP Solutions Consultant <span>(Freelancer)</span></h3>
+        <p class="exp-meta">Aug 2014 – Jul 2015 | Izmir, Türkiye</p>
+        <ul>
+          <li>Directed SAP B1 ERP selection and implementation for SMEs, boosting efficiency and reducing operational errors.</li>
+          <li>Delivered change management programs that accelerated system adoption.</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section id="about" class="container" aria-labelledby="about-title">
-  <h2 id="about-title">About Me</h2>
-  <p>
-    Passionate web developer with 5+ years of experience creating responsive, user-friendly websites and applications. I specialize in HTML, CSS, JavaScript and love turning ideas into reality through clean, efficient code.
-  </p>
+<!-- Service Catalogue (includes Documents Needed for Best Applications as part of it) -->
+<section id="services">
+<h2>Service Catalogue</h2>
+<div class="service-catalogue">
+    
+    <!-- Strategic Data Initiatives -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>🎯 Strategic Data Initiatives</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Digital Transformation Leadership</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Data strategy development and roadmap creation</li>
+                        <li>Analytics maturity assessment and improvement planning</li>
+                        <li>Digital transformation strategy and implementation roadmap</li>
+                        <li>Technology selection and vendor evaluation</li>
+                        <li>Data vision and executive alignment</li>
+                        <li>Analytics center of excellence (CoE) setup</li>
+                        <li>Data monetization strategy development</li>
+                        <li>Competitive intelligence and market research</li>
+                        <li>Organizational change management for data initiatives</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Business Intelligence & Performance Management</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Executive dashboards with KPI tracking and performance scorecards</li>
+                        <li>Real-time monitoring dashboards for operational oversight</li>
+                        <li>Performance scorecards and balanced scorecards</li>
+                        <li>Self-service BI platforms and user empowerment</li>
+                        <li>Automated reporting systems with intelligent alerts</li>
+                        <li>Multi-tenant dashboards for different stakeholder groups</li>
+                        <li>Interactive data visualizations and storytelling presentations</li>
+                        <li>Regulatory reporting compliance and audit trail implementation</li>
+                        <li>Ad-hoc reporting capabilities</li>
+                        <li>Infographic creation and design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Optimization -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>📊 Business Optimization & Insights</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Process Excellence & Automation</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Business process reengineering (BPR) and workflow optimization</li>
+                        <li>RPA implementation (UiPath, Robusta) for process automation</li>
+                        <li>Lean Six Sigma implementation and continuous improvement</li>
+                        <li>Standard operating procedures (SOP) development</li>
+                        <li>Bottleneck identification and resolution</li>
+                        <li>Workflow automation and approval process streamlining</li>
+                        <li>Process performance measurement and KPI development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Advanced Analytics & Predictive Intelligence</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Predictive analytics for forecasting (sales, demand, financial)</li>
+                        <li>Customer analytics (CLV prediction, churn analysis, segmentation)</li>
+                        <li>Risk assessment and fraud detection systems</li>
+                        <li>Market basket analysis and recommendation engines</li>
+                        <li>Anomaly detection and quality improvement systems</li>
+                        <li>Statistical hypothesis testing</li>
+                        <li>Regression analysis (linear, logistic, polynomial)</li>
+                        <li>Cluster analysis and customer segmentation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Strategic Business Analysis</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Market analysis and competitive intelligence</li>
+                        <li>SWOT analysis and strategic planning support</li>
+                        <li>Customer journey mapping and experience optimization</li>
+                        <li>Requirements analysis and stakeholder alignment</li>
+                        <li>Gap analysis and improvement recommendations</li>
+                        <li>Feasibility studies and ROI analysis</li>
+                        <li>Vendor evaluation and technology selection support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Foundation -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>🏗️ Data Foundation & Infrastructure</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Data Architecture & Integration</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Multi-source data integration (ERP, CRM, databases, APIs, cloud)</li>
+                        <li>Data lake and data warehouse design and implementation</li>
+                        <li>ETL/ELT pipeline development and automation</li>
+                        <li>Data migration services (legacy to modern systems)</li>
+                        <li>Real-time data streaming setup and monitoring</li>
+                        <li>Third-party data integration and web scraping services</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Data Quality & Governance</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Data governance framework development and implementation</li>
+                        <li>Data quality assessment and improvement programs</li>
+                        <li>Data cleansing and standardization processes</li>
+                        <li>Master data management (MDM) and data cataloging</li>
+                        <li>Data privacy compliance (GDPR, CCPA) implementation</li>
+                        <li>Data validation rules and monitoring systems</li>
+                        <li>Data profiling and anomaly detection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Delivery -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>🚀 Project Delivery & Implementation</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Enterprise Project Management</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Analytics project planning and execution</li>
+                        <li>Resource allocation and team management</li>
+                        <li>Timeline and milestone tracking with risk mitigation</li>
+                        <li>Budget management and cost optimization</li>
+                        <li>Stakeholder communication and executive reporting</li>
+                        <li>Change management for data initiatives</li>
+                        <li>Quality assurance and testing protocols</li>
+                        <li>Post-implementation support and optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Technology Implementation</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>BI tool implementation (Power BI, Tableau, Qlik)</li>
+                        <li>Database migration and system integration projects</li>
+                        <li>Data warehouse and analytics platform deployment</li>
+                        <li>Technology vendor management and coordination</li>
+                        <li>Training and adoption programs for user empowerment</li>
+                        <li>Support and maintenance planning and execution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Capability Building -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>💡 Capability Building & Knowledge Transfer</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Organizational Development</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Analytics training programs (Power BI, Tableau, SQL, Python)</li>
+                        <li>Data literacy workshops and capability building</li>
+                        <li>Best practices documentation and knowledge sharing</li>
+                        <li>Mentoring and coaching for analytics teams</li>
+                        <li>Custom training program development</li>
+                        <li>Certification preparation support</li>
+                        <li>Knowledge management system setup</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Industry-Specific Solutions</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Healthcare analytics (patient outcomes, operational efficiency)</li>
+                        <li>Retail analytics (customer behavior, inventory, pricing)</li>
+                        <li>Manufacturing analytics (quality, efficiency, predictive maintenance)</li>
+                        <li>Marketing analytics (campaign performance, customer acquisition)</li>
+                        <li>HR analytics (employee performance, retention, recruitment)</li>
+                        <li>Energy and utilities analytics (consumption, grid optimization)</li>
+                        <li>Education analytics (student performance, institutional effectiveness)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Documents Needed for Best Applications (moved as a service-category under Services) -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>📋 Documents Needed for Best Applications</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <!-- Initial Consultation -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Initial Consultation & Discovery</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Company overview and organizational structure</li>
+                        <li>Current business challenges and pain points</li>
+                        <li>Strategic goals and objectives (short-term and long-term)</li>
+                        <li>Key performance indicators (KPIs) currently tracked</li>
+                        <li>Decision-making processes and stakeholder map</li>
+                        <li>Budget constraints and resource availability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Data Assessment -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Data Assessment & Analysis</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>List of all data sources (databases, files, APIs, third-party)</li>
+                        <li>Data dictionaries and schema documentation</li>
+                        <li>Sample datasets (anonymized if necessary)</li>
+                        <li>Data volume and growth rate information</li>
+                        <li>Data refresh frequency and update schedules</li>
+                        <li>Historical data availability and retention policies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Project Execution -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Project Execution & Delivery</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Detailed project requirements and scope documentation</li>
+                        <li>User stories and use cases</li>
+                        <li>Reporting and dashboard mockups or wireframes</li>
+                        <li>Business rules and calculation logic</li>
+                        <li>Database connection strings and credentials (secure transfer)</li>
+                        <li>API keys and authentication tokens</li>
+                        <li>User acceptance testing (UAT) scenarios</li>
+                        <li>Performance benchmarks and SLA requirements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ongoing Support -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Ongoing Support & Maintenance</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Change request forms and approval workflows</li>
+                        <li>Impact assessment documentation</li>
+                        <li>Version control and release notes</li>
+                        <li>Training materials and user guides</li>
+                        <li>Technical documentation and architecture diagrams</li>
+                        <li>Troubleshooting guides and FAQs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 </section>
 
-<section id="portfolio" aria-labelledby="portfolio-title">
-  <h2 id="portfolio-title">My Work</h2>
-  <div class="grid">
-    <article class="card" tabindex="0" aria-label="Project: Responsive Blog Website">
-      <img src="https://images.unsplash.com/photo-1504691342899-00e7a2888f38?auto=format&fit=crop&w=600&q=80" alt="Screenshot of Responsive Blog Website" />
-      <div class="card-content">
-        <h3>Responsive Blog Website</h3>
-        <p>A clean blog layout optimized for mobile and desktop screens.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-    </article>
-
-    <article class="card" tabindex="0" aria-label="Project: E-commerce Landing Page">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Screenshot of E-commerce Landing Page" />
-      <div class="card-content">
-        <h3>E-commerce Landing Page</h3>
-        <p>Modern and sleek landing page design for online store.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-    </article>
-
-    <article class="card" tabindex="0" aria-label="Project: Portfolio Website">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Screenshot of Portfolio Website" />
-      <div class="card-content">
-        <h3>Portfolio Website</h3>
-        <p>Clean and modern portfolio to showcase work and skills.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-      </div>
-    </article>
-  </div>
+<!-- Education Section -->
+<section id="education">
+<h2>Education</h2>
+<div class="education-container">
+    <table class="education-table">
+        <thead>
+            <tr>
+                <th>Degree</th>
+                <th>Institution & Period</th>
+                <th>Highlights</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="degree">MSc in Data Analytics</div>
+                </td>
+                <td>
+                    <div class="university">University for the Creative Arts (UCA)</div>
+                    <div>Berlin, Germany</div>
+                    <div>2023–2025</div>
+                </td>
+                <td>
+                    <div class="thesis">Thesis: Enhancing Project Management through Machine Learning and Predictive Analytics</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="degree">BSc in Industrial Engineering</div>
+                </td>
+                <td>
+                    <div class="university">Koç University</div>
+                    <div>Istanbul, Türkiye</div>
+                    <div>2009–2014</div>
+                </td>
+                <td>
+                    <div class="thesis">Best Senior Project Award – Logistics Optimization for Auto Gas Facilities</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </section>
 
-<section id="contact" class="container" aria-labelledby="contact-title">
-  <h2 id="contact-title">Get In Touch</h2>
-  <p class="contact-info">
-    Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a> | Phone: <a href="tel:+1234567890">+1 234 567 890</a>
-  </p>
-  <form action="mailto:john.doe@example.com" method="post" enctype="text/plain" aria-label="Contact form">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="Name" placeholder="Your name" required />
-    
-    <label for="email">Email</label>
-    <input type="email" id="email" name="Email" placeholder="Your email" required />
-    
-    <label for="message">Message</label>
-    <textarea id="message" name="Message" placeholder="Your message" rows="5" required></textarea>
-    
-    <button type="submit">Send</button>
-  </form>
+<!-- Contact -->
+<section id="contact">
+    <div class="contact-content">
+        <h2>Let's Work Together</h2>
+        <p style="font-size: 18px; margin-bottom: 20px;">
+            I'm currently available for freelance projects. Whether you need data analysis, 
+            visualization, or consulting, I'd love to hear from you.
+        </p>
+        <div class="contact-info">
+            <div class="contact-item">
+                📧 <a href="mailto:birce.sari@gmail.com">birce.sari@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                📍 Berlin, Germany
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/bircesari" target="_blank" title="GitHub">
+                <i class="fab fa-github" style="font-size:2rem;"></i>
+            </a>
+            <a href="https://linkedin.com/in/birce-sari" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin" style="font-size:2rem;"></i>
+            </a>
+        </div>
+
+        <!-- E-mail form added after the "get in touch" part -->
+        <form class="contact-form" id="contact-form" method="post" action="#" aria-label="Contact form">
+            <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your full name" required>
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn-send">Send Message</button>
+        </form>
+
+    </div>
 </section>
 
 <footer>
-  &copy; 2024 John Doe. All rights reserved.
+    <div class="container">
+        <p>&copy; 2025 Birce SARI. All rights reserved.</p>
+        <p style="margin-top: 6px;">Based in Berlin, Germany</p>
+    </div>
 </footer>
 
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+
 <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+function toggleTheme() {
+    document.body.classList.toggle('dark');
+}
 
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    navLinks.classList.toggle('open');
-  });
-
-  // Accessibility: toggle menu with keyboard (Enter/Space)
-  menuToggle.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      menuToggle.click();
+function toggleCategory(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('i');
+    const isActive = content.classList.contains('active');
+    
+    // Close all categories
+    document.querySelectorAll('.category-content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.category-header i').forEach(i => i.style.transform = 'rotate(0)');
+    
+    // Close all subcategories
+    document.querySelectorAll('.service-list').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.subcategory-title i').forEach(i => i.style.transform = 'rotate(0)');
+    
+    if (!isActive) {
+        content.classList.add('active');
+        icon.style.transform = 'rotate(180deg)';
     }
-  });
+}
 
-  // Close nav menu when clicking a link (small screen)
-  [...navLinks.querySelectorAll('a')].forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinks.classList.contains('open')) {
-        navLinks.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', false);
-      }
-    });
-  });
+function toggleSubcategory(title) {
+    const list = title.nextElementSibling;
+    const icon = title.querySelector('i');
+    const isActive = list.classList.contains('active');
+    
+    // Close all subcategories in this category
+    const parent = title.closest('.category-content');
+    parent.querySelectorAll('.service-list').forEach(s => s.classList.remove('active'));
+    parent.querySelectorAll('.subcategory-title i').forEach(i => i.style.transform = 'rotate(0)');
+    
+    if (!isActive) {
+        list.classList.add('active');
+        icon.style.transform = 'rotate(90deg)';
+    }
+}
+
+/* Basic client-side submit handler to prevent navigation for demonstration.
+   Replace with real integration (email API or backend) as needed. */
+document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    // Basic validation already enforced by required attributes
+    alert('Thank you! Your message has been captured. (Hook this form to your backend/email service.)');
+    this.reset();
+});
 </script>
 
 </body>
