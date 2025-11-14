@@ -5,11 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Birce SARI | Data & BI Analyst Portfolio</title>
 <link rel="icon" href="BS_Logo.png" type="image/png">
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -26,14 +22,11 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;} /* smooth scrolling */
+html{scroll-behavior:smooth;}
 body{font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--text-light);transition:background var(--transition),color var(--transition);}
 
-
-/* Dark Theme */
 body.dark {background:var(--bg-dark);color:var(--text-dark);}
 
-/* NAV STAND (separate section the navbar stands on) */
 #nav-stand{
   background:linear-gradient(135deg,var(--primary),var(--secondary));
   position:sticky;
@@ -42,7 +35,6 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
   width:100%;
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
-/* Keep nav stand slightly taller so navbar has breathing room */
 #nav-stand .nav-container{
   max-width:1200px;
   margin:0 auto;
@@ -53,7 +45,6 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
   padding:0 1rem;
 }
 
-/* Navbar */
 .navbar{display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;}
 .navbar a{
   color:#fff;
@@ -62,10 +53,10 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
   border-radius:0.5rem;
   font-weight:500;
   transition:background var(--transition), transform var(--transition);
+  text-decoration:none;
 }
 .navbar a:hover{background:rgba(255,255,255,0.18);transform:translateY(-3px);}
     
-/* Hero Section */
 .hero {
     display:flex; 
     flex-wrap:wrap; 
@@ -87,8 +78,7 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
     text-align:left;
 }
 
-.hero .profile {flex-shrink:0;
-}
+.hero .profile {flex-shrink:0;}
 
 .hero .profile img {
     border-radius:50%; 
@@ -98,19 +88,10 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-.hero .info {
-    flex:1;
-}
+.hero .info {flex:1;}
 
-.hero h1 {
-    font-size:2.2rem; 
-    margin-bottom:0.5rem;
-}
-
-.hero p {
-    font-size:1.1rem; 
-    margin-bottom:1rem;
-}
+.hero h1 {font-size:2.2rem; margin-bottom:0.5rem;}
+.hero p {font-size:1.1rem; margin-bottom:1rem;}
 
 .hero .buttons {
     display:flex; 
@@ -129,23 +110,15 @@ body.dark {background:var(--bg-dark);color:var(--text-dark);}
     align-items:center; 
     gap:0.5rem; 
     box-shadow:0 5px 15px var(--shadow);
+    text-decoration:none;
 }
 
-.hero .buttons a:hover {
-    transform:translateY(-2px);
-}
+.hero .buttons a:hover {transform:translateY(-2px);}
+.hero .buttons a i {font-size:1.1rem;}
 
-.hero .buttons a i {
-    font-size:1.1rem;
-}
-
-<a href="#blog">Blog</a>
-  
-/* Sections */
 section{padding:3rem 2rem;max-width:1200px;margin:0 auto;}
-h2{color:var(--primary);margin-bottom:0.5rem;font-size:2rem;text-align:center;} /* center all section titles */
+h2{color:var(--primary);margin-bottom:0.5rem;font-size:2rem;text-align:center;}
 
-/* About Me - Paragraphs with equal spacing */
 #about p {
     text-align:left;
     margin-bottom:1rem;
@@ -153,7 +126,105 @@ h2{color:var(--primary);margin-bottom:0.5rem;font-size:2rem;text-align:center;} 
     font-size:1.05rem;
 }
 
-/* Education Section - Enlarged Width */
+/* Blog Section Styles */
+.blog-intro {
+    text-align:center;
+    margin-bottom:2rem;
+    font-size:1.05rem;
+    color:var(--text-light);
+}
+body.dark .blog-intro {color:var(--text-dark);}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background: #f9f9f9;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark .blog-card {background: #2a2a3d;}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(77, 208, 225, 0.3);
+}
+
+.blog-header {margin-bottom: 1rem;}
+
+.blog-card h3 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+body.dark .blog-meta {color: #aaa;}
+
+.blog-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.blog-tag {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.blog-excerpt {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    flex-grow: 1;
+}
+
+body.dark .blog-excerpt {color: var(--text-dark);}
+
+.blog-link {
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform var(--transition);
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.blog-link:hover {
+    transform: translateX(5px);
+}
+
 .education-container {max-width:1100px;margin:0 auto;}
 .education-table {width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:0.5rem;box-shadow:0 5px 15px var(--shadow);}
 .education-table thead {background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;}
@@ -168,7 +239,6 @@ body.dark .education-table .university {color:var(--text-dark);}
 .education-table .thesis {font-style:italic;font-size:0.95rem;color:#666;}
 body.dark .education-table .thesis {color:#aaa;}
 
-/* Skills & Certificates */
 .skills-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;}
 .skill-card {padding:1.5rem; background:linear-gradient(135deg,var(--secondary),var(--primary)); color:#fff; border-radius:1rem; box-shadow:0 5px 15px var(--shadow);}
 .skill-card h3 {margin-bottom:0.8rem;font-size:1.1rem;display:flex;align-items:center;gap:0.5rem;}
@@ -176,7 +246,6 @@ body.dark .education-table .thesis {color:#aaa;}
 .skill-card li {padding:0.3rem 0;font-size:0.95rem;padding-left:1rem;position:relative;}
 .skill-card li:before {content:"•";position:absolute;left:0;}
 
-/* Service Catalogue & Documents - 3 Levels */
 .service-catalogue {max-width:900px;margin:0 auto;}
 .service-category {margin-bottom:1.5rem;border-radius:0.5rem;overflow:hidden;box-shadow:0 3px 10px var(--shadow);}
 .category-header {background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;padding:1rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:1.2rem;font-weight:500;}
@@ -195,14 +264,12 @@ body.dark .subcategory {border-bottom:1px solid #444;}
 .service-list li {padding:0.4rem 0;padding-left:1.2rem;position:relative;line-height:1.6;}
 .service-list li:before {content:"•";position:absolute;left:0;color:var(--secondary);}
 
-/* Catalogue of Works Grid */
 #catalogue p.intro {margin-bottom:1rem;text-align:center;font-size:1.05rem;color:var(--text-light);}
 body.dark #catalogue p.intro {color:var(--text-dark);}
 .catalogue {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;justify-items:center;}
 .catalogue img {width:250px;height:150px;object-fit:cover;border-radius:1rem; box-shadow:0 5px 15px var(--shadow);transition:transform var(--transition);}
 .catalogue img:hover {transform:scale(1.05);}
 
-/* Experience Timeline - Vertical from Recent to Older */
 #experience {max-width:900px;margin:0 auto;padding:3rem 2rem;}
 #experience h2 {text-align:center;margin-bottom:40px;color:var(--primary);}
 .timeline {position:relative;margin-left:25px;padding-left:25px;border-left:3px solid var(--primary);}
@@ -221,82 +288,14 @@ body.dark .exp-meta {color:#bbb;}
 body.dark .timeline-content ul {color:var(--text-dark);}
 .timeline-content li {margin-bottom:6px;}
 
-/* Blog Section Styles*/
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.blog-card {
-    background: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 5px 15px var(--shadow);
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-body.dark .blog-card {
-    background: #2a2a3d;
-}
-
-.blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px var(--shadow);
-}
-
-.blog-header {
-    margin-bottom: 1rem;
-}
-
-.blog-card h3 {
-    color: var(--primary);
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.blog-date {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-body.dark .blog-date {
-    color: #aaa;
-}
-
-.blog-excerpt {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    color: var(--text-light);
-}
-
-body.dark .blog-excerpt {
-    color: var(--text-dark);
-}
-
-.blog-link {
-    color: var(--primary);
-    font-weight: 500;
-    display: inline-block;
-    transition: transform var(--transition);
-}
-
-.blog-link:hover {
-    transform: translateX(5px);
-}
-</style>
-  
-/* Contact */
 .contact-content {text-align:center;}
 .contact-info {margin:2rem 0;display:flex;flex-direction:column;gap:1rem;}
 .contact-item {font-size:1.1rem;}
-.contact-item a {color:var(--primary);font-weight:500;}
+.contact-item a {color:var(--primary);font-weight:500;text-decoration:none;}
 .social-links {display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;}
 .social-links a {color:var(--primary);transition:transform 0.3s;}
 .social-links a:hover {transform:scale(1.2);}
 
-    /* Contact Form (Email section) */
 .contact-form{max-width:800px;margin:1.5rem auto 0;display:flex;flex-direction:column;gap:0.75rem;text-align:left;}
 .contact-form label{font-weight:500;margin-bottom:0.25rem;color:var(--text-light);}
 .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{
@@ -310,10 +309,9 @@ body.dark .blog-excerpt {
 }
 body.dark .contact-form input, body.dark .contact-form textarea{background:#222834;border:1px solid rgba(255,255,255,0.06); color:var(--text-dark);}
 .contact-form textarea{min-height:140px;resize:vertical;}
-.contact-form .btn-send{align-self:flex-end;padding:0.6rem 1rem;border-radius:0.6rem;background:var(--primary);color:#fff;border:none;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.12);}
+.contact-form .btn-send{align-self:flex-end;padding:0.6rem 1rem;border-radius:0.6rem;background:var(--primary);color:#fff;border:none;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.12);cursor:pointer;}
 .contact-form .btn-send:hover{transform:translateY(-3px);}
     
-/* Footer - Reduced margin */
 footer {
     background:var(--bg-dark);
     color:var(--text-dark);
@@ -322,14 +320,10 @@ footer {
     margin-top:2rem;
 }
 
-body.dark footer {
-    background:#0a0a0a;
-}
+body.dark footer {background:#0a0a0a;}
 
-/* Dark/Light Toggle Button */
-.theme-toggle {position:fixed; bottom:2rem; right:2rem; background:var(--primary); color:#fff; border:none; padding:1rem 1.2rem; border-radius:50%; box-shadow:0 5px 15px var(--shadow);z-index:1000;}
+.theme-toggle {position:fixed; bottom:2rem; right:2rem; background:var(--primary); color:#fff; border:none; padding:1rem 1.2rem; border-radius:50%; box-shadow:0 5px 15px var(--shadow);z-index:1000;cursor:pointer;}
 
-/* Responsive */
 @media (max-width:768px){
   .hero-content{flex-direction:column;text-align:center;}
   .hero .profile img{width:140px;height:140px;}
@@ -339,12 +333,12 @@ body.dark footer {
   #nav-stand .nav-container{height:auto;padding:0.5rem 1rem;}
   .navbar{justify-content:center;}
   .contact-form .btn-send{width:100%;}
+  .blog-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV STAND: separate section that the navbar sits on; sticky -->
 <header id="nav-stand" aria-hidden="false">
   <div class="nav-container">
     <nav class="navbar" aria-label="Primary navigation">
@@ -352,6 +346,7 @@ body.dark footer {
       <a href="#skills">Skills</a>
       <a href="#catalogue">Works</a>
       <a href="#experience">Experience</a>
+      <a href="#blog">Blog</a>
       <a href="#services">Services</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
@@ -359,7 +354,6 @@ body.dark footer {
   </div>
 </header>
 
-<!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
         <div class="profile">
@@ -380,7 +374,6 @@ body.dark footer {
     </div>
 </section>
 
-<!-- About Me Section -->
 <section id="about">
 <h2>About Me</h2>
 <p><strong>From Analysis to Actionable Intelligence:</strong> I don't just analyze data, I architect complete BI solutions that drive business success.</p>
@@ -393,7 +386,6 @@ body.dark footer {
 <p>Ready to turn your data into growth? Let's connect.</p>
 </section>
 
-<!-- Skills & Certificates -->
 <section id="skills">
     <h2>Skills & Certificates</h2>
     <div class="skills-grid">
@@ -445,7 +437,6 @@ body.dark footer {
     </div>
 </section>
 
-<!-- Projects / Catalogue -->
 <section id="catalogue">
 <h2>Catalogue of Works</h2>
 <div class="catalogue">
@@ -456,11 +447,9 @@ body.dark footer {
 </div>
 </section>
 
-<!-- Experience Timeline -->
 <section id="experience">
   <h2>Experience</h2>
   <div class="timeline">
-
     <div class="timeline-item">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
@@ -513,9 +502,86 @@ body.dark footer {
         </ul>
       </div>
     </div>
-
   </div>
 </section>
+
+<!-- Blog Section -->
+<section id="blog">
+    <h2>Blog & Insights</h2>
+    <p class="blog-intro">
+        Sharing thoughts on data analytics, business intelligence, and the intersection of technology and strategy.
+    </p>
+    <div class="blog-grid">
+        <article class="blog-card">
+            <div class="blog-header">
+                <h3>DEIB: Diversity, Equity, Inclusion & Belonging in Data Teams</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> November 2025</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">DEIB</span>
+                    <span class="blog-tag">Data Culture</span>
+                    <span class="blog-tag">Leadership</span>
+                </div>
+            </div>
+            <p class="blog-excerpt">
+                Building diverse, equitable, and inclusive data teams isn't just the right thing to do—it's a 
+                strategic advantage. Explore how DEIB principles transform analytics organizations and drive 
+                better business outcomes through varied perspectives and inclusive practices.
+            </p>
+            <a href="blog/DEIB_Diversity_Equity_Inclusion_Belonging.html" class="blog-link">
+                Read Full Article <i class="fas fa-arrow-right"></i>
+            </a>
+        </article>
+
+        <!-- Placeholder for future blog posts -->
+        <article class="blog-card" style="opacity:0.6;">
+            <div class="blog-header">
+                <h3>Building Effective BI Dashboards: A Practitioner's Guide</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> Coming Soon</span>
+                    <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">BI</span>
+                    <span class="blog-tag">Dashboards</span>
+                    <span class="blog-tag">Best Practices</span>
+                </div>
+            </div>
+            <p class="blog-excerpt">
+                From stakeholder interviews to visual hierarchy, learn the practical steps to creating 
+                dashboards that drive decisions, not confusion.
+            </p>
+            <span class="blog-link" style="opacity:0.5;">
+                Coming Soon <i class="fas fa-hourglass-half"></i>
+            </span>
+        </article>
+
+        <article class="blog-card" style="opacity:0.6;">
+            <div class="blog-header">
+                <h3>Data Quality: The Hidden Cost of Bad Data</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> Coming Soon</span>
+                    <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">Data Quality</span>
+                    <span class="blog-tag">Governance</span>
+                    <span class="blog-tag">Strategy</span>
+                </div>
+            </div>
+            <p class="blog-excerpt">
+                Poor data quality costs businesses millions annually. Discover frameworks and practical 
+                approaches to implementing robust data quality programs.
+            </p>
+            <span class="blog-link" style="opacity:0.5;">
+                Coming Soon <i class="fas fa-hourglass-half"></i>
+            </span>
+        </article>
+    </div>
+</section>
+
 
 <!-- Service Catalogue -->
 <section id="services">
