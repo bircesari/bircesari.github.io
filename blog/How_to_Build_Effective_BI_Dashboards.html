@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title | Birce SARI</title>
+    <link rel="icon" href="../BS_Logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #4dd0e1;
+            --secondary: #b39ddb;
+            --bg-light: #ffffff;
+            --text-light: #1e1e2f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        article {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .post-meta {
+            color: #666;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .share-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .share-buttons a {
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .share-linkedin {
+            background: #0077b5;
+        }
+        
+        .share-twitter {
+            background: #1da1f2;
+        }
+        
+        footer {
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span>Birce SARI Blog</span>
+        </div>
+    </header>
+    
+    <article>
+        <h1>How to Build Effective BI Dashboards</h1>
+        
+        <div class="post-meta">
+            <span><i class="far fa-calendar"></i> November 14, 2025</span>
+            <span><i class="far fa-clock"></i> 5 min read</span>
+            <span><i class="fas fa-tag"></i> Business Intelligence, Dashboards</span>
+        </div>
+        
+        <p>
+            In my years of working with business intelligence, I've seen countless dashboards—some that 
+            transform decision-making and others that collect digital dust. Here's what I've learned 
+            about building dashboards that actually get used.
+        </p>
+        
+        <h2>1. Start with the Questions, Not the Data</h2>
+        <p>
+            The biggest mistake in dashboard design? Starting with "what data do we have?" instead of 
+            "what decisions need to be made?" Before touching any tool, I always conduct stakeholder 
+            interviews to understand:
+        </p>
+        <ul>
+            <li>What decisions are you trying to make?</li>
+            <li>What questions keep you up at night?</li>
+            <li>What would success look like in 6 months?</li>
+        </ul>
+        
+        <h2>2. The 5-Second Rule</h2>
+        <p>
+            If your dashboard can't communicate its main insight in 5 seconds, it's too complex. 
+            I use the "executive elevator test"—could your CEO understand the key message while 
+            riding an elevator?
+        </p>
+        
+        <blockquote>
+            "A dashboard should answer questions, not raise them." - My mentor's best advice
+        </blockquote>
+        
+        <h2>3. Visual Hierarchy Matters</h2>
+        <p>
+            Your eyes should naturally flow to the most important information first. Here's my 
+            hierarchy framework:
+        </p>
+        <ol>
+            <li><strong>Top-left:</strong> Most critical KPI</li>
+            <li><strong>Top-right:</strong> Comparison or trend</li>
+            <li><strong>Middle:</strong> Supporting details</li>
+            <li><strong>Bottom:</strong> Drill-down capabilities</li>
+        </ol>
+        
+        <h2>Real-World Example</h2>
+        <p>
+            At Zorlu Holding, we had a dashboard with 47 metrics. Usage was low, and executives 
+            complained about information overload. We redesigned it to show just 5 key metrics 
+            with the ability to drill down. Result? Daily active users increased by 300%.
+        </p>
+        
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li>Less is more—focus on decision-driving metrics</li>
+            <li>Test with actual users before full rollout</li>
+            <li>Update based on feedback, not assumptions</li>
+            <li>Mobile-first design is no longer optional</li>
+        </ul>
+        
+        <div class="share-section">
+            <h3>Found this helpful? Share it!</h3>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL" target="_blank" class="share-linkedin">
+                    <i class="fab fa-linkedin"></i> Share on LinkedIn
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Great%20insights%20on%20BI%20dashboards" target="_blank" class="share-twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+            </div>
+        </div>
+    </article>
+    
+    <footer>
+        <p>&copy; 2025 Birce SARI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
