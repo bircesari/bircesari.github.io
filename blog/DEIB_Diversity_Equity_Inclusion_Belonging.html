@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post Title | Birce SARI</title>
+    <title>Beyond Good Intentions: Making DEIB Actually Work | Birce SARI</title>
     <link rel="icon" href="../BS_Logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -71,12 +71,6 @@
             flex-wrap: wrap;
         }
         
-        .post-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        
         h1 {
             color: var(--primary);
             margin-bottom: 1rem;
@@ -98,38 +92,12 @@
             margin-bottom: 1.5rem;
         }
         
-        li {
-            margin-bottom: 0.5rem;
-        }
-        
-        code {
-            background: #f4f4f4;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-        }
-        
-        pre {
-            background: #f4f4f4;
-            padding: 1rem;
-            border-radius: 5px;
-            overflow-x: auto;
-            margin-bottom: 1.5rem;
-        }
-        
         blockquote {
             border-left: 4px solid var(--primary);
             padding-left: 1rem;
             margin: 1.5rem 0;
             font-style: italic;
             color: #555;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 1.5rem 0;
         }
         
         .share-section {
@@ -173,6 +141,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -184,77 +153,426 @@
     </header>
     
     <article>
-        <h1>How to Build Effective BI Dashboards</h1>
+        <h1>Beyond Good Intentions: What I Learned About Making DEIB Actually Work</h1>
         
         <div class="post-meta">
-            <span><i class="far fa-calendar"></i> November 14, 2025</span>
-            <span><i class="far fa-clock"></i> 5 min read</span>
-            <span><i class="fas fa-tag"></i> Business Intelligence, Dashboards</span>
+            <span><i class="far fa-calendar"></i> November 27, 2025</span>
+            <span><i class="far fa-clock"></i> 7 min read</span>
+            <span><i class="fas fa-tag"></i> DEIB, Organizational Culture, Analytics</span>
         </div>
-        
+
         <p>
-            In my years of working with business intelligence, I've seen countless dashboards—some that 
-            transform decision-making and others that collect digital dust. Here's what I've learned 
-            about building dashboards that actually get used.
+            I'll be honest, I started Dr. Tana M. Session's course on DEIB data and metrics thinking I'd pick 
+            up a few tips on tracking diversity numbers. What I got instead was a complete shift in how I 
+            think about making real change happen inside organizations.
         </p>
-        
-        <h2>1. Start with the Questions, Not the Data</h2>
+
+        <h2>The Wake-Up Call</h2>
         <p>
-            The biggest mistake in dashboard design? Starting with "what data do we have?" instead of 
-            "what decisions need to be made?" Before touching any tool, I always conduct stakeholder 
-            interviews to understand:
+            Here's the uncomfortable truth: many of us have been part of companies that talk a big game 
+            about diversity and inclusion. We sit through trainings, we see updated mission statements, 
+            maybe we even celebrate when hiring numbers look better. And then... very little changes.
         </p>
+
+        <p>
+            People still don’t feel like they belong. Talented employees from underrepresented groups 
+            still leave. The culture still feels the same.
+        </p>
+
+        <p>
+            Dr. Session gets straight to the root of why this happens: we're measuring the wrong things, 
+            or not measuring much at all beyond surface-level demographics.
+        </p>
+
+        <h2>What Actually Matters</h2>
+        <p>
+            The course drove home a truth that's obvious in hindsight but often ignored: if you can't 
+            measure it, you can't manage it.
+        </p>
+
+        <p>
+            But metrics shouldn't stop at counting heads. DEIB data needs to reflect <strong>experiences</strong>, 
+            not just demographics. The course highlighted the indicators that actually show whether people 
+            feel they belong:
+        </p>
+
         <ul>
-            <li>What decisions are you trying to make?</li>
-            <li>What questions keep you up at night?</li>
-            <li>What would success look like in 6 months?</li>
+            <li>Are people from diverse backgrounds being promoted at the same rates?</li>
+            <li>What do exit interviews really reveal about why people leave?</li>
+            <li>Do employee surveys show different experiences across different groups?</li>
+            <li>Are diverse voices actively shaping decisions, or just present in the room?</li>
         </ul>
-        
-        <h2>2. The 5-Second Rule</h2>
+
+        <h2>The Messy Middle</h2>
         <p>
-            If your dashboard can't communicate its main insight in 5 seconds, it's too complex. 
-            I use the "executive elevator test"—could your CEO understand the key message while 
-            riding an elevator?
+            One of the most valuable parts was learning about the roadblocks to collecting meaningful data.
+            Sometimes it's technical, disconnected systems, missing survey questions, inconsistent reporting. 
+            But just as often, it's cultural.
         </p>
-        
-        <blockquote>
-            "A dashboard should answer questions, not raise them." - My mentor's best advice
-        </blockquote>
-        
-        <h2>3. Visual Hierarchy Matters</h2>
+
         <p>
-            Your eyes should naturally flow to the most important information first. Here's my 
-            hierarchy framework:
+            People are afraid of what the data might expose. They worry about privacy. Or they're simply 
+            reluctant to disrupt the status quo.
         </p>
-        <ol>
-            <li><strong>Top-left:</strong> Most critical KPI</li>
-            <li><strong>Top-right:</strong> Comparison or trend</li>
-            <li><strong>Middle:</strong> Supporting details</li>
-            <li><strong>Bottom:</strong> Drill-down capabilities</li>
-        </ol>
-        
-        <h2>Real-World Example</h2>
+
         <p>
-            At Zorlu Holding, we had a dashboard with 47 metrics. Usage was low, and executives 
-            complained about information overload. We redesigned it to show just 5 key metrics 
-            with the ability to drill down. Result? Daily active users increased by 300%.
+            Dr. Session doesn't sugarcoat this reality. She acknowledges that meaningful organizational 
+            change is uncomfortable, slow, and requires persistence. But she also provides practical ways 
+            to handle resistance and keep moving forward.
         </p>
-        
-        <h2>Key Takeaways</h2>
-        <ul>
-            <li>Less is more—focus on decision-driving metrics</li>
-            <li>Test with actual users before full rollout</li>
-            <li>Update based on feedback, not assumptions</li>
-            <li>Mobile-first design is no longer optional</li>
-        </ul>
-        
+
+        <h2>Making It Your Own</h2>
+        <p>
+            What clicked for me was realizing that DEIB cannot be a one-size-fits-all program copied from 
+            another company. A tech startup, a manufacturing plant, and a hospital each have entirely 
+            different cultural dynamics and structural challenges.
+        </p>
+
+        <p>
+            The course gave me a framework for tailoring DEIB metrics to fit the actual state of an 
+            organization, not an idealized version of what it <em>should</em> look like.
+        </p>
+
+        <p>
+            It’s not about achieving some abstract version of “perfect diversity.” It’s about 
+            understanding your culture, identifying the gaps, and creating accountability to close them.
+        </p>
+
+        <h2>The Work Ahead</h2>
+        <p>
+            I’m leaving the course with more questions than answers, in the best possible way. I'm thinking 
+            differently about how to turn employee feedback into real, trackable goals. I'm more aware of 
+            the need to manage expectations around how long meaningful culture change takes.
+        </p>
+
+        <p>
+            Most importantly, I'm convinced that sustainable DEIB work requires both empathy and analytics.
+            We need to care deeply about people while also having the discipline to measure progress with 
+            honesty and courage.
+        </p>
+
+        <p>
+            Dr. Session’s expertise as an organizational development strategist shines in how she connects 
+            these dots. This isn't theory, it's practical wisdom shaped by real organizational challenges.
+        </p>
+
+        <h2>Your Turn</h2>
+        <p>
+            If you're working on DEIB within your organization, I'm curious: What’s been your biggest 
+            challenge? Are you measuring the right things? How are you navigating the gap between where 
+            you are and where you want to be?
+        </p>
+
+        <p>
+            None of us have this fully figured out, but conversations like these help us move closer to 
+            meaningful, human-centered change.
+        </p>
+
+        <p>
+            I completed this course through LinkedIn Learning, which offers PDUs for those tracking 
+            continuing education credits.
+        </p>
+
         <div class="share-section">
             <h3>Found this helpful? Share it!</h3>
             <div class="share-buttons">
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL" target="_blank" class="share-linkedin">
                     <i class="fab fa-linkedin"></i> Share on LinkedIn
                 </a>
-                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Great%20insights%20on%20BI%20dashboards" target="_blank" class="share-twitter">
+                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Insights%20on%20DEIB%20analytics%20and%20culture%20change" target="_blank" class="share-twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+            </div>
+        </div>
+    </article>
+    
+    <footer>
+        <p>&copy; 2025 Birce SARI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Good Intentions: Making DEIB Actually Work | Birce SARI</title>
+    <link rel="icon" href="../BS_Logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #4dd0e1;
+            --secondary: #b39ddb;
+            --bg-light: #ffffff;
+            --text-light: #1e1e2f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        article {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .post-meta {
+            color: #666;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .share-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .share-buttons a {
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .share-linkedin {
+            background: #0077b5;
+        }
+        
+        .share-twitter {
+            background: #1da1f2;
+        }
+        
+        footer {
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span>Birce SARI Blog</span>
+        </div>
+    </header>
+    
+    <article>
+        <h1>Beyond Good Intentions: What I Learned About Making DEIB Actually Work</h1>
+        
+        <div class="post-meta">
+            <span><i class="far fa-calendar"></i> November 27, 2025</span>
+            <span><i class="far fa-clock"></i> 7 min read</span>
+            <span><i class="fas fa-tag"></i> DEIB, Organizational Culture, Analytics</span>
+        </div>
+
+        <p>
+            I'll be honest, I started Dr. Tana M. Session's course on DEIB data and metrics thinking I'd pick 
+            up a few tips on tracking diversity numbers. What I got instead was a complete shift in how I 
+            think about making real change happen inside organizations.
+        </p>
+
+        <h2>The Wake-Up Call</h2>
+        <p>
+            Here's the uncomfortable truth: many of us have been part of companies that talk a big game 
+            about diversity and inclusion. We sit through trainings, we see updated mission statements, 
+            maybe we even celebrate when hiring numbers look better. And then... very little changes.
+        </p>
+
+        <p>
+            People still don’t feel like they belong. Talented employees from underrepresented groups 
+            still leave. The culture still feels the same.
+        </p>
+
+        <p>
+            Dr. Session gets straight to the root of why this happens: we're measuring the wrong things, 
+            or not measuring much at all beyond surface-level demographics.
+        </p>
+
+        <h2>What Actually Matters</h2>
+        <p>
+            The course drove home a truth that's obvious in hindsight but often ignored: if you can't 
+            measure it, you can't manage it.
+        </p>
+
+        <p>
+            But metrics shouldn't stop at counting heads. DEIB data needs to reflect <strong>experiences</strong>, 
+            not just demographics. The course highlighted the indicators that actually show whether people 
+            feel they belong:
+        </p>
+
+        <ul>
+            <li>Are people from diverse backgrounds being promoted at the same rates?</li>
+            <li>What do exit interviews really reveal about why people leave?</li>
+            <li>Do employee surveys show different experiences across different groups?</li>
+            <li>Are diverse voices actively shaping decisions, or just present in the room?</li>
+        </ul>
+
+        <h2>The Messy Middle</h2>
+        <p>
+            One of the most valuable parts was learning about the roadblocks to collecting meaningful data.
+            Sometimes it's technical, disconnected systems, missing survey questions, inconsistent reporting. 
+            But just as often, it's cultural.
+        </p>
+
+        <p>
+            People are afraid of what the data might expose. They worry about privacy. Or they're simply 
+            reluctant to disrupt the status quo.
+        </p>
+
+        <p>
+            Dr. Session doesn't sugarcoat this reality. She acknowledges that meaningful organizational 
+            change is uncomfortable, slow, and requires persistence. But she also provides practical ways 
+            to handle resistance and keep moving forward.
+        </p>
+
+        <h2>Making It Your Own</h2>
+        <p>
+            What clicked for me was realizing that DEIB cannot be a one-size-fits-all program copied from 
+            another company. A tech startup, a manufacturing plant, and a hospital each have entirely 
+            different cultural dynamics and structural challenges.
+        </p>
+
+        <p>
+            The course gave me a framework for tailoring DEIB metrics to fit the actual state of an 
+            organization, not an idealized version of what it <em>should</em> look like.
+        </p>
+
+        <p>
+            It’s not about achieving some abstract version of “perfect diversity.” It’s about 
+            understanding your culture, identifying the gaps, and creating accountability to close them.
+        </p>
+
+        <h2>The Work Ahead</h2>
+        <p>
+            I’m leaving the course with more questions than answers, in the best possible way. I'm thinking 
+            differently about how to turn employee feedback into real, trackable goals. I'm more aware of 
+            the need to manage expectations around how long meaningful culture change takes.
+        </p>
+
+        <p>
+            Most importantly, I'm convinced that sustainable DEIB work requires both empathy and analytics.
+            We need to care deeply about people while also having the discipline to measure progress with 
+            honesty and courage.
+        </p>
+
+        <p>
+            Dr. Session’s expertise as an organizational development strategist shines in how she connects 
+            these dots. This isn't theory, it's practical wisdom shaped by real organizational challenges.
+        </p>
+
+        <h2>Your Turn</h2>
+        <p>
+            If you're working on DEIB within your organization, I'm curious: What’s been your biggest 
+            challenge? Are you measuring the right things? How are you navigating the gap between where 
+            you are and where you want to be?
+        </p>
+
+        <p>
+            None of us have this fully figured out, but conversations like these help us move closer to 
+            meaningful, human-centered change.
+        </p>
+
+        <p>
+            I completed this course through LinkedIn Learning, which offers PDUs for those tracking 
+            continuing education credits.
+        </p>
+
+        <div class="share-section">
+            <h3>Found this helpful? Share it!</h3>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL" target="_blank" class="share-linkedin">
+                    <i class="fab fa-linkedin"></i> Share on LinkedIn
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Insights%20on%20DEIB%20analytics%20and%20culture%20change" target="_blank" class="share-twitter">
                     <i class="fab fa-twitter"></i> Share on Twitter
                 </a>
             </div>
