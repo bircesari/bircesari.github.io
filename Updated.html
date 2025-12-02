@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birce SARI | Data & BI Analyst Portfolio</title>
+<link rel="icon" href="BS_Logo.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Cookie Script -->
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/a4aa241dcbaf0fd5577ed420dd3efce9.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5C0HDP4GR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G5C0HDP4GR');
+</script>
+  
+<style>
+:root{
+  --primary:#4dd0e1;
+  --secondary:#b39ddb;
+  --bg-light:#ffffff;
+  --bg-dark:#1e1e2f;
+  --text-light:#1e1e2f;
+  --text-dark:#f5f5f5;
+  --shadow:rgba(0,0,0,0.1);
+  --transition:0.3s ease-in-out;
+  --nav-height:68px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--text-light);transition:background var(--transition),color var(--transition);}
+
+body.dark {background:var(--bg-dark);color:var(--text-dark);}
+
+#nav-stand{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  position:sticky;
+  top:0;
+  z-index:9999;
+  width:100%;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+#nav-stand .nav-container{
+  max-width:1200px;
+  margin:0 auto;
+  height:var(--nav-height);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 1rem;
+}
+
+.navbar{display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;}
+.navbar a{
+  color:#fff;
+  background:rgba(255,255,255,0.12);
+  padding:0.5rem 0.8rem;
+  border-radius:0.5rem;
+  font-weight:500;
+  transition:background var(--transition), transform var(--transition);
+  text-decoration:none;
+}
+.navbar a:hover{background:rgba(255,255,255,0.18);transform:translateY(-3px);}
+    
+.hero {
+    display:flex; 
+    flex-wrap:wrap; 
+    align-items:center; 
+    justify-content:center;
+    min-height:35vh; 
+    padding:2rem 1.5rem;
+    background:linear-gradient(135deg, var(--primary), var(--secondary));
+    color:#fff;
+}
+
+.hero-content {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:2rem;
+    max-width:1200px;
+    width:100%;
+    text-align:left;
+}
+
+.hero .profile {flex-shrink:0;}
+
+.hero .profile img {
+    border-radius:50%; 
+    width:180px; 
+    height:180px; 
+    object-fit:cover;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.hero .info {flex:1;}
+
+.hero h1 {font-size:2.2rem; margin-bottom:0.5rem;}
+.hero p {font-size:1.1rem; margin-bottom:1rem;}
+
+.hero .buttons {
+    display:flex; 
+    gap:0.8rem; 
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.hero .buttons a {
+    padding:0.6rem 1rem; 
+    border-radius:0.5rem; 
+    background:#fff; 
+    color:var(--primary); 
+    font-weight:500; 
+    display:flex; 
+    align-items:center; 
+    gap:0.5rem; 
+    box-shadow:0 5px 15px var(--shadow);
+    text-decoration:none;
+}
+
+.hero .buttons a:hover {transform:translateY(-2px);}
+.hero .buttons a i {font-size:1.1rem;}
+
+section{padding:3rem 2rem;max-width:1200px;margin:0 auto;}
+h2{color:var(--primary);margin-bottom:0.5rem;font-size:2rem;text-align:center;}
+
+#about p {
+    text-align:left;
+    margin-bottom:1rem;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.vision-positioning {
+    background:#f8f6ff;
+    padding:2rem;
+    border-radius:1rem;
+    margin-top:2rem;
+    box-shadow:0 5px 15px var(--shadow);
+}
+
+body.dark .vision-positioning {background:#2a2a3d;}
+
+.vision-positioning h3 {
+    color:var(--primary);
+    margin-bottom:1rem;
+    font-size:1.3rem;
+}
+
+.vision-positioning p {
+    line-height:1.8;
+    margin-bottom:1rem;
+}
+
+.vision-positioning .highlight-box {
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
+    color:#fff;
+    padding:1.5rem;
+    border-radius:0.8rem;
+    margin-top:1.5rem;
+    font-weight:500;
+    font-size:1.1rem;
+    text-align:center;
+    line-height:1.6;
+}
+
+/* Blog Section Styles */
+.blog-intro {
+    text-align:center;
+    margin-bottom:2rem;
+    font-size:1.05rem;
+    color:var(--text-light);
+}
+body.dark .blog-intro {color:var(--text-dark);}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background: #f9f9f9;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark .blog-card {background: #2a2a3d;}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(77, 208, 225, 0.3);
+}
+
+.blog-header {margin-bottom: 1rem;}
+
+.blog-card h3 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+body.dark .blog-meta {color: #aaa;}
+
+.blog-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.blog-tag {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.blog-excerpt {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    flex-grow: 1;
+}
+
+body.dark .blog-excerpt {color: var(--text-dark);}
+
+.blog-link {
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform var(--transition);
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.blog-link:hover {
+    transform: translateX(5px);
+}
+
+.education-container {max-width:1100px;margin:0 auto;}
+.education-table {width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:0.5rem;box-shadow:0 5px 15px var(--shadow);}
+.education-table thead {background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;}
+.education-table th {padding:1rem;text-align:left;font-weight:500;}
+.education-table tbody tr {background:#f9f9f9;border-bottom:1px solid #e0e0e0;}
+body.dark .education-table tbody tr {background:#2a2a3d;border-bottom:1px solid #444;}
+.education-table tbody tr:last-child {border-bottom:none;}
+.education-table td {padding:1rem;line-height:1.6;}
+.education-table .degree {font-weight:500;color:var(--primary);margin-bottom:0.3rem;}
+.education-table .university {color:var(--text-light);margin-bottom:0.3rem;}
+body.dark .education-table .university {color:var(--text-dark);}
+.education-table .thesis {font-style:italic;font-size:0.95rem;color:#666;}
+body.dark .education-table .thesis {color:#aaa;}
+
+.skills-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;}
+.skill-card {padding:1.5rem; background:linear-gradient(135deg,var(--secondary),var(--primary)); color:#fff; border-radius:1rem; box-shadow:0 5px 15px var(--shadow);}
+.skill-card h3 {margin-bottom:0.8rem;font-size:1.1rem;display:flex;align-items:center;gap:0.5rem;}
+.skill-card ul {list-style:none;padding:0;}
+.skill-card li {padding:0.3rem 0;font-size:0.95rem;padding-left:1rem;position:relative;}
+.skill-card li:before {content:"•";position:absolute;left:0;}
+
+.service-catalogue {max-width:900px;margin:0 auto;}
+.service-intro {
+    text-align:center;
+    margin-bottom:2rem;
+    font-size:1.05rem;
+}
+.download-catalogue {
+    text-align:center;
+    margin:2rem 0;
+}
+.download-catalogue a {
+    display:inline-flex;
+    align-items:center;
+    gap:0.8rem;
+    padding:1rem 2rem;
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
+    color:#fff;
+    font-weight:600;
+    font-size:1.1rem;
+    border-radius:0.8rem;
+    text-decoration:none;
+    box-shadow:0 5px 15px var(--shadow);
+    transition:transform var(--transition), box-shadow var(--transition);
+}
+.download-catalogue a:hover {
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(77, 208, 225, 0.4);
+}
+.service-category {margin-bottom:1.5rem;border-radius:0.5rem;overflow:hidden;box-shadow:0 3px 10px var(--shadow);}
+.category-header {background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;padding:1rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:1.2rem;font-weight:500;}
+.category-header:hover {opacity:0.9;}
+.category-content {max-height:0;overflow:hidden;transition:max-height 0.4s ease;background:#f9f9f9;}
+body.dark .category-content {background:#2a2a3d;}
+.category-content.active {max-height:3000px;}
+.service-item {border-bottom:1px solid #e0e0e0;padding:1.5rem;}
+body.dark .service-item {border-bottom:1px solid #444;}
+.service-item:last-child {border-bottom:none;}
+.service-item h4 {font-weight:600;color:var(--primary);margin-bottom:0.8rem;font-size:1.1rem;}
+.service-item .service-details {margin-bottom:1rem;line-height:1.7;}
+.service-item .service-meta {
+    display:flex;
+    gap:1.5rem;
+    flex-wrap:wrap;
+    font-size:0.95rem;
+    margin-top:1rem;
+    padding-top:1rem;
+    border-top:1px solid rgba(0,0,0,0.06);
+}
+body.dark .service-item .service-meta {border-top:1px solid rgba(255,255,255,0.06);}
+.service-meta span {
+    display:flex;
+    align-items:center;
+    gap:0.4rem;
+    color:#666;
+}
+body.dark .service-meta span {color:#aaa;}
+.service-meta .price {
+    color:var(--primary);
+    font-weight:600;
+}
+
+.investment-summary {
+    background:#f8f6ff;
+    padding:2rem;
+    border-radius:1rem;
+    margin-top:2rem;
+    box-shadow:0 5px 15px var(--shadow);
+}
+body.dark .investment-summary {background:#2a2a3d;}
+.investment-summary h3 {
+    color:var(--primary);
+    margin-bottom:1.5rem;
+    text-align:center;
+}
+.investment-table {
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    overflow:hidden;
+    border-radius:0.5rem;
+}
+.investment-table thead {
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
+    color:#fff;
+}
+.investment-table th {
+    padding:1rem;
+    text-align:left;
+    font-weight:500;
+}
+.investment-table tbody tr {
+    background:#fff;
+    border-bottom:1px solid #e0e0e0;
+}
+body.dark .investment-table tbody tr {
+    background:#222834;
+    border-bottom:1px solid #444;
+}
+.investment-table tbody tr:last-child {border-bottom:none;}
+.investment-table td {padding:1rem;line-height:1.6;}
+.subcategory {border-bottom:1px solid #e0e0e0;padding:1rem 1.5rem;}
+body.dark .subcategory {border-bottom:1px solid #444;}
+.subcategory:last-child {border-bottom:none;}
+.subcategory-title {font-weight:500;color:var(--primary);margin-bottom:0.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.subcategory-title:hover {opacity:0.8;}
+.service-list {max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding-left:1rem;}
+.service-list.active {max-height:1500px;margin-top:0.5rem;}
+.service-list ul {list-style:none;padding:0;}
+.service-list li {padding:0.4rem 0;padding-left:1.2rem;position:relative;line-height:1.6;}
+.service-list li:before {content:"•";position:absolute;left:0;color:var(--secondary);}
+
+#catalogue p.intro {margin-bottom:1rem;text-align:center;font-size:1.05rem;color:var(--text-light);}
+body.dark #catalogue p.intro {color:var(--text-dark);}
+.catalogue {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;justify-items:center;}
+.catalogue img {width:250px;height:150px;object-fit:cover;border-radius:1rem; box-shadow:0 5px 15px var(--shadow);transition:transform var(--transition);}
+.catalogue img:hover {transform:scale(1.05);}
+
+.contact-content {text-align:center;}
+.contact-info {margin:2rem 0;display:flex;flex-direction:column;gap:1rem;}
+.contact-item {font-size:1.1rem;}
+.contact-item a {color:var(--primary);font-weight:500;text-decoration:none;}
+.social-links {display:flex;gap:1.5rem;justify-content:center;margin-top:2rem;}
+.social-links a {color:var(--primary);transition:transform 0.3s;}
+.social-links a:hover {transform:scale(1.2);}
+
+.contact-form{max-width:800px;margin:1.5rem auto 0;display:flex;flex-direction:column;gap:0.75rem;text-align:left;}
+.contact-form label{font-weight:500;margin-bottom:0.25rem;color:var(--text-light);}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{
+    width:100%;
+    padding:0.75rem 1rem;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,0.08);
+    background:#fff;
+    font-size:1rem;
+    transition:box-shadow var(--transition), border-color var(--transition);
+}
+body.dark .contact-form input, body.dark .contact-form textarea{background:#222834;border:1px solid rgba(255,255,255,0.06); color:var(--text-dark);}
+.contact-form textarea{min-height:140px;resize:vertical;}
+.contact-form .btn-send{align-self:flex-end;padding:0.6rem 1rem;border-radius:0.6rem;background:var(--primary);color:#fff;border:none;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.12);cursor:pointer;}
+.contact-form .btn-send:hover{transform:translateY(-3px);}
+    
+footer {
+    background:var(--bg-dark);
+    color:var(--text-dark);
+    padding:1.5rem 2rem;
+    text-align:center;
+    margin-top:2rem;
+}
+
+body.dark footer {background:#0a0a0a;}
+
+#experience {max-width:900px;margin:0 auto;padding:3rem 2rem;}
+#experience h2 {text-align:center;margin-bottom:40px;color:var(--primary);font-size:2rem;}
+
+.timeline {position:relative;margin-left:25px;padding-left:25px;border-left:3px solid var(--primary);}
+.timeline::before {content:"";position:absolute;left:-1px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--secondary),var(--primary));}
+
+.timeline-item {position:relative;margin-bottom:30px;}
+.timeline-dot {position:absolute;left:-31px;top:6px;width:14px;height:14px;background-color:var(--primary);border-radius:50%;border:3px solid #e8defe;box-shadow:0 0 0 2px #fff;transition:all 0.3s;}
+body.dark .timeline-dot {border-color:var(--bg-dark);box-shadow:0 0 0 2px var(--bg-dark);}
+
+.timeline-item.active .timeline-dot {
+  width:18px;
+  height:18px;
+  left:-33px;
+  top:4px;
+}
+
+.timeline-header {
+  background:#f8f6ff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  cursor:pointer;
+  transition:all 0.3s;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+body.dark .timeline-header {background:#2a2a3d;}
+
+.timeline-header:hover {
+  transform:translateX(5px);
+  box-shadow:0 4px 12px rgba(77, 208, 225, 0.2);
+}
+
+.timeline-header-content {flex:1;}
+
+.timeline-header h3 {font-size:1.1em;color:var(--primary);margin-bottom:5px;}
+.timeline-header h3 span {color:#555;font-weight:normal;}
+body.dark .timeline-header h3 span {color:#aaa;}
+
+.exp-meta {font-size:0.95em;color:#666;margin-top:5px;}
+body.dark .exp-meta {color:#bbb;}
+
+.timeline-icon {
+  font-size:1.2rem;
+  color:var(--primary);
+  transition:transform 0.3s;
+  margin-left:1rem;
+}
+
+.timeline-item.active .timeline-icon {
+  transform:rotate(180deg);
+}
+
+.timeline-details {
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+  background:#f8f6ff;
+  border-radius:0 0 10px 10px;
+  margin-top:-10px;
+  padding:0 20px;
+}
+
+body.dark .timeline-details {background:#2a2a3d;}
+
+.timeline-item.active .timeline-details {
+  max-height:1000px;
+  padding:20px;
+  padding-top:10px;
+}
+
+.timeline-details ul {
+  margin-left:20px;
+  line-height:1.5;
+  color:#333;
+}
+
+body.dark .timeline-details ul {color:var(--text-dark);}
+
+.timeline-details li {
+  margin-bottom:8px;
+  padding-left:5px;
+}
+
+.theme-toggle {
+  position:fixed;
+  bottom:2rem;
+  right:2rem;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:1rem 1.2rem;
+  border-radius:50%;
+  box-shadow:0 5px 15px var(--shadow);
+  z-index:1000;
+  cursor:pointer;
+}
+
+@media (max-width:768px){
+  .hero-content{flex-direction:column;text-align:center;}
+  .hero .profile img{width:140px;height:140px;}
+  .hero h1{font-size:1.8rem;}
+  .hero p{font-size:0.95rem;}
+  section{padding:2rem 1rem;}
+  #nav-stand .nav-container{height:auto;padding:0.5rem 1rem;}
+  .navbar{justify-content:center;}
+  .contact-form .btn-send{width:100%;}
+  .blog-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header id="nav-stand" aria-hidden="false">
+  <div class="nav-container">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#catalogue">Works</a>
+      <a href="#experience">Experience</a>
+      <a href="#blog">Blog</a>
+      <a href="#services">Services</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="profile">
+            <img src="profile.jpg" alt="Birce SARI">
+        </div>
+        <div class="info">
+            <h1>Birce SARI</h1>
+            <p>Business Intelligence & Data Analytics Specialist | Data Storytelling Enthusiast</p>
+            <div class="buttons">
+                <a href="Birce_SARI_CV.pdf" download><i class="fas fa-download"></i> CV</a>
+                <a href="Birce_SARI_Service_Catalogue_2025.pdf" download><i class="fas fa-file-pdf"></i> Service Catalogue</a>
+                <a href="https://github.com/bircesari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/birce-sari" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://public.tableau.com/app/profile/birce.sari" target="_blank" title="Tableau"><i class="fas fa-chart-line"></i></a>
+                <a href="https://scholar.google.com/citations?hl=en&user=B_BTYSsAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/birce-sari/details/certifications/" target="_blank" title="Certifications"><i class="fa-solid fa-award"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p>I'm Birce SARI, a Business Intelligence Specialist and Data Analytics professional with 9 years of experience transforming complex data into strategic business advantage. I architect complete BI solutions—from strategic design to operational delivery—helping organizations make confident, data-driven decisions.</p>
+<p>My expertise spans the full analytics lifecycle: I design data strategies, build scalable infrastructure, create compelling visualizations, and manage projects to ensure on-time, high-impact delivery. With deep experience across healthcare, e-commerce, and enterprise organizations, I bring proven methodologies and measurable results to every engagement.</p>
+<p><strong>What sets me apart:</strong> I combine technical excellence with business acumen and strong stakeholder management. I don't just analyze data—I translate complexity into clear narratives that executives trust and act upon. Fluent in English, German, and Turkish, I bring international perspective and cross-cultural communication skills to global teams.</p>
+
+<div class="vision-positioning">
+    <h3>My Vision</h3>
+    <div class="highlight-box">
+        "Transforming data complexity into competitive advantage through strategic intelligence and disciplined execution."
+    </div>
+    <p style="margin-top:1.5rem;">I envision a business landscape where every organization can harness the full power of their data to make confident, timely decisions that drive sustainable growth. My mission is to bridge the gap between data potential and business reality—one solution at a time.</p>
+    
+    <h3 style="margin-top:2rem;">My Approach</h3>
+    <p>I believe the best analytics solutions start with understanding the business problem, not the technology. My methodology centers on:</p>
+    <p><strong>Strategic Alignment:</strong> Every dashboard and data pipeline serves clear business objectives</p>
+    <p><strong>End-to-End Ownership:</strong> From requirements gathering to post-deployment support, I ensure seamless delivery</p>
+    <p><strong>Data Storytelling:</strong> Complex insights become compelling visual narratives that drive action</p>
+    <p><strong>Sustainable Solutions:</strong> I build systems that teams can maintain and evolve independently</p>
+    <p><strong>Measurable Impact:</strong> Success is defined by business outcomes—improved forecasts, reduced costs, faster decisions</p>
+</div>
+</section>
+
+<section id="skills">
+    <h2>Skills & Certificates</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>📊 Data Analytics & BI</h3>
+            <ul>
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>SAP Analytics Cloud</li>
+                <li>Data Warehousing</li>
+                <li>ETL/ELT</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>🧠 Machine Learning & Data Science</h3>
+            <ul>
+                <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                <li>Statistical Analysis</li>
+                <li>Predictive Analytics</li>
+                <li>Dataiku</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>☁️ Data Infrastructure</h3>
+            <ul>
+                <li>Azure</li>
+                <li>MSSQL</li>
+                <li>Data Lakes</li>
+                <li>Real-time Streaming</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>🐍 Development</h3>
+            <ul>
+                <li>SQL (Advanced)</li>
+                <li>Python Development</li>
+                <li>APIs & Integration</li>
+                <li>Automation Scripts</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <h3>📈 Business & Strategy</h3>
+            <ul>
+                <li>Project Management</li>
+                <li>Stakeholder Management</li>
+                <li>Change Management</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header" onclick="toggleExperience(this)">
+        <div class="timeline-header-content">
+          <h3>Strategic Data Consultant & BI Specialist <span>(Freelancer)</span></h3>
+          <p class="exp-meta">Apr 2025 – Present | Berlin, Germany</p>
+        </div>
+        <i class="fas fa-chevron-down timeline-icon"></i>
+      </div>
+      <div class="timeline-details">
+        <ul>
+          <li>Architected automated BI dashboards that reduced ad-hoc reporting requests by 30%, enabling C-level executives to access real-time insights independently.</li>
+          <li>Partnered with executive teams across healthcare, femtech, and e-commerce to design and implement strategic analytics frameworks aligned with business objectives.</li>
+          <li>Led international workshops on experimental design and data visualization, elevating organizational analytics literacy by 40%.</li>
+          <li>Established compliance-driven data validation protocols ensuring full GDPR adherence across enterprise systems.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header" onclick="toggleExperience(this)">
+        <div class="timeline-header-content">
+          <h3>Senior Business and Data Analyst – Zorlu Holding</h3>
+          <p class="exp-meta">Jan 2020 – Sep 2023 | Izmir, Türkiye</p>
+        </div>
+        <i class="fas fa-chevron-down timeline-icon"></i>
+      </div>
+      <div class="timeline-details">
+        <ul>
+          <li>Spearheaded enterprise data warehouse transformation, eliminating 30% of manual processes and increasing operational efficiency by 20%.</li>
+          <li>Designed and deployed scalable analytics infrastructure on Azure, MSSQL, and Power BI for seamless multinational operations.</li>
+          <li>Developed 50+ executive dashboards that streamlined reporting processes, saving each department 10+ hours monthly.</li>
+          <li>Collaborated with finance, operations, and IT leadership to ensure data strategy directly supported corporate objectives.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header" onclick="toggleExperience(this)">
+        <div class="timeline-header-content">
+          <h3>BI & Reporting Specialist – Zorlu Holding</h3>
+          <p class="exp-meta">Aug 2015 – Jan 2020 | Istanbul, Türkiye</p>
+        </div>
+        <i class="fas fa-chevron-down timeline-icon"></i>
+      </div>
+      <div class="timeline-details">
+        <ul>
+          <li>Designed C-level KPI visualization solutions improving decision-making speed by 20%.</li>
+          <li>Built SQL-driven reporting systems supporting HR, Finance, IT, and Production departments.</li>
+          <li>Established governance frameworks to ensure audit readiness and compliance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header" onclick="toggleExperience(this)">
+        <div class="timeline-header-content">
+          <h3>SME ERP Solutions Consultant <span>(Freelancer)</span></h3>
+          <p class="exp-meta">Aug 2014 – Jul 2015 | Izmir, Türkiye</p>
+        </div>
+        <i class="fas fa-chevron-down timeline-icon"></i>
+      </div>
+      <div class="timeline-details">
+        <ul>
+          <li>Directed SAP B1 ERP selection and implementation for SMEs, boosting efficiency and reducing operational errors.</li>
+          <li>Delivered change management programs that accelerated system adoption.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+<h2>Education</h2>
+<div class="education-container">
+    <table class="education-table">
+        <thead>
+            <tr>
+                <th>Degree</th>
+                <th>Institution & Period</th>
+                <th>Highlights</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="degree">MSc in Data Analytics</div>
+                </td>
+                <td>
+                    <div class="university">University for the Creative Arts (UCA)</div>
+                    <div>Berlin, Germany</div>
+                    <div>2023–2025</div>
+                </td>
+                <td>
+                    <div class="thesis">Thesis: Enhancing Project Management through Machine Learning and Predictive Analytics</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="degree">BSc in Industrial Engineering</div>
+                </td>
+                <td>
+                    <div class="university">Koç University</div>
+                    <div>Istanbul, Türkiye</div>
+                    <div>2009–2014</div>
+                </td>
+                <td>
+                    <div class="thesis">Best Senior Project Award – Logistics Optimization for Auto Gas Facilities</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>
+  
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+  <i class="fas fa-adjust"></i>
+</button>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle('dark');
+}
+
+function toggleExperience(header) {
+    const item = header.parentElement;
+    const wasActive = item.classList.contains('active');
+    
+    // Optional: Close all other items (comment out if you want multiple items open)
+    document.querySelectorAll('.timeline-item').forEach(el => {
+        el.classList.remove('active');
+    });
+    
+    // Toggle current item
+    if (!wasActive) {
+        item.classList.add('active');
+    }
+}
+</script>
+</body>
+
+<!-- Blog Section -->
+<section id="blog">
+    <h2>Blog & Insights</h2>
+    <p class="blog-intro">
+        Sharing thoughts on data analytics, business intelligence, and the intersection of technology and strategy.
+    </p>
+
+    <div class="blog-grid">
+
+        <!-- BI Dashboards -->
+        <article class="blog-card">
+            <div class="blog-header">
+                <h3>How to Build Effective BI Dashboards</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> November 14, 2025</span>
+                    <span><i class="far fa-clock"></i> 5 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">Business Intelligence</span>
+                    <span class="blog-tag">Dashboards</span>
+                    <span class="blog-tag">Data Design</span>
+                </div>
+            </div>
+            <p class="blog-excerpt">
+                In my years working in business intelligence, I’ve learned that the most effective dashboards 
+                don’t start with data—they start with the questions that drive decisions. Here’s a practical guide 
+                to designing dashboards people actually use, with lessons learned from real projects.
+            </p>
+            <a href="blog/How_to_Build_Effective_BI_Dashboards.html" class="blog-link">
+                Read Full Article <i class="fas fa-arrow-right"></i>
+            </a>
+        </article>
+
+        <!-- DEIB Post -->
+        <article class="blog-card">
+            <div class="blog-header">
+                <h3>DEIB: Diversity, Equity, Inclusion & Belonging in Data Teams</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> November 2025</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">DEIB</span>
+                    <span class="blog-tag">Data Culture</span>
+                    <span class="blog-tag">Leadership</span>
+                </div>
+            </div>
+            <p class="blog-excerpt">
+                Building diverse, equitable, and inclusive data teams isn't just the right thing to do—it's a 
+                strategic advantage. Explore how DEIB principles transform analytics organizations and drive 
+                better business outcomes through varied perspectives and inclusive practices.
+            </p>
+            <a href="blog/DEIB_Diversity_Equity_Inclusion_Belonging.html" class="blog-link">
+                Read Full Article <i class="fas fa-arrow-right"></i>
+            </a>
+        </article>
+      
+        <!-- Strength Acknowledgment Post -->
+        <article class="blog-card">
+            <div class="blog-header">
+                <h3>The Quiet Revolution: Learning to Acknowledge Our Strengths Without Losing Our Humility</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> November 2025</span>
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">Personal Growth</span>
+                    <span class="blog-tag">Workplace Psychology</span>
+                    <span class="blog-tag">Leadership</span>
+                </div>
+            </div>
+        
+            <p class="blog-excerpt">
+               We uplift others effortlessly but hesitate to honor our own strengths. This reflection uncovers why and how embracing a healthier form of humility can empower our work and wellbeing.
+            </p>
+        
+            <a href="blog/The_Quiet_Revolution.html" class="blog-link">
+                Read Full Article <i class="fas fa-arrow-right"></i>
+            </a>
+        </article>
+
+        <!-- Placeholder: Sustainability -->
+        <article class="blog-card" style="opacity:0.6;">
+            <div class="blog-header">
+                <h3>Sustainability for Humanity; Democracy</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> Coming Soon</span>
+                    <span><i class="far fa-clock"></i> 6 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">BI</span>
+                    <span class="blog-tag">Dashboards</span>
+                    <span class="blog-tag">Best Practices</span>
+                </div>
+            </div>
+            <p class="blog-excerpt">
+                The last weeks highlight from Reichstag excursion...
+            </p>
+            <span class="blog-link" style="opacity:0.5;">
+                Coming Soon <i class="fas fa-hourglass-half"></i>
+            </span>
+        </article>
+
+        <!-- Placeholder: Data Quality -->
+        <article class="blog-card" style="opacity:0.6;">
+            <div class="blog-header">
+                <h3>Data Quality: The Hidden Cost of Bad Data</h3>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> Coming Soon</span>
+                    <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="blog-tag">Data Quality</span>
+                    <span class="blog-tag">Governance</span>
+                    <span class="blog-tag">Strategy</span>
+                </div>
+            </div>
+            <p class="blog-excerpt">
+                Poor data quality costs businesses millions annually. Discover frameworks and practical 
+                approaches to implementing robust data quality programs.
+            </p>
+            <span class="blog-link" style="opacity:0.5;">
+                Coming Soon <i class="fas fa-hourglass-half"></i>
+            </span>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- Service Catalogue -->
+<section id="services">
+<h2>Service Catalogue</h2>
+<div class="service-catalogue">
+    
+    <!-- Strategic Data Initiatives -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>🎯 Strategic Data Initiatives</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Digital Transformation Leadership</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Data strategy development and roadmap creation</li>
+                        <li>Analytics maturity assessment and improvement planning</li>
+                        <li>Digital transformation strategy and implementation roadmap</li>
+                        <li>Technology selection and vendor evaluation</li>
+                        <li>Data vision and executive alignment</li>
+                        <li>Analytics center of excellence (CoE) setup</li>
+                        <li>Data monetization strategy development</li>
+                        <li>Competitive intelligence and market research</li>
+                        <li>Organizational change management for data initiatives</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Business Intelligence & Performance Management</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Executive dashboards with KPI tracking and performance scorecards</li>
+                        <li>Real-time monitoring dashboards for operational oversight</li>
+                        <li>Performance scorecards and balanced scorecards</li>
+                        <li>Self-service BI platforms and user empowerment</li>
+                        <li>Automated reporting systems with intelligent alerts</li>
+                        <li>Multi-tenant dashboards for different stakeholder groups</li>
+                        <li>Interactive data visualizations and storytelling presentations</li>
+                        <li>Regulatory reporting compliance and audit trail implementation</li>
+                        <li>Ad-hoc reporting capabilities</li>
+                        <li>Infographic creation and design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Optimization -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>📊 Business Optimization & Insights</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Process Excellence & Automation</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Business process reengineering (BPR) and workflow optimization</li>
+                        <li>RPA implementation (UiPath, Robusta) for process automation</li>
+                        <li>Lean Six Sigma implementation and continuous improvement</li>
+                        <li>Standard operating procedures (SOP) development</li>
+                        <li>Bottleneck identification and resolution</li>
+                        <li>Workflow automation and approval process streamlining</li>
+                        <li>Process performance measurement and KPI development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Advanced Analytics & Predictive Intelligence</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Predictive analytics for forecasting (sales, demand, financial)</li>
+                        <li>Customer analytics (CLV prediction, churn analysis, segmentation)</li>
+                        <li>Risk assessment and fraud detection systems</li>
+                        <li>Market basket analysis and recommendation engines</li>
+                        <li>Anomaly detection and quality improvement systems</li>
+                        <li>Statistical hypothesis testing</li>
+                        <li>Regression analysis (linear, logistic, polynomial)</li>
+                        <li>Cluster analysis and customer segmentation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Strategic Business Analysis</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Market analysis and competitive intelligence</li>
+                        <li>SWOT analysis and strategic planning support</li>
+                        <li>Customer journey mapping and experience optimization</li>
+                        <li>Requirements analysis and stakeholder alignment</li>
+                        <li>Gap analysis and improvement recommendations</li>
+                        <li>Feasibility studies and ROI analysis</li>
+                        <li>Vendor evaluation and technology selection support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Foundation -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>🏗️ Data Foundation & Infrastructure</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Data Architecture & Integration</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Multi-source data integration (ERP, CRM, databases, APIs, cloud)</li>
+                        <li>Data lake and data warehouse design and implementation</li>
+                        <li>ETL/ELT pipeline development and automation</li>
+                        <li>Data migration services (legacy to modern systems)</li>
+                        <li>Real-time data streaming setup and monitoring</li>
+                        <li>Third-party data integration and web scraping services</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Data Quality & Governance</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Data governance framework development and implementation</li>
+                        <li>Data quality assessment and improvement programs</li>
+                        <li>Data cleansing and standardization processes</li>
+                        <li>Master data management (MDM) and data cataloging</li>
+                        <li>Data privacy compliance (GDPR, CCPA) implementation</li>
+                        <li>Data validation rules and monitoring systems</li>
+                        <li>Data profiling and anomaly detection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Delivery -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>🚀 Project Delivery & Implementation</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Enterprise Project Management</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Analytics project planning and execution</li>
+                        <li>Resource allocation and team management</li>
+                        <li>Timeline and milestone tracking with risk mitigation</li>
+                        <li>Budget management and cost optimization</li>
+                        <li>Stakeholder communication and executive reporting</li>
+                        <li>Change management for data initiatives</li>
+                        <li>Quality assurance and testing protocols</li>
+                        <li>Post-implementation support and optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Technology Implementation</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>BI tool implementation (Power BI, Tableau, Qlik)</li>
+                        <li>Database migration and system integration projects</li>
+                        <li>Data warehouse and analytics platform deployment</li>
+                        <li>Technology vendor management and coordination</li>
+                        <li>Training and adoption programs for user empowerment</li>
+                        <li>Support and maintenance planning and execution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Capability Building -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>💡 Capability Building & Knowledge Transfer</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Organizational Development</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Analytics training programs (Power BI, Tableau, SQL, Python)</li>
+                        <li>Data literacy workshops and capability building</li>
+                        <li>Best practices documentation and knowledge sharing</li>
+                        <li>Mentoring and coaching for analytics teams</li>
+                        <li>Custom training program development</li>
+                        <li>Certification preparation support</li>
+                        <li>Knowledge management system setup</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Industry-Specific Solutions</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Healthcare analytics (patient outcomes, operational efficiency)</li>
+                        <li>Retail analytics (customer behavior, inventory, pricing)</li>
+                        <li>Manufacturing analytics (quality, efficiency, predictive maintenance)</li>
+                        <li>Marketing analytics (campaign performance, customer acquisition)</li>
+                        <li>HR analytics (employee performance, retention, recruitment)</li>
+                        <li>Energy and utilities analytics (consumption, grid optimization)</li>
+                        <li>Education analytics (student performance, institutional effectiveness)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Documents Needed for Best Applications (moved as a service-category under Services) -->
+    <div class="service-category">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>📋 Documents Needed for Best Applications</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="category-content">
+            <!-- Initial Consultation -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Initial Consultation & Discovery</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Company overview and organizational structure</li>
+                        <li>Current business challenges and pain points</li>
+                        <li>Strategic goals and objectives (short-term and long-term)</li>
+                        <li>Key performance indicators (KPIs) currently tracked</li>
+                        <li>Decision-making processes and stakeholder map</li>
+                        <li>Budget constraints and resource availability</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Data Assessment -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Data Assessment & Analysis</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>List of all data sources (databases, files, APIs, third-party)</li>
+                        <li>Data dictionaries and schema documentation</li>
+                        <li>Sample datasets (anonymized if necessary)</li>
+                        <li>Data volume and growth rate information</li>
+                        <li>Data refresh frequency and update schedules</li>
+                        <li>Historical data availability and retention policies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Project Execution -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Project Execution & Delivery</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Detailed project requirements and scope documentation</li>
+                        <li>User stories and use cases</li>
+                        <li>Reporting and dashboard mockups or wireframes</li>
+                        <li>Business rules and calculation logic</li>
+                        <li>Database connection strings and credentials (secure transfer)</li>
+                        <li>API keys and authentication tokens</li>
+                        <li>User acceptance testing (UAT) scenarios</li>
+                        <li>Performance benchmarks and SLA requirements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ongoing Support -->
+            <div class="subcategory">
+                <div class="subcategory-title" onclick="toggleSubcategory(this)">
+                    <span>🔹 Ongoing Support & Maintenance</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="service-list">
+                    <ul>
+                        <li>Change request forms and approval workflows</li>
+                        <li>Impact assessment documentation</li>
+                        <li>Version control and release notes</li>
+                        <li>Training materials and user guides</li>
+                        <li>Technical documentation and architecture diagrams</li>
+                        <li>Troubleshooting guides and FAQs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<section id="catalogue">
+<h2>Catalogue of Works</h2>
+<div class="catalogue">
+    <img src="Revenue_dashboard.png" alt="Revenue Dashboard">
+    <img src="Sales_performance_dashboard.png" alt="Sales Performance">
+    <img src="Budget_overview_dashboard.png" alt="Budget Overview">
+    <img src="Customer_analysis_dashboard.png" alt="Customer Analysis">
+</div>
+</section>
+  
+<!-- Contact -->
+<section id="contact">
+    <div class="contact-content">
+        <h2>Let's Work Together</h2>
+        <p style="font-size: 18px; margin-bottom: 20px;">
+            I'm currently available for freelance projects. Whether you need data analysis, 
+            visualization, or consulting, I'd love to hear from you.
+        </p>
+        <div class="contact-info">
+            <div class="contact-item">
+                📧 <a href="mailto:birce.sari@gmail.com">birce.sari@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                📍 Berlin, Germany
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/bircesari" target="_blank" title="GitHub">
+                <i class="fab fa-github" style="font-size:2rem;"></i>
+            </a>
+            <a href="https://linkedin.com/in/birce-sari" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin" style="font-size:2rem;"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Birce SARI. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 14px;">Based in Berlin, Germany</p>
+        <a href="/privacy.html">Privacy</a> <!-- use absolute path for simplicity -->
+        <a href="/impressum.html">Impressum</a>
+
+    </div>
+</footer>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"><i class="fas fa-adjust"></i></button>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle('dark');
+}
+
+function toggleCategory(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('i');
+    const isActive = content.classList.contains('active');
+    
+    // Close all categories
+    document.querySelectorAll('.category-content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.category-header i').forEach(i => i.style.transform = 'rotate(0)');
+    
+    // Close all subcategories
+    document.querySelectorAll('.service-list').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.subcategory-title i').forEach(i => i.style.transform = 'rotate(0)');
+    
+    if (!isActive) {
+        content.classList.add('active');
+        icon.style.transform = 'rotate(180deg)';
+    }
+}
+
+function toggleSubcategory(title) {
+    const list = title.nextElementSibling;
+    const icon = title.querySelector('i');
+    const isActive = list.classList.contains('active');
+    
+    // Close all subcategories in this category
+    const parent = title.closest('.category-content');
+    parent.querySelectorAll('.service-list').forEach(s => s.classList.remove('active'));
+    parent.querySelectorAll('.subcategory-title i').forEach(i => i.style.transform = 'rotate(0)');
+    
+    if (!isActive) {
+        list.classList.add('active');
+        icon.style.transform = 'rotate(90deg)';
+    }
+    
+}
+document.querySelectorAll('section').forEach(s => s.style.scrollMarginTop = '80px');
+</script>
+
+</body>
+</html>
