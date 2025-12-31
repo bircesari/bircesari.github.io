@@ -91,6 +91,32 @@
             align-items: center;
             gap: 0.3rem;
         }
+
+        /* Add this to your style block or main stylesheet */
+        .share-section { background: transparent; position: relative; z-index: 1; }
+        
+        .share-buttons { display: flex; gap: 1rem; justify-content: center; align-items: center; }
+        
+        .share-buttons a {
+          display: inline-flex !important;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.6rem 1.2rem;
+          border-radius: 6px;
+          text-decoration: none;
+          color: #fff !important;               /* ensure text is readable */
+          background: #444 !important;          /* fallback bg if specific class is overridden */
+          font-weight: 500;
+          min-width: 160px;
+          justify-content: center;
+        }
+        
+        /* Brand colours (use !important only if other CSS is overriding them) */
+        .share-linkedin { background: #0077b5 !important; }
+        .share-twitter  { background: #1da1f2  !important; }
+        
+        /* Make icons visible even if FA fails — add small left padding on the text */
+        .share-buttons a i { font-size: 1rem; line-height: 1; }
         
         h1 {
             color: var(--primary);
