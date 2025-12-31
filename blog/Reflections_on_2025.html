@@ -3,58 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A deep dive into why acknowledging our strengths feels so uncomfortable, and how research shows that true humility requires seeing ourselves clearly.">
-    <meta name="keywords" content="humility, self-awareness, impostor syndrome, personal growth, strengths, leadership">
-    <meta name="author" content="Birce SARI">
-    <title>The Quiet Revolution: Learning to Acknowledge Our Strengths | Birce SARI</title>
-    <link rel="icon" href="../assets/images/BS_Logo.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>The Year Data Learned to Think| Birce SARI</title>
+    <link rel="icon" href="../BS_Logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #2563eb;
-            --secondary: #7c3aed;
-            --accent: #06b6d4;
+            --primary: #4dd0e1;
+            --secondary: #b39ddb;
             --bg-light: #ffffff;
-            --bg-gray: #f8fafc;
-            --text-dark: #1e293b;
-            --text-gray: #64748b;
-            --border: #e2e8f0;
+            --text-light: #1e1e2f;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.8;
-            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.7;
         }
-        
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
         .header-content {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
         .back-link {
             color: white;
             text-decoration: none;
@@ -62,409 +42,188 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            transition: background 0.3s;
         }
-        
-        .back-link:hover {
-            background: rgba(255,255,255,0.1);
-        }
-        
-        .header-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        
         article {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
-        
-        .post-header {
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid var(--border);
-        }
-        
-        .post-title {
-            color: var(--text-dark);
-            font-size: 2.75rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-        
         .post-meta {
+            color: #666;
+            margin-bottom: 2rem;
             display: flex;
-            gap: 2rem;
-            color: var(--text-gray);
-            font-size: 0.95rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
-        
-        .meta-item {
+        .post-meta span {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.3rem;
         }
-        
-        .meta-item i {
+        h1 {
             color: var(--primary);
-        }
-        
-        .post-content h2 {
-            color: var(--text-dark);
-            font-size: 1.875rem;
-            font-weight: 700;
-            margin-top: 3rem;
             margin-bottom: 1rem;
-            line-height: 1.3;
+            font-size: 2.5rem;
         }
-        
-        .post-content p {
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-            font-size: 1.0625rem;
+        h2 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
         }
-        
-        .post-content ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
-            color: var(--text-dark);
-            line-height: 1.7;
-        }
-        
+        p { margin-bottom: 1.5rem; }
+        ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; }
         blockquote {
             border-left: 4px solid var(--primary);
-            padding: 1rem 1.5rem;
-            margin: 2rem 0;
-            background: var(--bg-gray);
-            border-radius: 0 8px 8px 0;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
             font-style: italic;
-            color: var(--text-gray);
+            color: #555;
         }
-        
-        .divider {
-            margin: 3rem 0;
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(124,58,237,0.05));
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        
-        .references-section {
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 2px solid var(--border);
-        }
-        
-        .references-section h3 {
-            color: var(--text-dark);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-        
-        .references-list {
-            list-style: none;
-            margin: 0;
-        }
-        
-        .references-list li {
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            color: var(--text-gray);
-            font-size: 0.95rem;
-        }
-        
-        .references-list li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
         .share-section {
-            margin-top: 4rem;
-            padding: 2.5rem;
-            background: var(--bg-gray);
-            border-radius: 12px;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
             text-align: center;
         }
-        
-        .share-section h3 {
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-        
         .share-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
-            flex-wrap: wrap;
+            margin-top: 1rem;
         }
-        
         .share-buttons a {
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-weight: 500;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
-        
-        .share-buttons a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        
-        .share-linkedin {
-            background: #0077b5;
-        }
-        
-        .share-twitter {
-            background: #1da1f2;
-        }
-        
-        .share-facebook {
-            background: #1877f2;
-        }
-        
+        .share-linkedin { background: #0077b5; }
         footer {
-            background: var(--text-dark);
+            background: #1e1e2f;
             color: white;
-            padding: 3rem 2rem;
+            padding: 2rem;
             text-align: center;
-            margin-top: 5rem;
-        }
-        
-        .footer-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .post-title {
-                font-size: 2rem;
-            }
-            
-            .post-content h2 {
-                font-size: 1.5rem;
-            }
-            
-            article {
-                padding: 2rem 1.5rem;
-            }
-            
-            .post-meta {
-                gap: 1rem;
-            }
+            margin-top: 4rem;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="header-content">
-            <a href="../index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <span>Birce SARI Blog</span>
+    </div>
+</header>
+
+<article>
+    <h1>The Year Data Learned to Think: Reflections on 2025's Transformation</h1>
+
+    <div class="post-meta">
+        <span><i class="far fa-calendar"></i> December 29, 2025</span>
+        <span><i class="far fa-clock"></i> 18 min read</span>
+        <span><i class="fas fa-tag"></i> AI, Data Analytics, Digital Transformation</span>
+    </div>
+
+    <p>
+        As we close out 2025, it’s clear that this year marked a fundamental shift in how data operates, how insights are generated,
+        and how decisions are made. The boundary between human analysts and intelligent systems has blurred in ways that would have
+        seemed like science fiction just a few years ago.
+    </p>
+
+    <h2>The Rise of Agentic AI: When Data Started Making Its Own Decisions</h2>
+    <p>
+        The most transformative development of 2025 was the emergence of agentic AI—autonomous systems capable of perceiving
+        environments, setting goals, planning multi-step actions, and executing decisions independently.
+        Industry projections suggest explosive growth, but what mattered most this year was not scale—it was capability.
+    </p>
+
+    <blockquote>
+        Agentic AI shifted analytics from passive insight generation to active, closed-loop decision-making.
+    </blockquote>
+
+    <h2>From Dashboards to Conversations: The Data Storytelling Revolution</h2>
+    <p>
+        Analytics became conversational. Static dashboards gave way to AI-generated narratives that explain not just what happened,
+        but why it matters and what to do next. Data storytelling moved from a soft skill to a core analytical capability.
+    </p>
+
+    <h2>Real-Time Everything: The Death of Yesterday’s Data</h2>
+    <p>
+        Edge computing, 5G, and streaming architectures made real-time analytics the default.
+        Decisions once made daily or weekly are now executed in milliseconds, fundamentally changing logistics,
+        manufacturing, finance, and digital marketing.
+    </p>
+
+    <h2>Data Governance: The Unsung Hero of AI Success</h2>
+    <p>
+        The AI race revealed a harsh truth: without strong data governance, even the most advanced AI systems fail.
+        Semantic modeling, metadata management, and data contracts became foundational for trustworthy AI outcomes.
+    </p>
+
+    <h2>The Data Mesh Movement: Decentralizing Data Ownership</h2>
+    <p>
+        Data mesh moved from theory to reality in 2025. Domain teams now own data as products, accelerating access
+        while demanding higher standards for quality, interoperability, and accountability.
+    </p>
+
+    <h2>The Model Context Protocol: Building Blocks for an AI-Native World</h2>
+    <p>
+        MCP quietly standardized how AI models connect to enterprise data, enabling faster experimentation,
+        safer integrations, and scalable agent frameworks across organizations.
+    </p>
+
+    <h2>Predictive and Prescriptive Analytics: From Insight to Action</h2>
+    <p>
+        Predictive analytics matured into prescriptive systems that recommend—and execute—actions.
+        Pattern recognition, multi-source forecasting, and agent-driven optimization closed the loop
+        between insight and impact.
+    </p>
+
+    <h2>The Data Quality Imperative</h2>
+    <p>
+        In an era of zettabytes, quality beat quantity. Organizations shifted from hoarding data
+        to curating reliable, purpose-driven datasets that AI systems could trust.
+    </p>
+
+    <h2>What This Means for Data Professionals</h2>
+    <p>
+        The role of the data professional evolved into that of an AI orchestrator, storyteller,
+        and ethical governor—combining technical depth with strategic and human-centered thinking.
+    </p>
+
+    <h2>Looking Ahead to 2026</h2>
+    <p>
+        Multi-agent collaboration, immersive analytics, and maturing governance frameworks will define the next phase.
+        The challenge ahead is not technological—it is human: guiding autonomous systems responsibly and intelligently.
+    </p>
+
+    <h2>The Bottom Line</h2>
+    <p>
+        2025 was the year data learned to think. It didn’t replace us—it elevated us.
+        Those willing to evolve alongside intelligent systems are shaping the future of analytics.
+    </p>
+
+    <div class="share-section">
+        <h3>Share this reflection</h3>
+        <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.bircesari.com/blog/Reflections_on_2025.html"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="share-linkedin">
+                <i class="fab fa-linkedin"></i> Share on LinkedIn
             </a>
-            <span class="header-title">Birce SARI</span>
         </div>
-    </header>
-    
-    <article>
-        <div class="post-header">
-            <h1 class="post-title">The Quiet Revolution: Learning to Acknowledge Our Strengths Without Losing Our Humility</h1>
-            <div class="post-meta">
-                <span class="meta-item">
-                    <i class="far fa-calendar"></i>
-                    December 30, 2025
-                </span>
-                <span class="meta-item">
-                    <i class="far fa-user"></i>
-                    Birce SARI
-                </span>
-                <span class="meta-item">
-                    <i class="far fa-clock"></i>
-                    12 min read
-                </span>
-            </div>
-        </div>
+    </div>
+</article>
 
-        <div class="post-content">
-            <p>Last week, I attended a workshop that fundamentally changed how I think about my professional identity. As I sat through sessions on Failing Forward and Strength Spotting Through Failure Stories, something unexpected happened. The facilitator was not just teaching us about resilience, she was inviting us to see ourselves differently. When asked what I was taking away from the experience, I wrote: Be humble but do not forget to acknowledge yourself.</p>
-
-            <p>I decided to ask my circle of colleagues a simple question: Why is it so hard to talk about our own strengths? What came back were stories that felt uncomfortably familiar, tales of internal buts that followed every accomplishment, of comparing ourselves to others who seemed to do it better, of cultural conditioning that taught us to stay small and quiet.</p>
-
-            <p>Then I dove into the research. What I discovered was not just validating, it was transformative.</p>
-
-            <h2>The But That Follows Every Win</h2>
-
-            <p>One colleague captured something I have felt countless times: When I want to talk about my strengths, I always have a hard time doing so with confidence because of the buts, but I can do more, but others do it better. I guess my desire to be better gets in the way, and comparison.</p>
-
-            <p>This internal dialogue is not random. Research shows that humble individuals possess accurate views of themselves and their capabilities, acknowledging both their strengths and limitations (Krumrei-Mancuso and Rouse, 2016). However, many of us get this wrong. True humility is not about diminishing our strengths. Intellectually humble individuals recognize their strengths while also acknowledging their limitations.</p>
-
-            <p>Psychological research reveals something profound. Humility must include accurate self-knowledge and a generous acknowledgment of the qualities of others without distortion or extremes (Nielsen, Marrone and Slay, 2010). We have confused humility with self-erasure. We have mistaken modesty for invisibility.</p>
-
-            <h2>The Gendered Dimension of Self Promotion</h2>
-
-            <p>As I compiled responses, a pattern emerged that research confirms with clarity. Another colleague wrote about being socialized as female, the caregiver, and the constant temptation to put aside my ego, my sense of who I am, the person that has preferences, weaknesses, strengths and needs, and accepting others preferences and needs first.</p>
-
-            <p>The research on gender and self promotion reveals significant disparities in how women and men approach acknowledging their strengths. Cultural conditioning teaches many women to value modesty, with self promotion often being socially discouraged (Sandberg, 2013). This creates a double bind where women face negative evaluation for the same self promotional behaviour that benefits men professionally.</p>
-
-            <p>But this is not only about gender. It is about what we have all internalized about worthiness and visibility. One colleague put it plainly: I find it difficult because I grew up with the idea that talking about your achievements is the same as bragging. I learned to be quiet and not stand out, so speaking about my strengths does not feel natural.</p>
-
-            <h2>Why We Are Brilliant at Spotting Others Strengths</h2>
-
-            <p>Here is the paradox. We are remarkably good at seeing strengths in others while remaining blind to our own. As one respondent shared, It is easier to see strengths in others because I can look at their actions objectively, without self judgment or fear of sounding arrogant.</p>
-
-            <p>Another colleague added depth: When I have a vulnerable conversation with someone and they share their struggles, I can hear their strengths. This also works for me. If I stop, breathe, and recognize what I have been navigating, I can also recognize my strengths.</p>
-
-            <p>But then comes the familiar pattern: But I do not do this enough. Even when I stop and say, this job search takes resilience, I find myself belittling my strength for what is not accomplished. Research confirms that humility is easier to observe accurately in others than in oneself (Porter et al., 2022), which explains why we can be generous observers of others and harsh critics of ourselves.</p>
-
-            <h2>The Hidden Cost of Staying Silent</h2>
-
-            <p>Research on the consequences of failing to acknowledge our strengths is sobering. Impostor syndrome affects up to 70 percent of people at least once in their lives (Bravata et al., 2020). Prevalence rates range widely from 9 to 82 percent depending on screening methods (Sakulku and Alexander, 2011).</p>
-
-            <p>Impostor syndrome is associated with anxiety, poor self-worth, burnout, and reduced job satisfaction. Crucially, acknowledging strengths is one of the internal factors that can moderate its negative effects (Villwock et al., 2016).</p>
-
-            <p>In other words, our inability to recognize our capabilities is not just uncomfortable. It is professionally costly. Modesty norms and the unwillingness to promote our achievements often make us invisible to decision makers.</p>
-
-            <h2>What Balanced Self Acknowledgment Looks Like</h2>
-
-            <p>The balance lies in what researchers call humble confidence. Humility reflects an accurate view of oneself and one's limitations while appreciating the strengths of others (Bauer and Wayment, 2008; Owens et al., 2013). This creates a state where people can evaluate themselves without falling into arrogance or self deprecation.</p>
-
-            <p>When people work within their areas of strength, they report higher job satisfaction, productivity, and retention (Harzer and Ruch, 2012). This is not about ego, it is about effectiveness.</p>
-
-            <p>A strengths based approach helps individuals foster wellbeing. People who use their strengths intentionally experience greater hope, resilience, and inspiration (Smock et al., 2008; Park et al., 2004).</p>
-
-            <h2>Creating Environments Where Acknowledgment Is Safe</h2>
-
-            <p>One colleague captured what many of us need: an environment where it is acceptable to be imperfect, where I can speak about what I have gained during my job search, resilience, courage, creativity, while accepting where I am. A balance of strengths and imperfections. Humanity in full form.</p>
-
-            <p>Research supports this. Consistently celebrating achievements is critical in reducing impostor syndrome, with regular acknowledgment reinforcing competence (Clance and Imes, 1978; Young, 2011).</p>
-
-            <p>Another colleague suggested simple practices: focusing on facts instead of labels, keeping a wins journal, or noting achievements regularly. Research shows that maintaining a record of successes and reviewing them helps counter impostor feelings (Bravata et al., 2020).</p>
-
-            <h2>A New Practice: The Weekly Pause</h2>
-
-            <p>Inspired by the workshop and these conversations, I have started creating intentional moments of reflection each week. Documenting one challenge, the strength I used, and what became possible. No buts. No comparisons. Just facts.</p>
-
-            <p>It feels uncomfortable. Vulnerable. Necessary.</p>
-
-            <h2>Reframing Self Promotion as Service</h2>
-
-            <p>The most powerful reframe is this: self promotion is not self serving when done intentionally. It is visibility that allows teams and organizations to function effectively (Rudman, 1998). It is not bragging. It is transparency.</p>
-
-            <p>One colleague captured it beautifully: I balance my humility with accepting myself, since I need to take care of myself so I can make the world more peaceful and kind.</p>
-
-            <h2>The Path Forward</h2>
-
-            <p>The workshop taught me that we often spot our strengths through our struggles. The survey responses revealed that this challenge is universal. Research confirms that acknowledging our strengths is not abandoning humility, it is completing it.</p>
-
-            <p>Humility requires a balanced and accurate understanding of strengths and limitations (Owens, Johnson and Mitchell, 2013). Many of us have leaned so far toward acknowledging our limitations that we have lost our balance.</p>
-
-            <p>Acknowledging strengths is not arrogance. It is not bragging. It is seeing ourselves clearly.</p>
-
-            <h2>An Invitation</h2>
-
-            <p>If you have read this far, you have likely minimized your accomplishments. Added a but to every compliment. Stayed quiet when you should have spoken about what you achieved.</p>
-
-            <p>I am curious. What strength are you not acknowledging right now? And what but follows it?</p>
-
-            <p>Maybe it is time for a new kind of humility. One that sees the full picture.</p>
-
-            <div class="divider">
-                What practices have helped you balance humility with healthy self acknowledgment? I would love to hear your stories in the comments.
-            </div>
-
-            <div class="references-section">
-                <h3>References</h3>
-                <ul class="references-list">
-                    <li>Bauer, J.J. and Wayment, H.A. (2008). The psychology of the quiet ego. Transcending self interest.</li>
-                    <li>Bravata, D.M. et al. (2019). Prevalence, predictors, and treatment of Impostor Syndrome.</li>
-                    <li>Clance, P.R. and Imes, S.A. (1978). The imposter phenomenon in high achieving women.</li>
-                    <li>Harzer, C. and Ruch, W. (2012). Applying one's strengths at work.</li>
-                    <li>Krumrei-Mancuso, E.J. and Rouse, S.V. (2015). Comprehensive intellectual humility scale.</li>
-                    <li>Nielsen, R., Marrone, J.A. and Slay, H.S. (2009). A new look at humility.</li>
-                    <li>Niemiec, R.M. (2018). Character strengths interventions.</li>
-                    <li>Owens, B.P., Johnson, M.D. and Mitchell, T.R. (2013). Expressed humility in organizations.</li>
-                    <li>Park, N., Peterson, C. and Seligman, M.E. (2004). Strengths of character and well-being.</li>
-                    <li>Porter, T. et al. (2022). Predictors and consequences of intellectual humility.</li>
-                    <li>Rudman, L.A. (1998). Self promotion as a risk factor for women.</li>
-                    <li>Sakulku, J. and Alexander, J. (2011). The Impostor Phenomenon.</li>
-                    <li>Sandberg, S. and Scovell, N. (2019). Lean In.</li>
-                    <li>Smock, S.A. et al. (2008). Solution focused group therapy.</li>
-                    <li>Villwock, J.A. et al. (2016). Impostor syndrome and burnout.</li>
-                    <li>Young, V. (2011). The secret thoughts of successful women.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="share-section">
-            <h3>Found this helpful? Share it!</h3>
-            <div class="share-buttons">
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL" target="_blank" class="share-linkedin">
-                    <i class="fab fa-linkedin"></i> Share on LinkedIn
-                </a>
-                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=The%20Quiet%20Revolution%3A%20Acknowledging%20Strengths%20Without%20Losing%20Humility" target="_blank" class="share-twitter">
-                    <i class="fab fa-twitter"></i> Share on Twitter
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank" class="share-facebook">
-                    <i class="fab fa-facebook"></i> Share on Facebook
-                </a>
-            </div>
-        </div>
-    </article>
-    
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="../index.html">Home</a>
-                <a href="../about.html">About</a>
-                <a href="../blog.html">Blog</a>
-                <a href="../contact.html">Contact</a>
-            </div>
-            <p>&copy; 2025 Birce SARI. All rights reserved.</p>
-        </div>
-    </footer>
+<footer>
+    <p>&copy; 2025 Birce SARI. All rights reserved.</p>
+</footer>
 </body>
 </html>
