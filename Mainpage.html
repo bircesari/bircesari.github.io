@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="og:image" content="https://bircesari.github.io/BS_Logo.png">
-<title>Birce SARI | Data & BI Analyst Portfolio</title>
+
+<!-- ═══════════════════════════════════════════
+     PRIMARY SEO META TAGS
+═══════════════════════════════════════════ -->
+<title>Birce SARI | Data Analyst & BI Specialist Berlin | Freelance Consultant</title>
+<meta name="description" content="Birce SARI – Freelance Data Analyst & Business Intelligence Specialist based in Berlin. 8+ years experience in Tableau, Power BI, SQL, Python, Azure. Available for BI dashboards, data strategy, and analytics consulting.">
+<meta name="keywords" content="Data Analyst Berlin, Business Intelligence Consultant, Freelance BI Specialist, Tableau Developer, Power BI Consultant, SQL Python Analytics, Data Storytelling, KPI Dashboard, ETL Pipeline, GDPR Data Governance, Birce Sari">
+<meta name="author" content="Birce SARI">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#4dd0e1">
+<link rel="canonical" href="https://bircesari.github.io/">
+
+<!-- ═══════════════════════════════════════════
+     OPEN GRAPH (Facebook, LinkedIn previews)
+═══════════════════════════════════════════ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bircesari.github.io/">
+<meta property="og:title" content="Birce SARI | Data Analyst & BI Specialist Berlin">
+<meta property="og:description" content="Freelance Data Analyst & Business Intelligence Specialist based in Berlin. 8+ years turning messy data into trusted insights with Tableau, Power BI, SQL & Python.">
+<meta property="og:image" content="https://bircesari.github.io/BS_Logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Birce SARI Portfolio">
+
+<!-- ═══════════════════════════════════════════
+     TWITTER / X CARD
+═══════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Birce SARI | Data Analyst & BI Specialist Berlin">
+<meta name="twitter:description" content="Freelance Data Analyst & BI Specialist in Berlin. Tableau, Power BI, SQL, Python, Azure. Book a free intro call.">
+<meta name="twitter:image" content="https://bircesari.github.io/BS_Logo.png">
+
+<!-- ═══════════════════════════════════════════
+     STRUCTURED DATA — Person (JSON-LD)
+═══════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Birce SARI",
+  "url": "https://bircesari.github.io",
+  "image": "https://bircesari.github.io/profile.jpg",
+  "jobTitle": "Data Analyst & Business Intelligence Specialist",
+  "description": "Freelance Data Analyst and BI Specialist with 8+ years experience in Tableau, Power BI, SQL, Python and Azure. Based in Berlin, Germany.",
+  "email": "birce.sari@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/birce-sari",
+    "https://github.com/bircesari",
+    "https://public.tableau.com/app/profile/birce.sari",
+    "https://scholar.google.com/citations?hl=en&user=B_BTYSsAAAAJ"
+  ],
+  "knowsAbout": ["Tableau", "Power BI", "SQL", "Python", "Azure", "Business Intelligence", "Data Analytics", "ETL", "GDPR", "Data Governance", "Machine Learning"],
+  "knowsLanguage": ["English", "German", "Turkish"]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════
+     STRUCTURED DATA — ProfessionalService (JSON-LD)
+═══════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Birce SARI – Data & BI Consulting",
+  "url": "https://bircesari.github.io",
+  "description": "Freelance data analytics and business intelligence consulting services in Berlin. Specialising in BI dashboards, data strategy, ETL pipelines, predictive analytics and GDPR-compliant data governance.",
+  "founder": { "@type": "Person", "name": "Birce SARI" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  },
+  "areaServed": ["DE", "GB", "TR", "EU"],
+  "serviceType": ["Business Intelligence Consulting", "Data Analytics", "BI Dashboard Development", "Data Strategy", "ETL Pipeline Development", "Predictive Analytics", "Data Governance"]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════
+     PERFORMANCE & PRECONNECTS
+═══════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
 <link rel="icon" href="BS_Logo.png" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -129,16 +217,6 @@ body.dark{background:var(--bg-dark);color:var(--text-dark);}
 .hero .buttons a:hover{transform:translateY(-2px);}
 .hero .buttons a i{font-size:1.1rem;}
 
-/* ── HERO BOOK BUTTON ── */
-.hero .buttons a.btn-book{
-  background:rgba(255,255,255,0.15);
-  color:#fff;
-  border:2px solid rgba(255,255,255,0.7);
-  font-weight:700;
-  backdrop-filter:blur(4px);
-}
-.hero .buttons a.btn-book:hover{background:rgba(255,255,255,0.25);}
-
 section{padding:3rem 2rem;max-width:1200px;margin:0 auto;}
 h2{color:var(--primary);margin-bottom:0.5rem;font-size:2rem;text-align:center;}
 
@@ -149,36 +227,23 @@ h2{color:var(--primary);margin-bottom:0.5rem;font-size:2rem;text-align:center;}
   font-size:1.05rem;
 }
 
-/* ── ABOUT WITH SECOND PHOTO ── */
-.about-layout{
-  display:flex;
-  gap:3rem;
-  align-items:flex-start;
-  margin-top:1.5rem;
-}
-.about-photo-col{
-  flex-shrink:0;
-  display:flex;
-  flex-direction:column;
+/* ── ABOUT BOOK INLINE CTA ── */
+.about-book-cta{
+  display:inline-flex;
   align-items:center;
-  gap:1rem;
+  gap:0.5rem;
+  margin-top:0.5rem;
+  padding:0.6rem 1.4rem;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  font-weight:700;
+  border-radius:0.6rem;
+  text-decoration:none;
+  font-size:1rem;
+  box-shadow:0 4px 14px rgba(77,208,225,0.35);
+  transition:transform var(--transition),box-shadow var(--transition);
 }
-.about-photo-col img{
-  width:220px;
-  height:280px;
-  object-fit:cover;
-  border-radius:1rem;
-  box-shadow:0 8px 24px rgba(77,208,225,0.25);
-  border:3px solid var(--primary);
-}
-.about-photo-caption{
-  font-size:0.85rem;
-  color:#888;
-  text-align:center;
-  font-style:italic;
-}
-body.dark .about-photo-caption{color:#aaa;}
-.about-text-col{flex:1;}
+.about-book-cta:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(77,208,225,0.45);}
 
 /* ── AWARDS SECTION ── */
 .awards-grid{
@@ -356,8 +421,6 @@ body.dark .timeline-details ul{color:var(--text-dark);}
   .navbar{justify-content:center;}
   .contact-form .btn-send{width:100%;}
   .blog-grid{grid-template-columns:1fr;}
-  .about-layout{flex-direction:column;align-items:center;}
-  .about-photo-col img{width:180px;height:230px;}
 }
 </style>
 </head>
@@ -374,7 +437,7 @@ body.dark .timeline-details ul{color:var(--text-dark);}
       <a href="#services">Services</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-      <a href="https://cal.com/bircesari/intro" target="_blank" class="nav-book">
+      <a href="https://cal.com/bircesari/15min" target="_blank" class="nav-book">
         <i class="fas fa-calendar-check"></i> Book a Call
       </a>
     </nav>
@@ -392,9 +455,6 @@ body.dark .timeline-details ul{color:var(--text-dark);}
       <div class="buttons">
         <a href="Birce_SARI_CV.pdf" download><i class="fas fa-download"></i> CV - ENG</a>
         <a href="Birce_SARI_Lebenslauf.pdf" download><i class="fas fa-download"></i> CV - DE</a>
-        <a href="https://cal.com/bircesari/intro" target="_blank" class="btn-book">
-          <i class="fas fa-calendar-check"></i> Book an Intro Call
-        </a>
         <a href="https://github.com/bircesari" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/birce-sari" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://public.tableau.com/app/profile/birce.sari" target="_blank" title="Tableau"><i class="fas fa-chart-line"></i></a>
@@ -405,25 +465,20 @@ body.dark .timeline-details ul{color:var(--text-dark);}
   </div>
 </section>
 
+<main>
 <section id="about">
   <h2>About Me</h2>
-  <div class="about-layout">
-    <div class="about-photo-col">
-      <!-- Replace "profile2.jpg" with your second photo filename -->
-      <img src="profile2.jpg" alt="Birce SARI – in action">
-      <span class="about-photo-caption">Berlin, Germany</span>
-    </div>
-    <div class="about-text-col">
-      <p><strong>From Analysis to Actionable Intelligence:</strong> I don't just analyze data — I architect complete BI solutions that drive business success.</p>
-      <p>Data Analyst & BI Specialist with 8+ years of turning messy, scattered business data into clean, trusted insights that leaders actually use to make decisions. I build end-to-end SQL/Python/BI solutions that eliminate manual spreadsheets, cut reporting effort by 40%, and save 16+ hours per department each month while reducing metric conflicts by 40%.</p>
-      <p>I'm usually brought in when teams are drowning in different "versions of truth" and need someone to align KPIs, centralize data, and ship fast, reliable dashboards.</p>
-      <p><strong>End-to-End Ownership:</strong> I design the strategy, build the solution, and manage delivery — ensuring every piece works together seamlessly.</p>
-      <p><strong>Data Storytelling:</strong> Complex data becomes compelling visual narratives that stakeholders immediately understand and trust.</p>
-      <p><strong>Guaranteed Results:</strong> My project management discipline ensures on-time delivery with measurable ROI — improved forecasting, reduced uncertainty.</p>
-      <p><strong>International Expertise:</strong> Fluent in English (C1), German (B1), and Turkish — I bring global perspective and proven execution to every engagement.</p>
-      <p>Ready to turn your data into growth? <a href="https://cal.com/bircesari/intro" target="_blank" style="color:var(--primary);font-weight:600;">Let's connect →</a></p>
-    </div>
-  </div>
+  <p><strong>From Analysis to Actionable Intelligence:</strong> I don't just analyze data — I architect complete BI solutions that drive business success.</p>
+  <p>Data Analyst & BI Specialist with 8+ years of turning messy, scattered business data into clean, trusted insights that leaders actually use to make decisions. I build end-to-end SQL/Python/BI solutions that eliminate manual spreadsheets, cut reporting effort by 40%, and save 16+ hours per department each month while reducing metric conflicts by 40%.</p>
+  <p>I'm usually brought in when teams are drowning in different "versions of truth" and need someone to align KPIs, centralize data, and ship fast, reliable dashboards.</p>
+  <p><strong>End-to-End Ownership:</strong> I design the strategy, build the solution, and manage delivery — ensuring every piece works together seamlessly.</p>
+  <p><strong>Data Storytelling:</strong> Complex data becomes compelling visual narratives that stakeholders immediately understand and trust.</p>
+  <p><strong>Guaranteed Results:</strong> My project management discipline ensures on-time delivery with measurable ROI — improved forecasting, reduced uncertainty.</p>
+  <p><strong>International Expertise:</strong> Fluent in English (C1), German (B1), and Turkish — I bring global perspective and proven execution to every engagement.</p>
+  <p>Ready to turn your data into growth? Let's connect.</p>
+  <a href="https://cal.com/bircesari/15min" target="_blank" class="about-book-cta" rel="noopener">
+    <i class="fas fa-calendar-check"></i> Book a Free 15-Min Intro Call
+  </a>
 </section>
 
 <section id="skills">
@@ -1062,14 +1117,14 @@ body.dark .timeline-details ul{color:var(--text-dark);}
     <div class="book-banner">
       <h3><i class="fas fa-calendar-check"></i> Book a Free Intro Call</h3>
       <p>15 minutes to explore how I can help with your data challenges. No commitment required.</p>
-      <a href="https://cal.com/bircesari/intro" target="_blank">
+      <a href="https://cal.com/bircesari/15min" target="_blank" rel="noopener">
         <i class="fas fa-calendar-plus"></i> Schedule on Cal.com
       </a>
     </div>
 
     <div class="contact-info">
       <div class="contact-item">
-        📧 <a href="mailto:birce.sari@gmail.com">birce.sari@gmail.com</a>
+        📧 <a href="/cdn-cgi/l/email-protection#f5979c879690db8694879cb59298949c99db969a98"><span class="__cf_email__" data-cfemail="94f6fde6f7f1bae7f5e6fdd4f3f9f5fdf8baf7fbf9">[email&#160;protected]</span></a>
       </div>
       <div class="contact-item">
         📍 Berlin, Germany
@@ -1086,12 +1141,17 @@ body.dark .timeline-details ul{color:var(--text-dark);}
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="container">
     <p>&copy; 2025 Birce SARI. All rights reserved.</p>
-    <p style="margin-top:10px;font-size:14px;">Based in Berlin, Germany</p>
-    <a href="/privacy.html" style="color:var(--primary);margin-right:1rem;">Privacy</a>
-    <a href="/impressum.html" style="color:var(--primary);">Impressum</a>
+    <p style="margin-top:10px;font-size:14px;">Freelance Data Analyst & BI Specialist · Based in Berlin, Germany</p>
+    <p style="margin-top:8px;font-size:13px;">
+      <a href="/privacy.html" style="color:var(--primary);margin-right:1rem;">Privacy</a>
+      <a href="/impressum.html" style="color:var(--primary);margin-right:1rem;">Impressum</a>
+      <a href="/sitemap.xml" style="color:var(--primary);">Sitemap</a>
+    </p>
   </div>
 </footer>
 
@@ -1099,7 +1159,7 @@ body.dark .timeline-details ul{color:var(--text-dark);}
   <i class="fas fa-adjust"></i>
 </button>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleTheme(){document.body.classList.toggle('dark');}
 
 function toggleExperience(header){
@@ -1126,12 +1186,4 @@ function toggleSubcategory(title){
   const isActive=list.classList.contains('active');
   const parent=title.closest('.category-content');
   parent.querySelectorAll('.service-list').forEach(s=>s.classList.remove('active'));
-  parent.querySelectorAll('.subcategory-title i').forEach(i=>i.style.transform='rotate(0)');
-  if(!isActive){list.classList.add('active');icon.style.transform='rotate(90deg)';}
-}
-
-document.querySelectorAll('section').forEach(s=>s.style.scrollMarginTop='80px');
-</script>
-
-</body>
-</html>
+  parent.querySelectorAll('.subcategory-tit
