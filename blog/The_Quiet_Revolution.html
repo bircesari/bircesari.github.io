@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond Good Intentions: Making DEIB Actually Work | Birce SARI</title>
+    <title>The Quiet Revolution | Birce SARI</title>
     <link rel="icon" href="../BS_Logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -82,6 +82,11 @@
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
+
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
         
         p {
             margin-bottom: 1.5rem;
@@ -91,6 +96,12 @@
             margin-left: 2rem;
             margin-bottom: 1.5rem;
         }
+
+        .references-list li {
+            font-size: 0.88rem;
+            color: #555;
+            margin-bottom: 0.4rem;
+        }
         
         blockquote {
             border-left: 4px solid var(--primary);
@@ -99,10 +110,85 @@
             font-style: italic;
             color: #555;
         }
-        
+
+        .divider {
+            font-weight: 400;
+            font-style: italic;
+            color: #666;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ── Recommended Readings ── */
+        .recommended-readings {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .recommended-readings h3 {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+        }
+
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .rec-card {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .rec-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .rec-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .rec-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .rec-desc {
+            font-size: 0.82rem;
+            color: #666;
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .rec-meta {
+            font-size: 0.78rem;
+            color: #999;
+        }
+
+        /* ── Share section ── */
         .share-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem 2rem 0;
             border-top: 2px solid #e0e0e0;
             text-align: center;
         }
@@ -124,13 +210,8 @@
             gap: 0.5rem;
         }
         
-        .share-linkedin {
-            background: #0077b5;
-        }
-        
-        .share-twitter {
-            background: #1da1f2;
-        }
+        .share-linkedin { background: #0077b5; }
+        .share-twitter  { background: #1da1f2; }
         
         footer {
             background: #1e1e2f;
@@ -153,7 +234,7 @@
     </header>
     
     <article>
-         <h1>The Quiet Revolution: Learning to Acknowledge Our Strengths Without Losing Our Humility</h1>
+        <h1>The Quiet Revolution: Learning to Acknowledge Our Strengths Without Losing Our Humility</h1>
 
         <p>Last week, I attended a workshop that fundamentally changed how I think about my professional identity. As I sat through sessions on Failing Forward and Strength Spotting Through Failure Stories, something unexpected happened. The facilitator was not just teaching us about resilience, she was inviting us to see ourselves differently. When asked what I was taking away from the experience, I wrote: Be humble but do not forget to acknowledge yourself.</p>
 
@@ -195,7 +276,7 @@
 
         <h2>What Balanced Self Acknowledgment Looks Like</h2>
 
-        <p>The balance lies in what researchers call humble confidence. Humility reflects an accurate view of oneself and one’s limitations while appreciating the strengths of others (Bauer and Wayment, 2008; Owens et al., 2013). This creates a state where people can evaluate themselves without falling into arrogance or self deprecation.</p>
+        <p>The balance lies in what researchers call humble confidence. Humility reflects an accurate view of oneself and one's limitations while appreciating the strengths of others (Bauer and Wayment, 2008; Owens et al., 2013). This creates a state where people can evaluate themselves without falling into arrogance or self deprecation.</p>
 
         <p>When people work within their areas of strength, they report higher job satisfaction, productivity, and retention (Harzer and Ruch, 2012). This is not about ego, it is about effectiveness.</p>
 
@@ -239,13 +320,13 @@
 
         <h4 class="divider">What practices have helped you balance humility with healthy self acknowledgment? I would love to hear your stories in the comments.</h4>
 
-        </h3>References</h3>
+        <h3>References</h3>
 
         <ul class="references-list">
             <li>Bauer, J.J. and Wayment, H.A. (2008). The psychology of the quiet ego. Transcending self interest.</li>
             <li>Bravata, D.M. et al. (2019). Prevalence, predictors, and treatment of Impostor Syndrome.</li>
             <li>Clance, P.R. and Imes, S.A. (1978). The imposter phenomenon in high achieving women.</li>
-            <li>Harzer, C. and Ruch, W. (2012). Applying one’s strengths at work.</li>
+            <li>Harzer, C. and Ruch, W. (2012). Applying one's strengths at work.</li>
             <li>Krumrei-Mancuso, E.J. and Rouse, S.V. (2015). Comprehensive intellectual humility scale.</li>
             <li>Nielsen, R., Marrone, J.A. and Slay, H.S. (2009). A new look at humility.</li>
             <li>Niemiec, R.M. (2018). Character strengths interventions.</li>
@@ -262,43 +343,31 @@
 
     </article>
 
-        <div class="share-section">
-            <h3>Found this helpful? Share it!</h3>
-            <div class="share-buttons">
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL" target="_blank" class="share-linkedin">
-                    <i class="fab fa-linkedin"></i> Share on LinkedIn
-                </a>
-                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Insights%20on%20DEIB%20analytics%20and%20culture%20change" target="_blank" class="share-twitter">
-                    <i class="fab fa-twitter"></i> Share on Twitter
-                </a>
-            </div>
+    <!-- Recommended Readings — powered by posts.js -->
+    <div class="recommended-readings">
+        <h3>You might also enjoy</h3>
+        <div class="rec-grid">
+            <!-- filled by posts.js at runtime -->
         </div>
-    </article>
-        <!-- Recommended Readings — powered by posts.js -->
-        <div class="recommended-readings">
-            <h3>You might also enjoy</h3>
-            <div class="rec-grid">
-                <!-- filled by posts.js at runtime -->
-            </div>
+    </div>
+
+    <div class="share-section">
+        <h3>Found this helpful? Share it!</h3>
+        <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL" target="_blank" class="share-linkedin">
+                <i class="fab fa-linkedin"></i> Share on LinkedIn
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=The+Quiet+Revolution+by+Birce+SARI" target="_blank" class="share-twitter">
+                <i class="fab fa-twitter"></i> Share on Twitter
+            </a>
         </div>
- 
-        <div class="share-section">
-            <h3>Found this helpful? Share it!</h3>
-            <div class="share-buttons">
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL" target="_blank" class="share-linkedin">
-                    <i class="fab fa-linkedin"></i> Share on LinkedIn
-                </a>
-                <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=Insights%20on%20DEIB%20analytics%20and%20culture%20change" target="_blank" class="share-twitter">
-                    <i class="fab fa-twitter"></i> Share on Twitter
-                </a>
-            </div>
-        </div>
-    </article>
+    </div>
     
     <footer>
         <p>&copy; 2025 Birce SARI. All rights reserved.</p>
     </footer>
-<!-- Load shared post registry, then render recommendations -->
+
+    <!-- Load shared post registry, then render recommendations -->
     <script src="posts.js"></script>
     <script>
         renderRecommendations("The_Quiet_Revolution.html");
