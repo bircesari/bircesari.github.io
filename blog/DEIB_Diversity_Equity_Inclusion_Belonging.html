@@ -324,20 +324,11 @@
             I completed this course through LinkedIn Learning, which offers PDUs for those tracking 
             continuing education credits.
         </p>
-        <!-- Recommended Readings -->
+         <!-- Recommended Readings — powered by posts.js -->
         <div class="recommended-readings">
             <h3>You might also enjoy</h3>
             <div class="rec-grid">
-                <a href="How_to_Build_Effective_BI_Dashboards.html" class="rec-card">
-                    <div class="rec-tag">Analytics</div>
-                    <p class="rec-title">How to Build Effective BI Dashboards</p>
-                    <span class="rec-meta">Nov 14 · 6 min read</span>
-                </a>
-                <a href="The_Quiet_Revolution.html" class="rec-card">
-                    <div class="rec-tag">AI & Work</div>
-                    <p class="rec-title">The Quiet Revolution</p>
-                    <span class="rec-meta">Nov 1 · 5 min read</span>
-                </a>
+                <!-- filled by posts.js at runtime -->
             </div>
         </div>
         <div class="share-section">
@@ -356,6 +347,14 @@
     <footer>
         <p>&copy; 2025 Birce SARI. All rights reserved.</p>
     </footer>
+    
+    <!-- Load shared post registry, then render recommendations -->
+    <script src="posts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderRecommendations("DEIB_Diversity_Equity_Inclusion_Belonging.html");
+        });
+    </script>
 </body>
 </html>
 
