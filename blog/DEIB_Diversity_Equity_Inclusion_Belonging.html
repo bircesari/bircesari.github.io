@@ -131,7 +131,59 @@
         .share-twitter {
             background: #1da1f2;
         }
+           .recommended-readings {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+        }
         
+        .recommended-readings h3 {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        
+        .rec-card {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        
+        .rec-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .rec-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rec-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .rec-meta {
+            font-size: 0.8rem;
+            color: #888;
+        }
         footer {
             background: #1e1e2f;
             color: white;
@@ -272,7 +324,22 @@
             I completed this course through LinkedIn Learning, which offers PDUs for those tracking 
             continuing education credits.
         </p>
-
+        <!-- Recommended Readings -->
+        <div class="recommended-readings">
+            <h3>You might also enjoy</h3>
+            <div class="rec-grid">
+                <a href="How_to_Build_Effective_BI_Dashboards.html" class="rec-card">
+                    <div class="rec-tag">Analytics</div>
+                    <p class="rec-title">How to Build Effective BI Dashboards</p>
+                    <span class="rec-meta">Nov 14 · 6 min read</span>
+                </a>
+                <a href="The_Quiet_Revolution.html" class="rec-card">
+                    <div class="rec-tag">AI & Work</div>
+                    <p class="rec-title">The Quiet Revolution</p>
+                    <span class="rec-meta">Nov 1 · 5 min read</span>
+                </a>
+            </div>
+        </div>
         <div class="share-section">
             <h3>Found this helpful? Share it!</h3>
             <div class="share-buttons">
