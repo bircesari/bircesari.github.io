@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Year Data Learned to Think| Birce SARI</title>
+    <title>The Year Data Learned to Think | Birce SARI</title>
     <link rel="icon" href="../BS_Logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -72,6 +72,7 @@
         }
         p { margin-bottom: 1.5rem; }
         ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.4rem; }
         blockquote {
             border-left: 4px solid var(--primary);
             padding-left: 1rem;
@@ -79,9 +80,82 @@
             font-style: italic;
             color: #555;
         }
+        .tags {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 2rem;
+            line-height: 2;
+        }
+
+        /* ── Recommended Readings ── */
+        .recommended-readings {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .recommended-readings h3 {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+        }
+
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .rec-card {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .rec-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .rec-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .rec-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .rec-desc {
+            font-size: 0.82rem;
+            color: #666;
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .rec-meta {
+            font-size: 0.78rem;
+            color: #999;
+        }
+
+        /* ── Share section ── */
         .share-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem 2rem 0;
             border-top: 2px solid #e0e0e0;
             text-align: center;
         }
@@ -101,6 +175,8 @@
             gap: 0.5rem;
         }
         .share-linkedin { background: #0077b5; }
+        .share-twitter  { background: #1da1f2; }
+
         footer {
             background: #1e1e2f;
             color: white;
@@ -122,9 +198,8 @@
 </header>
 
 <article>
-    
     <h1>The Year Data Learned to Think: Reflections on 2025's Transformation</h1>
-    
+
     <p>As we close out 2025, I find myself reflecting on what has been nothing short of a revolutionary year in the data world. We didn't just see incremental improvements, but we witnessed a fundamental shift in how data operates; how insights are generated, and how decisions are made. The line between human analyst and intelligent system has blurred in ways that would have seemed like science fiction just five years ago.</p>
     <p>This year forced all of us in the data field to reimagine our roles. I spent much of 2025 investing in my own growth, completing certifications that now feel prophetic given how the industry evolved. From Artificial Intelligence (AI) and Machine Learning (ML) to data storytelling and conversational AI, each learning journey aligned perfectly with the seismic shifts happening around us.</p>
 
@@ -142,7 +217,7 @@
     
     <h2>Real-Time Everything: The Death of Yesterday's Data</h2>
        
-    <p>One of the most persistent themes across 2025 has been the acceleration toward real-time analytics. By processing data closer to its source, edge solutions minimize latency and bandwidth usage, making them ideal for real-time analytics in IoT, industrial, and other time-sensitive environments (Gartner, 2025a). International Data Corporation (IDC)’s projection has come true: by 2025, 75% of enterprise data is being processed at the edge (APMdigest, 2025). This shift to edge computing means decisions are made in microseconds rather than minutes, fundamentally changing what's possible in industries from autonomous vehicles to predictive maintenance to financial trading.</p>
+    <p>One of the most persistent themes across 2025 has been the acceleration toward real-time analytics. By processing data closer to its source, edge solutions minimize latency and bandwidth usage, making them ideal for real-time analytics in IoT, industrial, and other time-sensitive environments (Gartner, 2025a). International Data Corporation (IDC)'s projection has come true: by 2025, 75% of enterprise data is being processed at the edge (APMdigest, 2025). This shift to edge computing means decisions are made in microseconds rather than minutes, fundamentally changing what's possible in industries from autonomous vehicles to predictive maintenance to financial trading.</p>
     <p>The integration of 5G technology has supercharged this trend. In logistics, companies are now optimizing delivery routes in real-time using edge analytics, cutting costs while improving service quality. In manufacturing, sensors detect anomalies and predict equipment failures before they occur, all without sending data to centralized servers. My Google Analytics Certification and Google Ads certifications (both in Measurement and AI-Powered Performance Ads) positioned me perfectly to leverage these real-time capabilities. Campaign optimization that once took days now happens continuously, with AI agents adjusting bids, audiences, and creative elements based on streaming performance data.</p>
     
     <h2>Data Governance: The Unsung Hero of AI Success</h2>
@@ -194,45 +269,65 @@
 
     <p>2025 will be remembered as the year data learned to think for itself. Agentic AI moved from concept to reality. Real-time analytics became the default. Data governance emerged as the make-or-break factor for AI success. And storytelling evolved from a nice-to-have skill to a fundamental requirement. For those of us who invested in learning, who earned certifications, experimented with new tools, and pushed beyond our comfort zones, this year was exhilarating. The data world didn't just change incrementally; it transformed fundamentally.</p>
     <p>As we enter 2026, the question isn't whether AI agents will reshape how we work with data, they already have. The question is whether we, as data professionals, can evolve alongside these systems. Can we become the strategic guides, ethical governors, and human translators that AI-powered organizations need?</p>
-    <p>Based on what I've seen this year, I'm optimistic. The human elements like  judgment, creativity, ethical reasoning, and the ability to craft compelling narratives, remain irreplaceable. But they must be combined with deep technical understanding and willingness to work alongside autonomous systems rather than in opposition to them.</p>    
+    <p>Based on what I've seen this year, I'm optimistic. The human elements like judgment, creativity, ethical reasoning, and the ability to craft compelling narratives, remain irreplaceable. But they must be combined with deep technical understanding and willingness to work alongside autonomous systems rather than in opposition to them.</p>    
     <p>The data revolution of 2025 didn't replace us. It elevated us. And I, for one, can't wait to see where 2026 takes us.</p>
-    
     
     <h2>References</h2>
     <ul>
         <li>APMdigest (2025) Gartner: Top trends in data and analytics for 2025. Available at: https://www.apmdigest.com/gartner-top-trends-data-and-analytics-2025 (Accessed: 29 December 2025).</li>
         <li>Citrusbug (2025) AI agents statistics 2025: Adoption, market growth and key trends. Available at: https://citrusbug.com/blog/ai-agents-statistics/ (Accessed: 29 December 2025).</li>
-        <li>Deloitte (2025) Agentic AI strategy. Deloitte Insights. Available at: https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html(Accessed: 29 December 2025).</li>
+        <li>Deloitte (2025) Agentic AI strategy. Deloitte Insights. Available at: https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html (Accessed: 29 December 2025).</li>
         <li>Gartner (2025a) Gartner identifies top trends in data and analytics for 2025. Press Release, 5 March. Available at: https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-identifies-top-trends-in-data-and-analytics-for-2025 (Accessed: 29 December 2025).</li>
         <li>Hosseini, S. and Seilani, H. (2025) 'The role of agentic AI in shaping a smart future: A systematic review', Array, 26, 100399. doi: 10.1016/j.array.2025.100399.</li>
-        <li>Kesari, G. (2025) 'The enduring power of data storytelling in the generative AI era', MIT Sloan Management Review. Available at: https://sloanreview.mit.edu/article/the-enduring-power-of-data-storytelling-in-the-generative-ai-era/(Accessed: 29 December 2025).</li>
+        <li>Kesari, G. (2025) 'The enduring power of data storytelling in the generative AI era', MIT Sloan Management Review. Available at: https://sloanreview.mit.edu/article/the-enduring-power-of-data-storytelling-in-the-generative-ai-era/ (Accessed: 29 December 2025).</li>
         <li>Kirkpatrick, K. (2025) 'Was 2025 the year of agentic AI, or just more agentic hype?', Futurum Group. Available at: https://futurumgroup.com/insights/was-2025-really-the-year-of-agentic-ai-or-just-more-agentic-hype/ (Accessed: 29 December 2025).</li>
         <li>Loten, A. (2025) '2025 was the year of agentic AI. How did we do?', Fortune, 15 December. Available at: https://fortune.com/2025/12/15/agentic-artificial-intelligence-automation-capital-one/ (Accessed: 29 December 2025).</li>
-        <li>Richardson, J. (2021) cited in 'Gartner predicts data storytelling will dominate BI by 2025', TechTarget. Available at: https://www.techtarget.com/searchbusinessanalytics/feature/Gartner-predicts-data-storytelling-will-dominate-BI-by-2025(Accessed: 29 December 2025).</li>
+        <li>Richardson, J. (2021) cited in 'Gartner predicts data storytelling will dominate BI by 2025', TechTarget. Available at: https://www.techtarget.com/searchbusinessanalytics/feature/Gartner-predicts-data-storytelling-will-dominate-BI-by-2025 (Accessed: 29 December 2025).</li>
         <li>Sapkota, R., Roumeliotis, K.I. and Karkee, M. (2025) 'AI agents vs. agentic AI: A conceptual taxonomy, applications and challenges', Information Fusion, 126(B), 103599. doi: 10.1016/j.inffus.2025.103599.</li>
         <li>The National CIO Review (2025) 'Gartner identifies top trends in data and analytics for 2025', 5 March. Available at: https://nationalcioreview.com/articles-insights/gartner-identifies-top-trends-in-data-and-analytics-for-2025/ (Accessed: 29 December 2025).</li>
     </ul>
     
     <p class="tags">
-    #DataAnalytics #AI #MachineLearning #DataScience #AgenticAI #RealTimeAnalytics #DataGovernance
-    #DigitalTransformation #FutureOfWork #ContinuousLearning #BusinessIntelligence
+        #DataAnalytics #AI #MachineLearning #DataScience #AgenticAI #RealTimeAnalytics #DataGovernance
+        #DigitalTransformation #FutureOfWork #ContinuousLearning #BusinessIntelligence
     </p>
 
-    <div class="share-section">
-        <h3>Share this reflection</h3>
-        <div class="share-buttons">
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.bircesari.com/blog/Reflections_on_2025.html"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="share-linkedin">
-                <i class="fab fa-linkedin"></i> Share on LinkedIn
-            </a>
-        </div>
-    </div>
 </article>
+
+<!-- Recommended Readings — powered by posts.js -->
+<div class="recommended-readings">
+    <h3>You might also enjoy</h3>
+    <div class="rec-grid">
+        <!-- filled by posts.js at runtime -->
+    </div>
+</div>
+
+<div class="share-section">
+    <h3>Share this reflection</h3>
+    <div class="share-buttons">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.bircesari.com/blog/Reflections_on_2025.html"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="share-linkedin">
+            <i class="fab fa-linkedin"></i> Share on LinkedIn
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://www.bircesari.com/blog/Reflections_on_2025.html&text=The+Year+Data+Learned+to+Think+by+Birce+SARI"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="share-twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+        </a>
+    </div>
+</div>
 
 <footer>
     <p>&copy; 2025 Birce SARI. All rights reserved.</p>
 </footer>
+
+<!-- Load shared post registry, then render recommendations -->
+<script src="posts.js"></script>
+<script>
+    renderRecommendations("Reflections_on_2025.html");
+</script>
 </body>
 </html>
