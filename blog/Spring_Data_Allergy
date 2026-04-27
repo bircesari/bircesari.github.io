@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ═══════════════════════════════════════════════
+         PRIMARY SEO
+    ════════════════════════════════════════════════ -->
+    <title>Spring Data Allergy: A Night at SumUp Berlin | Birce SARI</title>
+    <meta name="description" content="A recap of the Spring Data Allergy Data Berlin meetup hosted at SumUp on April 23, 2026, covering regulatory automation with LLMs, AI data fabrication, and LLM-as-judge customer support evaluation.">
+    <meta name="keywords" content="Data Berlin meetup, Spring Data Allergy, SumUp Berlin, LLM compliance automation, data quality, LLM as judge, AI analytics, data engineering Berlin, regulatory reporting automation, Birce Sari">
+    <meta name="author" content="Birce SARI">
+    <link rel="canonical" href="https://bircesari.github.io/blog/Spring_Data_Allergy.html">
+    <link rel="icon" href="../BS_Logo.png" type="image/png">
+
+    <!-- ═══════════════════════════════════════════════
+         OPEN GRAPH (LinkedIn / Facebook)
+    ════════════════════════════════════════════════ -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Spring Data Allergy: A Night at SumUp Berlin">
+    <meta property="og:description" content="Recap of the Data Berlin meetup at SumUp; regulatory pipelines, AI that fabricated analytics data for 3 months, and LLMs judging customer support quality.">
+    <meta property="og:url" content="https://bircesari.github.io/blog/Spring_Data_Allergy.html">
+    <meta property="og:site_name" content="Birce SARI">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:published_time" content="2026-04-27">
+    <meta property="article:author" content="https://www.linkedin.com/in/bircesari">
+    <meta property="article:tag" content="Data Berlin">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Data Engineering">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Berlin Meetup">
+
+    <!-- ═══════════════════════════════════════════════
+         TWITTER CARD
+    ════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spring Data Allergy: A Night at SumUp Berlin">
+    <meta name="twitter:description" content="Three talks. One recurring theme: the gap between what AI promises and what your data actually supports.">
+    <meta name="twitter:creator" content="@bircesari">
+
+    <!-- ═══════════════════════════════════════════════
+         STRUCTURED DATA — BlogPosting (Schema.org)
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Spring Data Allergy: An Evening at SumUp That I Did Not Walk Away From Unaffected",
+      "description": "A recap of the Spring Data Allergy Data Berlin meetup hosted at SumUp on April 23, 2026, covering regulatory automation with LLMs, AI data fabrication, and LLM-as-judge customer support evaluation.",
+      "author": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io",
+        "sameAs": "https://www.linkedin.com/in/bircesari"
+      },
+      "datePublished": "2026-04-27",
+      "dateModified": "2026-04-27",
+      "url": "https://bircesari.github.io/blog/Spring_Data_Allergy.html",
+      "publisher": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io"
+      },
+      "keywords": ["Data Berlin", "LLM", "AI analytics", "regulatory automation", "data quality", "SumUp", "Berlin meetup", "LLM as judge"],
+      "about": [
+        { "@type": "Event", "name": "Spring Data Allergy", "startDate": "2026-04-23", "location": { "@type": "Place", "name": "SumUp Services GmbH", "address": "Koppenstraße 8, 10243 Berlin, Germany" } }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         BREADCRUMB structured data
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://bircesari.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bircesari.github.io/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Spring Data Allergy", "item": "https://bircesari.github.io/blog/Spring_Data_Allergy.html" }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         FONTS & ICONS
+    ════════════════════════════════════════════════ -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #4dd0e1;
+            --secondary: #b39ddb;
+            --bg-light: #ffffff;
+            --text-light: #1e1e2f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.75;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .back-link:hover { opacity: 0.8; }
+
+        /* ── ARTICLE ── */
+        article {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .post-meta {
+            color: #888;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .post-meta span { display: flex; align-items: center; gap: 0.35rem; }
+
+        /* reading time pill */
+        .read-time {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border-radius: 20px;
+            padding: 0.15rem 0.75rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            line-height: 1.25;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.85rem;
+            font-size: 1.35rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        /* ── AGENDA TABLE ── */
+        .agenda {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.9rem;
+        }
+        .agenda th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.6rem 1rem;
+            text-align: left;
+            font-weight: 500;
+        }
+        .agenda td {
+            padding: 0.55rem 1rem;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        .agenda tr:nth-child(even) td { background: #f9fdfe; }
+        .agenda tr:hover td { background: #e8fafb; }
+        .agenda .time { color: var(--primary); font-weight: 500; white-space: nowrap; }
+
+        /* ── BLOCKQUOTE ── */
+        blockquote {
+            border-left: 4px solid var(--primary);
+            padding: 0.75rem 1.25rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+            background: #f5fdfe;
+            border-radius: 0 6px 6px 0;
+        }
+
+        /* ── HASHTAGS ── */
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2.5rem 0 1rem;
+        }
+        .hashtag {
+            background: #f0f9fa;
+            color: var(--primary);
+            border: 1px solid #c8eef2;
+            border-radius: 20px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .hashtag:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ── DIVIDER ── */
+        .divider {
+            font-weight: 400;
+            font-style: italic;
+            color: #666;
+            margin: 2rem 0;
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+        }
+
+        /* ── REFERENCES ── */
+        ul.references-list {
+            margin-left: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        ul.references-list li {
+            font-size: 0.86rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        ul.references-list a {
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        /* ── RECOMMENDED READINGS ── */
+        .recommended-readings {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+        }
+        .recommended-readings h3 {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+        }
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        .rec-card {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .rec-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .rec-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .rec-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+        .rec-desc { font-size: 0.82rem; color: #666; margin-bottom: 0.6rem; line-height: 1.5; }
+        .rec-meta { font-size: 0.78rem; color: #999; }
+
+        /* ── SHARE ── */
+        .share-section {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+        .share-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+        .share-buttons a {
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .share-linkedin { background: #0077b5; }
+        .share-twitter  { background: #1da1f2; }
+
+        footer {
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.65rem; }
+            article { padding: 0 1.25rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══════════════════════════════
+         HEADER
+    ══════════════════════════════ -->
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <span>Birce SARI · Blog</span>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════
+         ARTICLE BODY
+    ══════════════════════════════ -->
+    <article>
+
+        <!-- META -->
+        <div class="post-meta">
+            <span><i class="fas fa-calendar-alt"></i> 27 April 2026</span>
+            <span><i class="fas fa-map-marker-alt"></i> Berlin, DE</span>
+            <span><i class="fas fa-tag"></i> Meetup Recap · AI · Data Engineering</span>
+            <span class="read-time">~5 min read</span>
+        </div>
+
+        <!-- TITLE -->
+        <h1>🌸 Spring Data Allergy: An Evening at SumUp That I Did Not Walk Away From Unaffected</h1>
+
+        <!-- INTRO -->
+        <p>Let me be upfront: the meetup was brilliant. The talks were sharp, the energy in the room was electric, and the conversations ran well. The only thing I did not manage to protect myself from, despite my best efforts, was catching a full-blown case of data enthusiasm (an occupational hazard I have clearly not built immunity to yet). Consider this my delayed sneezing fit, in blog form.</p>
+
+        <!-- SETTING THE SCENE -->
+        <h2>Setting the Scene: A Spring Evening at Koppenstraße 8</h2>
+
+        <p>On the evening of April 23rd, a few dozen data professionals made their way to the SumUp offices in Friedrichshain, tucked into the kind of Berlin neighbourhood that still has enough character to remind you this city runs on more than venture capital and oat milk.</p>
+        <p>Data Berlin is a community gathering of professionals and enthusiasts working in data analytics, business intelligence, and data engineering Meetup and this edition, titled Spring Data Allergy, leaned fully into the seasonal metaphor. Spring is here. And so are the sniffles. Not from pollen, but from data pipelines, AI hype, and the occasional rogue SQLs; from a company that, incidentally, has an enormous amount of real-world data coursing through its systems daily. The setting was fitting.</p>
+
+        <!-- TALKS -->
+        <h2>The Talks: Where the Allergy Really Kicked In</h2>
+
+        <p>Three talks, three teams, one recurring theme: the gap between what AI promises and what your data actually supports.</p>
+        <p><strong>Johana Yuan Feng</strong> opened with something I find genuinely exciting using multi-LLM orchestration to turn dense regulatory language into automated compliance pipelines. The kind of work that makes you think: if we can parse a regulatory document and build a SQL pipeline from it, what else is just a translation problem waiting to be solved?</p>
+        <p><strong>Marina Ariamnova</strong> then delivered the honest talk of an AI had been generating analytics outputs for three months. No one noticed they were fabricated. The root cause was not the model, it was that only a narrow slice of their data was actually AI-ready, and the system had no mechanism to say so. The lesson is one the field keeps needing to relearn, you cannot skip the data foundation and go straight to the intelligence layer. The research on this is unambiguous: poor data quality costs organisations not just money but trust, and once an AI erodes that trust, rebuilding it takes considerably longer than the three months it took to lose it (Redman, 2016).</p>
+        <p><strong>Dafne Romero</strong> closed with a framework her team, built where LLMs act as judges over real customer support conversations that scoring resolution quality, flagging PII leakage, evaluating human agents across channels, and classifying formal complaints for compliance purposes. What made it compelling was not the architecture, but the honesty about what makes it hard: prompts drift, transcripts are inconsistent, models are non-deterministic, and every stakeholder has a different definition of "good." That tension, between what evaluation frameworks promise in theory and what they require to survive in production, is exactly where the most important work in applied AI is happening right now.</p>
+        <p>Taken together, the three talks made a quiet argument: data is not the new oil. Reliable, well-governed, honestly evaluated data is. The rest is just pressure without a pipeline.</p>
+
+        <!-- MY VIEW -->
+        <h2>What Data Can Already Do — and What We Are Still Leaving on the Table</h2>
+
+        <p>Here is where I have to be honest about the thing that hit me hardest that evening, and it was not any single slide. It was the accumulated weight of realising how much is already possible and how large the gap remains between what the field knows and what most organisations actually practise.</p>
+        <p>We have techniques today that allow us to detect anomalies in real-time transactional data before a human analyst would notice anything is wrong. We can model customer churn with enough lead time to act. We can surface the KPIs that correlate with revenue in ways that challenge every assumption a leadership team has held for years. We can automate the reporting layer entirely and redirect analyst capacity toward interpretation, strategy, and the uncomfortable questions that numbers alone cannot answer.</p>
+        <p>And yet, in most organisations I have worked with or spoken to the data team is still producing weekly Excel exports for people who have already made up their minds.</p>
+        <p>This is not a technology gap. The tools exist. The research exists. The frameworks exist. It is a translation gap: the distance between what data can tell you and what decision-makers are equipped to hear. Closing that gap is, I would argue, the most important work in this field right now.</p>
+        <p>The research broadly confirms this tension. A landmark study published in the MIT Sloan Management Review by McAfee and Brynjolfsson established that data-driven organisations outperform peers across productivity and profitability metrics and that evidence predates the current wave of AI capability by over a decade. We have known this. The question has never been whether data works. It is why adoption is still so uneven.</p>
+
+        <!-- CLOSING -->
+        <h2>Why I Keep Showing Up to These Things</h2>
+
+        <p>I will be direct: I do not attend meetups for the free drinks, though I appreciate them. I attend because there is something that happens in a room of people who are all genuinely trying to figure out the same hard problems that does not happen anywhere else. You hear someone describe a solution you have been circling for months. You realise your frustration is shared. You leave with three things to read, one question you had not thought to ask, and a renewed sense that the work matters.</p>
+        <p>Spring Data Allergy delivered on all three counts. The setting was generous, the talks were substantive, and the conversations in the networking stretches were the kind that run over time for good reasons.</p>
+        <p>The next edition will find me there. Possibly with antihistamines. Definitely without regrets.</p>
+
+        <p class="divider">Did you attend Spring Data Allergy? I would love to hear what stayed with you. Find me on <a href="https://www.linkedin.com/in/bircesari" target="_blank" rel="noopener">LinkedIn</a> or drop a comment below.</p>
+
+                <h3>References</h3>
+
+        <ul class="references-list">
+            <li>Biskupski, T. & Kleber, S. (2025). Evaluating the reliability and fidelity of automated judgment systems of large language models. arXiv preprint. Available at: https://arxiv.org/pdf/2603.22214 [Accessed 27 April 2026].</li>
+            <li>Gao, J., Chen, C., Jia, Y., Gong, X., Lam, K. & Wang, Q. (2025). Evaluating and mitigating LLM-as-a-judge bias in communication systems. arXiv preprint. Available at: https://arxiv.org/pdf/2510.12462 [Accessed 27 April 2026].</li>
+            <li>Gu, J. et al. (2024). LLMs-as-judges: A comprehensive survey on LLM-based evaluation methods. arXiv preprint arXiv:2412.05579. Available at: https://arxiv.org/abs/2412.05579 [Accessed 27 April 2026].</li>
+            <li>Redman, T.C. (2016). Bad data costs the U.S. $3 trillion per year. Harvard Business Review, 22 September. Available at: https://community.sap.com/t5/technology-blog-posts-by-sap/bad-data-costs-the-u-s-3-trillion-per-year/ba-p/13575387 [Accessed 27 April 2026].</li>
+            <li>Jiang, S. et al. (2025). 'Stars at the Regulations Challenge Task: A large language model for financial regulation', in Proceedings of the Joint Workshop of the 9th FinNLP, the 6th FNP, and the 1st LLMFinLegal, pp. 371–384. Available at: https://aclanthology.org/2025.finnlp-1.43.pdf [Accessed 27 April 2026].</li>
+            <li>Responsible Innovation Framework (2025). Responsible innovation: A strategic framework for financial LLM integration. arXiv preprint arXiv:2504.02165. Available at: https://arxiv.org/html/2504.02165v1 [Accessed 27 April 2026].</li>
+        </ul>
+
+        <!-- HASHTAGS -->
+        <div class="hashtags" aria-label="Post tags">
+            <a class="hashtag" href="#">#DataBerlin</a>
+            <a class="hashtag" href="#">#SpringDataAllergy</a>
+            <a class="hashtag" href="#">#BerlinMeetup</a>
+            <a class="hashtag" href="#">#DataEngineering</a>
+            <a class="hashtag" href="#">#LLM</a>
+            <a class="hashtag" href="#">#AIanalytics</a>
+            <a class="hashtag" href="#">#DataQuality</a>
+            <a class="hashtag" href="#">#RegTech</a>
+            <a class="hashtag" href="#">#LLMasJudge</a>
+            <a class="hashtag" href="#">#SumUp</a>
+            <a class="hashtag" href="#">#MachineLearning</a>
+            <a class="hashtag" href="#">#DataDriven</a>
+            <a class="hashtag" href="#">#BusinessIntelligence</a>
+            <a class="hashtag" href="#">#WomenInData</a>
+        </div>
+
+        <!-- REFERENCES -->
+        <h3>References</h3>
+        <ul class="references-list">
+            <li>McAfee, A. &amp; Brynjolfsson, E. (2012). 'Big data: The management revolution', <em>Harvard Business Review</em>, 90(10), pp. 60–68. Available at: <a href="https://hbr.org/2012/10/big-data-the-management-revolution" target="_blank" rel="noopener">https://hbr.org/2012/10/big-data-the-management-revolution</a> [Accessed 27 April 2026].</li>
+            <li>Redman, T.C. (2016). 'Bad data costs the U.S. $3 trillion per year', <em>Harvard Business Review</em>, 22 September. Available at: <a href="https://hbr.org/2016/09/bad-data-costs-the-u-s-3-trillion-per-year" target="_blank" rel="noopener">https://hbr.org/2016/09/bad-data-costs-the-u-s-3-trillion-per-year</a> [Accessed 27 April 2026].</li>
+            <li>Gu, J. et al. (2024). <em>LLMs-as-judges: A comprehensive survey on LLM-based evaluation methods</em>. arXiv:2412.05579. Available at: <a href="https://arxiv.org/abs/2412.05579" target="_blank" rel="noopener">https://arxiv.org/abs/2412.05579</a> [Accessed 27 April 2026].</li>
+            <li>Orji, S. (2024). 'Implementing AI-powered solutions for regulatory compliance in digital banking', <em>International Journal of Science and Research Archive</em>, 13(02), pp. 3115–3119. Available at: <a href="https://journalwjaets.com/sites/default/files/fulltext_pdf/WJAETS-2025-0784.pdf" target="_blank" rel="noopener">https://journalwjaets.com/sites/default/files/fulltext_pdf/WJAETS-2025-0784.pdf</a> [Accessed 27 April 2026].</li>
+        </ul>
+
+    </article>
+
+    <!-- ══════════════════════════════
+         RECOMMENDED READINGS
+    ══════════════════════════════ -->
+    <div class="recommended-readings">
+        <h3>You might also enjoy</h3>
+        <div class="rec-grid">
+            <!-- populated by posts.js at runtime -->
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════
+         SHARE
+    ══════════════════════════════ -->
+    <div class="share-section">
+        <h3>Found this useful? Share it!</h3>
+        <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbircesari.github.io%2Fblog%2FSpring_Data_Allergy.html"
+               target="_blank" rel="noopener" class="share-linkedin">
+                <i class="fab fa-linkedin"></i> Share on LinkedIn
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbircesari.github.io%2Fblog%2FSpring_Data_Allergy.html&text=Spring+Data+Allergy+%F0%9F%8C%B8+%E2%80%94+a+night+at+%40SumUp+Berlin+with+%40DataBerlin%3A+LLMs%2C+broken+AI%2C+and+the+data+foundations+we+keep+skipping."
+               target="_blank" rel="noopener" class="share-twitter">
+                <i class="fab fa-twitter"></i> Share on Twitter
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Birce SARI. All rights reserved.</p>
+    </footer>
+
+    <!-- shared post registry → recommendations -->
+    <script src="posts.js"></script>
+    <script>
+        if (typeof renderRecommendations === 'function') {
+            renderRecommendations("Spring_Data_Allergy.html");
+        }
+    </script>
+
+</body>
+</html>
