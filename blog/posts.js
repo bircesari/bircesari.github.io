@@ -13,7 +13,7 @@ window.BLOG_POSTS = [
         tag: "Culture",
         date: "Nov 27",
         time: "7 min",
-        description: "What measuring the right things — not just counting heads — actually looks like."
+        description: "What measuring the right things — not just counting heads, actually looks like."
     },
     {
         title: "The Quiet Revolution",
@@ -30,6 +30,14 @@ window.BLOG_POSTS = [
         date: "Dec 1",
         time: "4 min",
         description: "Looking back at a year of transitions, lessons, and things worth keeping."
+    },
+    {
+        title: "Your KPIs Are Lying to You",
+        url: "Your_KPIs_Are_Lying_To_You.html",
+        tag: "KPI Governance",
+        date: "May 12",
+        time: "8 min",
+        description: "How a metric degrades from useful proxy to misleading signal?"
     }
 ];
 
