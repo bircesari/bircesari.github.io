@@ -588,39 +588,44 @@
 
 </article>
 
-<div class="recommended-readings">
-    <h3>You might also enjoy</h3>
-    <div class="rec-grid">
-        <!-- populated by posts.js -->
+
+    <!-- Recommended Readings — powered by posts.js -->
+    <div class="recommended-readings">
+        <h3>You might also enjoy</h3>
+        <div class="rec-grid">
+            <!-- filled by posts.js at runtime -->
+        </div>
     </div>
-</div>
 
-<div class="share-section">
-    <h3>Found this useful? Share it!</h3>
-
-    <div class="share-buttons">
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbircesari.github.io%2Fblog%2FYour_KPIs_Are_Lying_To_You.html"
-           target="_blank" rel="noopener" class="share-linkedin">
-            <i class="fab fa-linkedin"></i> Share on LinkedIn
-        </a>
-
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbircesari.github.io%2Fblog%2FYour_KPIs_Are_Lying_To_You.html&text=Your+KPIs+Are+Lying+To+You+—+why+dashboard+alignment+matters+more+than+most+organizations+realize."
-           target="_blank" rel="noopener" class="share-twitter">
-            <i class="fab fa-twitter"></i> Share on Twitter
-        </a>
+    <div class="share-section">
+        <h3>Found this helpful? Share it!</h3>
+        <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.bircesari.com/blog/How_to_Build_Effective_BI_Dashboards.html"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="share-linkedin">
+                <i class="fab fa-linkedin"></i> Share on LinkedIn
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://www.bircesari.com/blog/How_to_Build_Effective_BI_Dashboards.html&text=How+to+Build+Effective+BI+Dashboards+by+Birce+SARI"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="share-twitter">
+                <i class="fab fa-twitter"></i> Share on Twitter
+            </a>
+        </div>
     </div>
-</div>
+    
+    <footer>
+        <p>&copy; 2025 Birce SARI. All rights reserved.</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2026 Birce SARI. All rights reserved.</p>
-</footer>
-
-<script src="posts.js"></script>
-<script>
-    if (typeof renderRecommendations === 'function') {
-        renderRecommendations("Your_KPIs_Are_Lying_To_You.html");
-    }
-</script>
+    <!-- Load shared post registry, then render recommendations -->
+    <script src="posts.js"></script>
+    <script>
+        renderRecommendations("How_to_Build_Effective_BI_Dashboards.html");
+    </script>
+</body>
+</html>
 
 </body>
 </html>
