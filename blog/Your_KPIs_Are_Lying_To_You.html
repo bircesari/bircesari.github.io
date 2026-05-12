@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ═══════════════════════════════════════════════
+         PRIMARY SEO
+    ════════════════════════════════════════════════ -->
+    <title>Your KPIs Are Lying to You | Birce SARI</title>
+    <meta name="description" content="An analysis of KPI misalignment, dashboard culture, and why organizations struggle when teams define performance differently.">
+    <meta name="keywords" content="KPI governance, business intelligence, dashboard culture, Goodhart's Law, Campbell's Law, data governance, KPI alignment, performance measurement, BI strategy, Birce Sari">
+    <meta name="author" content="Birce SARI">
+    <link rel="canonical" href="https://bircesari.github.io/blog/Your_KPIs_Are_Lying_To_You.html">
+    <link rel="icon" href="../BS_Logo.png" type="image/png">
+
+    <!-- ═══════════════════════════════════════════════
+         OPEN GRAPH
+    ════════════════════════════════════════════════ -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Your KPIs Are Lying to You">
+    <meta property="og:description" content="The dashboard is green. The meeting room is tense. Both things are true.">
+    <meta property="og:url" content="https://bircesari.github.io/blog/Your_KPIs_Are_Lying_To_You.html">
+    <meta property="og:site_name" content="Birce SARI">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:published_time" content="2026-05-12">
+    <meta property="article:author" content="https://www.linkedin.com/in/bircesari">
+    <meta property="article:tag" content="Business Intelligence">
+    <meta property="article:tag" content="KPI Governance">
+    <meta property="article:tag" content="Data Strategy">
+    <meta property="article:tag" content="Analytics">
+
+    <!-- ═══════════════════════════════════════════════
+         TWITTER CARD
+    ════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your KPIs Are Lying to You">
+    <meta name="twitter:description" content="When teams measure the same reality differently, dashboards stop helping and meetings stop moving forward.">
+    <meta name="twitter:creator" content="@bircesari">
+
+    <!-- ═══════════════════════════════════════════════
+         STRUCTURED DATA
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Your KPIs Are Lying to You",
+      "description": "An analysis of KPI misalignment, dashboard culture, and why organizations struggle when teams define performance differently.",
+      "author": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io",
+        "sameAs": "https://www.linkedin.com/in/bircesari"
+      },
+      "datePublished": "2026-05-12",
+      "dateModified": "2026-05-12",
+      "url": "https://bircesari.github.io/blog/Your_KPIs_Are_Lying_To_You.html",
+      "publisher": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io"
+      },
+      "keywords": [
+        "KPI governance",
+        "Business Intelligence",
+        "Data governance",
+        "Performance measurement",
+        "Dashboard strategy",
+        "Goodhart's Law"
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         BREADCRUMB STRUCTURED DATA
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://bircesari.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bircesari.github.io/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Your KPIs Are Lying to You", "item": "https://bircesari.github.io/blog/Your_KPIs_Are_Lying_To_You.html" }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         FONTS & ICONS
+    ════════════════════════════════════════════════ -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #4dd0e1;
+            --secondary: #b39ddb;
+            --bg-light: #ffffff;
+            --text-light: #1e1e2f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.75;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover { opacity: 0.8; }
+
+        article {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .post-meta {
+            color: #888;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .read-time {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border-radius: 20px;
+            padding: 0.15rem 0.75rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            line-height: 1.25;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.85rem;
+            font-size: 1.35rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        .drop-cap::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            line-height: 0.9;
+            margin-right: 8px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary);
+            padding: 0.75rem 1.25rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+            background: #f5fdfe;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .divider {
+            font-weight: 400;
+            font-style: italic;
+            color: #666;
+            margin: 2rem 0;
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+        }
+
+        ul.references-list {
+            margin-left: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul.references-list li {
+            font-size: 0.86rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        ul.references-list a {
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .hashtag {
+            background: #f0f9fa;
+            color: var(--primary);
+            border: 1px solid #c8eef2;
+            border-radius: 20px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .hashtag:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .recommended-readings {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .recommended-readings h3 {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+        }
+
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .share-section {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-buttons a {
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .share-linkedin { background: #0077b5; }
+        .share-twitter  { background: #1da1f2; }
+
+        footer {
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.65rem; }
+            article { padding: 0 1.25rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <span>Birce SARI · Blog</span>
+    </div>
+</header>
+
+<article>
+
+    <div class="post-meta">
+        <span><i class="fas fa-calendar-alt"></i> 12 May 2026</span>
+        <span><i class="fas fa-map-marker-alt"></i> Berlin, DE</span>
+        <span><i class="fas fa-tag"></i> KPI Governance · BI · Analytics</span>
+        <span class="read-time">~8 min read</span>
+    </div>
+
+    <h1>Your KPIs Are Lying to You</h1>
+
+    <p>The dashboard is green. The meeting room is tense. Both things are true. Here is what happened when I figured out why.</p>
+
+    <h2>A Room Full of Right Answers That Added Up to Nothing</h2>
+
+    <p class="drop-cap">I was in a client meeting about sales and marketing data. Both teams had prepared. Both teams had numbers. The sales department said revenue was declining. The marketing department said traction was growing. Neither was lying. Both were reading from the same business.</p>
+
+    <p>What followed was not a data problem. It was not a tools problem. It was the peculiar organizational theater that happens when two departments measure the same reality with different rulers and nobody has noticed yet.</p>
+
+    <p>The confused faces of the senior officers in that room said everything: we have invested heavily in dashboards, and we still have no idea what is going on.</p>
+
+    <p>I have sat in versions of that room more times than I can count. The names change. The industry changes. The confusion is remarkably consistent.</p>
+
+    <h2>When the Metric Is Green and the Business Is Not</h2>
+
+    <p>There is a pattern here that research has been naming for decades. British economist Charles Goodhart observed that any statistical regularity tends to collapse once it is placed under pressure for control purposes. Donald Campbell later expanded the same logic into organizational systems and decision-making.</p>
+
+    <blockquote>
+        “When a measure becomes a target, it ceases to be a good measure.”
+    </blockquote>
+
+    <p>Together, Goodhart’s Law and Campbell’s Law describe something that every business analyst eventually recognizes in the wild. A metric starts as a proxy for reality. It gets promoted into a target. And once it becomes a target, people optimize for the metric rather than for the thing the metric was supposed to represent.</p>
+
+    <p>The dashboard turns green. The underlying problem does not go away. It just stops being visible.</p>
+
+    <p>In the meeting I described, nobody was gaming the system. The problem was more structural: the sales team and the marketing team had each built their own operational definition of what counted as a conversion. One measured intent. The other measured completion. Both were internally consistent. Neither was comparable.</p>
+
+    <h2>Siloed Definitions Are Not a Data Quality Problem</h2>
+
+    <p>It is tempting to frame this as a data quality issue. The data is dirty, the pipeline is broken, the source system is unreliable. Reframe it that way and you get a technical project: clean the data, rebuild the pipeline, implement a new tool.</p>
+
+    <p>That framing is incomplete.</p>
+
+    <p>Research on performance measurement systems consistently shows that inconsistent KPIs across organizational units are primarily a governance and alignment problem, not a technology problem. When new dashboards are introduced without addressing the definitional inconsistencies underneath, those inconsistencies do not disappear. They simply become more visible.</p>
+
+    <p>You have built a more powerful microscope for looking at your confusion.</p>
+
+    <h2>The Real Cost Is Not in the Metric. It Is in the Meeting.</h2>
+
+    <p>The practical damage from siloed KPI definitions shows up in a specific and recognizable place: the room where decisions are supposed to get made.</p>
+
+    <p>When departments walk into a review with incompatible numbers, the meeting stops being strategic. It becomes a negotiation about whose version of reality is correct. Senior leadership spends time on definitional arbitration instead of action. Analysts get pulled into defending methodology rather than generating insight.</p>
+
+    <p>Nothing moves forward until someone agrees to “revisit offline.”</p>
+
+    <blockquote>
+        The tension in that room did not come from bad data. It came from the absence of a shared understanding of what the data was supposed to mean.
+    </blockquote>
+
+    <h2>The Fix Is Not a Better Dashboard. It Is a Better Conversation.</h2>
+
+    <p>What actually worked, in my experience, was not a new tool. It was a structured process for getting business owners into the same room before any number went into a dashboard.</p>
+
+    <p>The sequence was simple:</p>
+
+    <p>• Workshops with unit heads to surface definitional gaps.<br>
+       • A KPI dictionary that made every formula and source explicit.<br>
+       • A sign-off process so each business owner formally approved the metric definition before publication.</p>
+
+    <p>Not approved the number. Approved the definition.</p>
+
+    <p>This matters because governance literature distinguishes between measurement and ownership. Accountability structures improve data quality, decision-making efficiency, and long-term organizational trust.</p>
+
+    <p>The KPI dictionary was the artifact, but the workshops were the actual intervention.</p>
+
+    <h2>What Happens When Teams Finally Share the Same Definition</h2>
+
+    <p>The change in that client organization was not dramatic. There was no single meeting where everything suddenly clicked into place.</p>
+
+    <p>It was more gradual than that, and more interesting.</p>
+
+    <p>Teams that had spent months disagreeing over numbers started talking about what the numbers implied instead. People who had been defending their metrics started asking questions about each other’s constraints. The sales team started thinking about the marketing funnel upstream. The marketing team started caring about close rates downstream.</p>
+
+    <p>They had been operating as adjacent competitors. They became something closer to a chain.</p>
+
+    <h2>The Number Is Not the Point. The Agreement Is.</h2>
+
+    <p>Here is the uncomfortable conclusion most KPI conversations avoid: the number on your dashboard is not the problem.</p>
+
+    <p>The real question is whether the people looking at it agree on what it represents and why it matters.</p>
+
+    <p>Unclear definitions create unmet expectations. When teams build operations around different interpretations of the same metric, they are not actually working toward the same goal. They are working toward parallel versions of it and wondering why collaboration feels harder than it should.</p>
+
+    <p>The fix is not sophisticated. Run the workshops. Write the dictionary. Get the sign-offs. Make sure the business owns the definition, not just the data team.</p>
+
+    <p>Do this before the dashboard goes live, and the meeting where everyone argues over whose numbers are correct simply does not happen.</p>
+
+    <p>That meeting is optional. Most organizations just do not know that yet.</p>
+
+    <p class="divider">Has your team ever argued over a KPI definition? The disagreement is usually less about the data itself and more about what different teams believe the metric is supposed to represent.</p>
+
+    <h3>References</h3>
+
+    <ul class="references-list">
+        <li>Campbell, D. T. (1979). Assessing the impact of planned social change. Evaluation and Program Planning, 2(1), 67–90.</li>
+        <li>Strathern, M. (1997). Improving ratings: Audit in the British University system. European Review, 5(3), 305–321.</li>
+        <li>Micheli, P. & Pavlov, A. (2020). Beyond the textbook: The role of PMS in organizational change. International Journal of Operations & Production Management.</li>
+        <li>Mathieu, J. E., Heffner, T. S., Goodwin, G. F., Salas, E., & Cannon-Bowers, J. A. (2000). The influence of shared mental models on team process and performance. Journal of Applied Psychology, 85(2), 273–283.</li>
+    </ul>
+
+    <div class="hashtags" aria-label="Post tags">
+        <a class="hashtag" href="#">#BusinessIntelligence</a>
+        <a class="hashtag" href="#">#KPI</a>
+        <a class="hashtag" href="#">#DataGovernance</a>
+        <a class="hashtag" href="#">#Analytics</a>
+        <a class="hashtag" href="#">#DashboardDesign</a>
+        <a class="hashtag" href="#">#PerformanceManagement</a>
+        <a class="hashtag" href="#">#DataStrategy</a>
+        <a class="hashtag" href="#">#Leadership</a>
+        <a class="hashtag" href="#">#BusinessAnalysis</a>
+        <a class="hashtag" href="#">#DataDriven</a>
+    </div>
+
+</article>
+
+<div class="recommended-readings">
+    <h3>You might also enjoy</h3>
+    <div class="rec-grid">
+        <!-- populated by posts.js -->
+    </div>
+</div>
+
+<div class="share-section">
+    <h3>Found this useful? Share it!</h3>
+
+    <div class="share-buttons">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbircesari.github.io%2Fblog%2FYour_KPIs_Are_Lying_To_You.html"
+           target="_blank" rel="noopener" class="share-linkedin">
+            <i class="fab fa-linkedin"></i> Share on LinkedIn
+        </a>
+
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbircesari.github.io%2Fblog%2FYour_KPIs_Are_Lying_To_You.html&text=Your+KPIs+Are+Lying+To+You+—+why+dashboard+alignment+matters+more+than+most+organizations+realize."
+           target="_blank" rel="noopener" class="share-twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Birce SARI. All rights reserved.</p>
+</footer>
+
+<script src="posts.js"></script>
+<script>
+    if (typeof renderRecommendations === 'function') {
+        renderRecommendations("Your_KPIs_Are_Lying_To_You.html");
+    }
+</script>
+
+</body>
+</html>
