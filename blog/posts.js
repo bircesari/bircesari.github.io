@@ -2,21 +2,21 @@ window.BLOG_POSTS = [
     {
         title: "How to Build Effective BI Dashboards",
         url: "How_to_Build_Effective_BI_Dashboards.html",
-        tag: "Analytics",
+        tag: "Business Intelligence",
         date: "Nov 14",
         time: "6 min",
         description: "Practical principles for dashboards that drive decisions, not just display data."
     },
     {
-        title: "Beyond Good Intentions: Making DEIB Actually Work",
+        title: "Beyond Good Intentions: What I Learned About Making DEIB Actually Work",
         url: "DEIB_Diversity_Equity_Inclusion_Belonging.html",
         tag: "Culture",
         date: "Nov 27",
         time: "7 min",
-        description: "What measuring the right things — not just counting heads, actually looks like."
+        description: "Why measuring experience (not just demographics) matters for meaningful DEIB change."
     },
     {
-        title: "The Quiet Revolution",
+        title: "The Quiet Revolution: Learning to Acknowledge Our Strengths",
         url: "The_Quiet_Revolution.html",
         tag: "AI & Work",
         date: "Nov 1",
@@ -24,12 +24,28 @@ window.BLOG_POSTS = [
         description: "How AI is reshaping the way data professionals work, quietly but irreversibly."
     },
     {
-        title: "Reflections on 2025",
+        title: "The Year Data Learned to Think: Reflections on 2025",
         url: "Reflections_on_2025.html",
-        tag: "Personal",
+        tag: "AI & Data",
         date: "Dec 1",
-        time: "4 min",
-        description: "Looking back at a year of transitions, lessons, and things worth keeping."
+        time: "8 min",
+        description: "A look back at 2025: agentic AI, real-time analytics, and the governance work that mattered."
+    },
+    {
+        title: "Spring Data Allergy: An Evening at SumUp",
+        url: "Spring_Data_Allergy.html",
+        tag: "Meetup Recap",
+        date: "Apr 27",
+        time: "5 min",
+        description: "Recap of the Data Berlin meetup at SumUp: LLM pipelines, AI failures, and practical lessons."
+    },
+    {
+        title: "Opinionated Analysts Beat Accurate Analysts",
+        url: "Opinionated_vs_Accurate_Analysts.html",
+        tag: "Analytics",
+        date: "May 25",
+        time: "9 min",
+        description: "Why interpretation and defensible judgement matter more than technical correctness alone."
     },
     {
         title: "Your KPIs Are Lying to You",
