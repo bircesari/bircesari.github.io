@@ -759,6 +759,54 @@ body.dark .education-table .thesis { color: var(--text-muted-dark); }
 
 .contact-item { font-size: 1.1rem; }
 
+/* ─── 16. PAGE-SPECIFIC UTILITY CLASSES FROM index.html ────────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+.shadow-soft { box-shadow: 0 10px 30px -10px rgba(16,24,40,0.08); }
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #4dd0e1, #b39ddb);
+}
+details > summary::-webkit-details-marker { display: none; }
+.service-card { transition: all 0.3s ease; }
+.service-card:hover { transform: translateY(-4px); border-color: #4dd0e1; }
+.blog-card { transition: all 0.4s cubic-bezier(0.165,0.84,0.44,1); }
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05); }
+.brand-gradient { background: linear-gradient(135deg, #4dd0e1, #b39ddb); }
+.brand-text-gradient {
+  background: linear-gradient(135deg, #4dd0e1, #b39ddb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.accent-icon { color: #4dd0e1; }
+
+/* Timeline experience */
+.exp-details { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.exp-item.open .exp-details { max-height: 600px; }
+.exp-item.open .exp-chevron { transform: rotate(180deg); }
+.exp-chevron { transition: transform 0.3s ease; }
+
+/* Accordion services */
+.acc-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.acc-item.open .acc-body { max-height: 2000px; }
+.acc-item.open .acc-chevron { transform: rotate(180deg); }
+.acc-chevron { transition: transform 0.3s ease; }
+
+/* Sub-accordion */
+.subacc-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.subacc-item.open .subacc-body { max-height: 800px; }
+.subacc-item.open .subacc-chevron { transform: rotate(90deg); }
+.subacc-chevron { transition: transform 0.3s ease; color: #4dd0e1; }
+
+html { scroll-padding-top: 72px; }
+
 .contact-item a {
   color: var(--primary);
   font-weight: 500;
