@@ -9,203 +9,104 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary-container": "#1e1e2f",
-            "ice-blue": "#F7FAFC",
-            "on-primary-fixed": "#1a1a2b",
-            "secondary-container": "#E3F2FD",
-            "on-surface-variant": "#47464c",
-            "on-error-container": "#93000a",
-            "secondary": "#4dd0e1",
-            "outline-variant": "#e0e0e0",
-            "deep-teal": "#4dd0e1",
-            "error-container": "#ffdad6",
-            "tertiary-fixed": "#ebdcff",
-            "inverse-surface": "#313031",
-            "primary-fixed-dim": "#c6c4db",
-            "tertiary-fixed-dim": "#d3bcfc",
-            "primary-fixed": "#e3e0f8",
-            "outline": "#BDBDBD",
-            "on-error": "#ffffff",
-            "slate-gray": "#546E7A",
-            "secondary-fixed-dim": "#60a5fa",
-            "surface": "#fcf8fa",
-            "surface-tint": "#5d5c70",
-            "primary": "#101828",
-            "on-surface": "#1c1b1d",
-            "on-secondary-fixed": "#001f23",
-            "on-secondary-container": "#1e40af",
-            "surface-variant": "#f4f1f0",
-            "on-primary-fixed-variant": "#454558",
-            "tertiary": "#0c0027",
-            "on-secondary": "#ffffff",
-            "surface-container-highest": "#e5e1e3",
-            "surface-dim": "#ddd9db",
-            "surface-container": "#f1edee",
-            "on-tertiary": "#ffffff",
-            "on-primary-container": "#86859a",
-            "on-tertiary-fixed-variant": "#503d73",
-            "on-tertiary-fixed": "#230f45",
-            "surface-container-low": "#FAF7F6",
-            "on-background": "#1c1b1d",
-            "on-tertiary-container": "#927db9",
-            "inverse-on-surface": "#f4f0f1",
-            "error": "#ba1a1a",
-            "surface-container-high": "#ebe7e9",
-            "secondary-fixed": "#93c5fd",
-            "inverse-primary": "#c6c4db",
-            "surface-container-lowest": "#ffffff",
-            "on-secondary-fixed-variant": "#1e3a8a",
-            "background": "#fcf8fa",
-            "tertiary-container": "#271449",
-            "on-primary": "#ffffff",
-            "surface-bright": "#fcf8fa"
-          },
-          borderRadius: {
-            DEFAULT: "0.25rem",
-            lg: "0.5rem",
-            xl: "0.75rem",
-            full: "9999px"
-          },
-          spacing: {
-            "grid-gutter": "32px",
-            "container-max": "1200px",
-            "stack-sm": "8px",
-            "section-gap": "64px",
-            "stack-md": "16px",
-            "stack-lg": "24px"
-          },
-          fontFamily: {
-            "headline-lg": ["Manrope"],
-            "label-caps": ["JetBrains Mono"],
-            "body-md": ["Plus Jakarta Sans"],
-            "headline-md": ["Manrope"],
-            "headline-display": ["Manrope"],
-            "body-lg": ["Plus Jakarta Sans"],
-            "headline-lg-mobile": ["Manrope"]
-          },
-          fontSize: {
-            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
-            "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600" }],
-            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
-            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
-            "headline-display": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "800" }],
-            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
-            "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "700" }]
-          }
-        }
-      }
-    }
-  </script>
 </head>
-<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
-  <header class="py-6 border-b border-outline-variant/20 bg-surface-container-low">
-    <div class="max-w-[1200px] mx-auto px-grid-gutter flex flex-col md:flex-row items-center justify-between gap-4">
-      <a class="font-headline-md text-xl font-bold tracking-tight text-primary" href="index.html">Birce SARI</a>
-      <nav class="flex flex-wrap items-center gap-4 text-sm text-slate-gray">
-        <a class="hover:text-primary transition" href="index.html#about">About</a>
-        <a class="hover:text-primary transition" href="index.html#works">Works</a>
-        <a class="hover:text-primary transition" href="index.html#contact">Contact</a>
-        <a class="hover:text-primary transition" href="index.html">Home</a>
+<body class="feedback-page">
+  <header class="page-header">
+    <div class="page-header-inner">
+      <a class="page-logo" href="index.html">Birce SARI</a>
+      <nav class="page-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#works">Works</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a class="btn btn-secondary" href="index.html#services">Services</a>
+        <a class="btn btn-primary" href="index.html#testimonials">Leave feedback</a>
       </nav>
     </div>
   </header>
 
-  <main class="py-16">
-    <div class="max-w-[900px] mx-auto px-grid-gutter">
-      <div class="text-center mb-10">
-        <p class="font-label-caps text-label-caps uppercase text-[#4dd0e1] mb-2">Feedback</p>
-        <h1 class="font-headline-display text-4xl text-primary">Share your testimonial or comment</h1>
-        <p class="mt-4 text-slate-gray">Please enter your name, how you know me, your feedback, and whether I may display it publicly. Your email is only used for follow-up.</p>
+  <main class="feedback-main">
+    <div class="feedback-inner">
+      <div class="feedback-heading">
+        <p class="label-caps accent-icon">Feedback</p>
+        <h1>Share your testimonial or comment</h1>
+        <p>Tell me your name, how you know me, and your feedback. Let me know if I may display it publicly. Your email is only used to follow up with you.</p>
       </div>
 
-      <section class="bg-white p-8 rounded-3xl border border-outline-variant/70 shadow-sm">
-        <h2 class="font-bold text-xl text-primary mb-4">How feedback is collected</h2>
-        <p class="text-slate-gray leading-7">This site is static and hosted on GitHub Pages, so I cannot store submissions directly on the website. Please use one of the options below:</p>
-        <ul class="mt-4 space-y-3 text-slate-gray list-disc list-inside">
-          <li><strong>Email</strong> your testimonial and details to <a class="text-primary hover:underline" href="mailto:birce.sari@gmail.com">birce.sari@gmail.com</a>.</li>
-          <li>If you prefer, send a message through my <a class="text-primary hover:underline" href="mailto:birce.sari@gmail.com">email</a> with your:</li>
-        </ul>
-        <div class="mt-4 space-y-3">
-          <p class="text-slate-gray"><strong>Required:</strong> Name, role / relationship, testimonial text, permission to publish, and email for private follow-up.</p>
-          <p class="text-slate-gray"><strong>Optional:</strong> any context that helps explain how we worked together or what results mattered most.</p>
+      <section class="feedback-panel">
+        <h2>How this works</h2>
+        <p>The form below sends your message straight to my inbox through a secure form-relay service. Nothing you submit is stored in a website database, and your email address is only ever used to reply; it's never published.</p>
+        <div class="feedback-notes">
         </div>
       </section>
 
-      <section class="mt-10 bg-surface-container-low p-8 rounded-3xl border border-outline-variant/70 shadow-sm">
-        <h2 class="font-bold text-xl text-primary mb-4">Feedback format</h2>
-        <div class="space-y-4">
-          <div>
-            <p class="font-semibold text-primary">Name</p>
-            <p class="text-slate-gray text-sm">Your full name so I can credit your feedback correctly.</p>
-          </div>
-          <div>
-            <p class="font-semibold text-primary">Role / relationship</p>
-            <p class="text-slate-gray text-sm">Tell me whether you are a client, colleague, manager or collaborator.</p>
-          </div>
-          <div>
-            <p class="font-semibold text-primary">Testimonial</p>
-            <p class="text-slate-gray text-sm">Share what stood out about working together, outcomes, or the value delivered.</p>
-          </div>
-          <div>
-            <p class="font-semibold text-primary">Permission</p>
-            <p class="text-slate-gray text-sm">Confirm if I can publish the feedback publicly on the website.</p>
-          </div>
-          <div>
-            <p class="font-semibold text-primary">Email</p>
-            <p class="text-slate-gray text-sm">Your email is for private follow-up only and will not be published without consent.</p>
-          </div>
-        </div>
-      </section>
+      <section class="feedback-panel feedback-panel-alt">
+        <h2>Submit your feedback</h2>
+        <form id="feedback-form" class="feedback-form" method="POST" action="https://formsubmit.co/ajax/birce.sari@gmail.com" novalidate>
+          <input type="hidden" name="_subject" value="New feedback submission from website">
+          <input type="hidden" name="_captcha" value="false">
 
-      <section class="mt-10 bg-white p-8 rounded-3xl border border-outline-variant/70 shadow-sm">
-        <h2 class="font-bold text-xl text-primary mb-4">Send feedback by email</h2>
-        <form id="feedback-form" class="space-y-6">
-          <div>
-            <label class="block text-sm font-semibold text-primary mb-2" for="name">Name</label>
-            <input class="w-full rounded-2xl border border-outline-variant bg-surface p-3 text-sm text-on-surface outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="name" name="name" type="text" placeholder="Your name" required>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Jane Doe - displayed only if you allow publication" required>
           </div>
-          <div>
-            <label class="block text-sm font-semibold text-primary mb-2" for="role">Role / relationship</label>
-            <input class="w-full rounded-2xl border border-outline-variant bg-surface p-3 text-sm text-on-surface outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="role" name="role" type="text" placeholder="Client, colleague, manager or collaborator" required>
+
+          <div class="form-field">
+            <label for="role">Role / relationship</label>
+            <input id="role" name="role" type="text" autocomplete="organization-title" placeholder="e.g. Client, manager, colleague - helps verify and contextualize your feedback" required>
           </div>
-          <div>
-            <label class="block text-sm font-semibold text-primary mb-2" for="email">Email</label>
-            <input class="w-full rounded-2xl border border-outline-variant bg-surface p-3 text-sm text-on-surface outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="email" name="email" type="email" placeholder="your.email@example.com" required>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="your.email@example.com - used only to reply, never published" required>
           </div>
-          <div>
-            <label class="block text-sm font-semibold text-primary mb-2" for="testimonial">Testimonial</label>
-            <textarea class="w-full min-h-[160px] rounded-3xl border border-outline-variant bg-surface p-3 text-sm text-on-surface outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="testimonial" name="testimonial" placeholder="What stood out about working together?" required></textarea>
+
+          <div class="form-field">
+            <label for="testimonial">Testimonial</label>
+            <textarea id="testimonial" name="testimonial" rows="5" placeholder="Share outcomes, working style, or the value delivered - a few honest sentences are plenty" required></textarea>
           </div>
-          <div class="flex items-center gap-3">
-            <input id="permission" name="permission" type="checkbox" class="h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary">
-            <label class="text-sm text-slate-gray" for="permission">I agree to have my feedback displayed publicly if selected.</label>
+
+          <div class="form-checkbox-row">
+            <input id="permission" name="permission" type="checkbox">
+            <label for="permission">I agree to have my feedback published on the website if selected.</label>
           </div>
-          <button type="submit" class="brand-gradient text-white px-6 py-3 rounded-full font-label-caps text-[12px] hover:opacity-90 transition-all shadow-sm">Open email client</button>
+
+          <div class="form-checkbox-row">
+            <input id="consent" name="consent" type="checkbox" required>
+            <label for="consent">I agree that the information above may be used to respond to my message, as described in the <a class="link-primary" href="privacy.html">Privacy Policy</a>.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send feedback</button>
         </form>
-        <p id="mail-status" class="mt-4 text-sm text-slate-gray">After clicking, your email app should open with the feedback details prefilled. If it does not, use the email address above.</p>
+        <p id="form-status" class="form-status">Your submission is sent directly from this page. You will receive a confirmation message on screen.</p>
       </section>
 
-      <section class="mt-10 text-center">
-        <p class="text-slate-gray">Send an email to <a class="text-primary hover:underline" href="mailto:birce.sari@gmail.com">birce.sari@gmail.com</a> with the details above. I will reply personally and may add your testimonial to the site if you agree.</p>
+      <section class="feedback-panel">
+        <h2>Privacy &amp; data protection</h2>
+        <p>Birce SARI (<a class="link-primary" href="mailto:birce.sari@gmail.com">birce.sari@gmail.com</a>) is the controller for the personal data you submit on this page.</p>
+        <div class="feedback-notes">
+          <p><strong>What's collected:</strong> name, role/relationship, email address, your testimonial text, and your publication preference.</p>
+          <p><strong>Why:</strong> to read and reply to your feedback, and; only if you tick the publication checkbox; to display your name, role, and testimonial on this website.</p>
+          <p><strong>Legal basis:</strong> your consent (Art. 6(1)(a) GDPR), given by ticking the checkboxes above and submitting the form.</p>
+          <p><strong>Processor:</strong> the form is delivered using FormSubmit.co, a third-party form-relay service that transmits your submission by email. No copy is stored in a database on this site.</p>
+          <p><strong>Retention:</strong> submissions are kept in my email inbox only as long as needed to respond and, where applicable, to maintain the published testimonial. You can request deletion at any time.</p>
+          <p><strong>Your rights:</strong> you can withdraw consent, and request access to, correction of, or deletion of your data, at any time by emailing <a class="link-primary" href="mailto:birce.sari@gmail.com">birce.sari@gmail.com</a>. You also have the right to lodge a complaint with your local data protection authority.</p>
+        </div>
+        <p>This is a summary for this form specifically. See the full <a class="link-primary" href="privacy.html">Privacy Policy</a> for details that apply across the site.</p>
       </section>
     </div>
   </main>
 
-  <footer class="py-8 border-t border-outline-variant/30 bg-surface-container-low">
-    <div class="max-w-[900px] mx-auto px-grid-gutter text-center text-sm text-slate-gray">
-      <p>© 2025 Birce SARI. Feedback page for testimonial collection and follow-up.</p>
+  <footer class="feedback-footer">
+    <div class="feedback-inner text-center">
+      <p>© 2026 Birce SARI. Feedback page for testimonial collection and follow-up.</p>
     </div>
   </footer>
+
   <script>
     const feedbackForm = document.getElementById('feedback-form');
-    const mailStatus = document.getElementById('mail-status');
+    const formStatus = document.getElementById('form-status');
+    const submitButton = feedbackForm.querySelector('button[type="submit"]');
 
     feedbackForm.addEventListener('submit', event => {
       event.preventDefault();
@@ -214,26 +115,45 @@
       const role = formData.get('role').trim();
       const email = formData.get('email').trim();
       const testimonial = formData.get('testimonial').trim();
-      const permission = formData.get('permission') ? 'Yes' : 'No';
+      const consentGiven = document.getElementById('consent').checked;
 
       if (!name || !role || !email || !testimonial) {
-        mailStatus.textContent = 'Please complete all required fields before sending.';
-        mailStatus.className = 'mt-4 text-sm text-[#b91c1c]';
+        formStatus.textContent = 'Please complete all required fields before sending.';
+        formStatus.className = 'form-status error';
         return;
       }
 
-      const subject = encodeURIComponent(`Website feedback from ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-        `Role / relationship: ${role}\n` +
-        `Email: ${email}\n` +
-        `Permission to publish: ${permission}\n\n` +
-        `Testimonial:\n${testimonial}`
-      );
-      const mailtoLink = `mailto:birce.sari@gmail.com?subject=${subject}&body=${body}`;
-      mailStatus.textContent = 'Opening your email client now. If it does not open, please send the feedback manually to birce.sari@gmail.com.';
-      mailStatus.className = 'mt-4 text-sm text-slate-gray';
-      window.location.href = mailtoLink;
+      if (!consentGiven) {
+        formStatus.textContent = 'Please confirm you agree to the data processing consent before sending.';
+        formStatus.className = 'form-status error';
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', feedbackForm.action);
+      xhr.setRequestHeader('Accept', 'application/json');
+      xhr.onload = () => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send feedback';
+        if (xhr.status === 200) {
+          formStatus.textContent = 'Thank you! Your feedback has been sent successfully.';
+          formStatus.className = 'form-status success';
+          feedbackForm.reset();
+        } else {
+          formStatus.textContent = 'Submission failed. Please try again or email birce.sari@gmail.com directly.';
+          formStatus.className = 'form-status error';
+        }
+      };
+      xhr.onerror = () => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send feedback';
+        formStatus.textContent = 'Submission failed. Please check your connection and try again.';
+        formStatus.className = 'form-status error';
+      };
+      xhr.send(formData);
     });
   </script>
 </body>
