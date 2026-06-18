@@ -74,7 +74,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" href="BS_Logo.png" type="image/png">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
@@ -157,13 +157,13 @@
           "stack-md": "16px", "stack-lg": "24px"
         },
         fontFamily: {
-          "headline-lg": ["Manrope"],
-          "label-caps": ["JetBrains Mono"],
-          "body-md": ["Plus Jakarta Sans"],
-          "headline-md": ["Manrope"],
-          "headline-display": ["Manrope"],
-          "body-lg": ["Plus Jakarta Sans"],
-          "headline-lg-mobile": ["Manrope"]
+          "headline-lg": ["Open Sans", "sans-serif"],
+          "label-caps": ["Open Sans", "sans-serif"],
+          "body-md": ["Open Sans", "sans-serif"],
+          "headline-md": ["Open Sans", "sans-serif"],
+          "headline-display": ["Open Sans", "sans-serif"],
+          "body-lg": ["Open Sans", "sans-serif"],
+          "headline-lg-mobile": ["Open Sans", "sans-serif"]
         },
         fontSize: {
           "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
@@ -999,33 +999,45 @@
 </section>
 <section class="py-16 bg-surface-container-low" id="testimonials">
   <div class="max-w-[1200px] mx-auto px-grid-gutter">
-    <div class="text-center mb-12">
+    <div class="mb-12">
       <h2 class="font-label-caps text-label-caps accent-icon mb-2 uppercase">Testimonials</h2>
       <h3 class="font-headline-lg text-2xl text-primary">What clients and collaborators say</h3>
-      <p class="text-slate-gray max-w-2xl mx-auto mt-3">Real feedback from teams, product owners, and business leaders I
+      <p class="text-slate-gray text-sm max-w-2xl mt-2">Real feedback from teams, product owners, and business leaders I
         have supported in analytics, BI, and data strategy.</p>
     </div>
     <div class="grid gap-6 md:grid-cols-3">
-      <article class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/60 shadow-sm">
-        <p class="text-slate-gray mb-6">"I had the pleasure of working with Birce Sarı at Zorlu Holding, where she
-          reported directly to me in her role as a Business Analyst and Power BI Specialist. Birce consistently
-          demonstrated strong analytical thinking, effective communication skills, and a positive attitude."</p>
-        <p class="font-bold text-primary">Pinar Yildiran</p>
-        <p class="text-xs text-slate-gray">PMO, Enterprise Architecture &amp; IT Governance Lead Director</p>
+      <article class="blog-card flex flex-col bg-white rounded-2xl border border-outline-variant overflow-hidden">
+        <div class="p-6 flex flex-col flex-grow">
+          <p class="text-slate-gray mb-6">"I had the pleasure of working with Birce Sarı at Zorlu Holding, where she
+            reported directly to me in her role as a Business Analyst and Power BI Specialist. Birce consistently
+            demonstrated strong analytical thinking, effective communication skills, and a positive attitude."</p>
+          <div class="mt-auto">
+            <p class="font-bold text-primary">Pinar Yildiran</p>
+            <p class="text-xs text-slate-gray">PMO, Enterprise Architecture &amp; IT Governance Lead Director</p>
+          </div>
+        </div>
       </article>
-      <article class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/60 shadow-sm">
-        <p class="text-slate-gray mb-6">"Birce was an exceptional professional in our Solution Development team, with
-          dual expertise in both data analytics and business analysis. Her ability to extract meaningful insights from
-          complex datasets and align them with business needs was truly impressive."</p>
-        <p class="font-bold text-primary">Tekin Çetin</p>
-        <p class="text-xs text-slate-gray">Zorlu Holding Consultant</p>
+      <article class="blog-card flex flex-col bg-white rounded-2xl border border-outline-variant overflow-hidden">
+        <div class="p-6 flex flex-col flex-grow">
+          <p class="text-slate-gray mb-6">"Birce was an exceptional professional in our Solution Development team, with
+            dual expertise in both data analytics and business analysis. Her ability to extract meaningful insights from
+            complex datasets and align them with business needs was truly impressive."</p>
+          <div class="mt-auto">
+            <p class="font-bold text-primary">Tekin Çetin</p>
+            <p class="text-xs text-slate-gray">Zorlu Holding Consultant</p>
+          </div>
+        </div>
       </article>
-      <article class="p-6 bg-surface-container-low rounded-3xl border border-outline-variant/60 shadow-sm">
-        <p class="text-slate-gray mb-6">"Birce Sari is an outstanding Data Analytics specialist. She stood out from the
-          rest — her questions showed deep experience, and in our Tableau course she often seemed to know the tool
-          better than the lecturer."</p>
-        <p class="font-bold text-primary">Iuliia Arkadeva</p>
-        <p class="text-xs text-slate-gray">Frontend-focused Fullstack Developer</p>
+      <article class="blog-card flex flex-col bg-white rounded-2xl border border-outline-variant overflow-hidden">
+        <div class="p-6 flex flex-col flex-grow">
+          <p class="text-slate-gray mb-6">"Birce Sari is an outstanding Data Analytics specialist. She stood out from the
+            rest — her questions showed deep experience, and in our Tableau course she often seemed to know the tool
+            better than the lecturer."</p>
+          <div class="mt-auto">
+            <p class="font-bold text-primary">Iuliia Arkadeva</p>
+            <p class="text-xs text-slate-gray">Frontend-focused Fullstack Developer</p>
+          </div>
+        </div>
       </article>
     </div>
     <div class="text-center pt-10">

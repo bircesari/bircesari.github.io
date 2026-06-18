@@ -63,7 +63,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: var(--bg-light);
   color: var(--text-light);
   transition: background var(--ease), color var(--ease);
