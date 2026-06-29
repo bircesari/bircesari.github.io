@@ -1,25 +1,64 @@
 window.BLOG_POSTS = [
     {
-        title: "How to Build Effective BI Dashboards",
-        url: "How_to_Build_Effective_BI_Dashboards.html",
-        tag: "Business Intelligence",
-        date: "Nov 14",
-        time: "6 min",
-        description: "Practical principles for dashboards that drive decisions, not just display data."
+        title: "On Perception, Representation, and What Gets Lost in the Chart",
+        url: "Heatwave_in_Data_Analytics.html",
+        tag: "Analytics",
+        date: "Jun 29, 2026",
+        dateValue: "2026-06-29",
+        time: "5 min",
+        description: "A Berlin heatwave reframed through perception, external representation, and the way meaning is shaped by what we choose to show."
+    },
+    {
+        title: "Opinionated Analysts Beat Accurate Analysts",
+        url: "Opinionated_vs_Accurate_Analysts.html",
+        tag: "Analytics",
+        date: "May 25, 2026",
+        dateValue: "2026-05-25",
+        time: "9 min",
+        description: "Why interpretation and a defensible point of view often matter more than technical correctness alone."
+    },
+    {
+        title: "Your KPIs Are Lying to You",
+        url: "Your_KPIs_Are_Lying_To_You.html",
+        tag: "KPI Governance",
+        date: "May 12, 2026",
+        dateValue: "2026-05-12",
+        time: "8 min",
+        description: "How metrics drift from useful signals into misleading stories, and why governance matters more than dashboards."
+    },
+    {
+        title: "Spring Data Allergy: An Evening at SumUp",
+        url: "Spring_Data_Allergy.html",
+        tag: "Meetup Recap",
+        date: "Apr 27, 2026",
+        dateValue: "2026-04-27",
+        time: "5 min",
+        description: "A recap of the Data Berlin meetup at SumUp covering AI hype, data quality, and practical lessons from the field."
     },
     {
         title: "Beyond Good Intentions: What I Learned About Making DEIB Actually Work",
         url: "DEIB_Diversity_Equity_Inclusion_Belonging.html",
         tag: "Culture",
-        date: "Nov 27",
+        date: "Nov 27, 2025",
+        dateValue: "2025-11-27",
         time: "7 min",
-        description: "Why measuring experience (not just demographics) matters for meaningful DEIB change."
+        description: "Why measuring experience and belonging matters more than tracking demographics alone."
+    },
+    {
+        title: "How to Build Effective BI Dashboards",
+        url: "How_to_Build_Effective_BI_Dashboards.html",
+        tag: "Business Intelligence",
+        date: "Nov 14, 2025",
+        dateValue: "2025-11-14",
+        time: "6 min",
+        description: "Practical principles for dashboards that guide decisions, not just display numbers."
     },
     {
         title: "The Quiet Revolution: Learning to Acknowledge Our Strengths",
         url: "The_Quiet_Revolution.html",
         tag: "AI & Work",
-        date: "Nov 1",
+        date: "Nov 1, 2025",
+        dateValue: "2025-11-01",
         time: "5 min",
         description: "How AI is reshaping the way data professionals work, quietly but irreversibly."
     },
@@ -27,33 +66,10 @@ window.BLOG_POSTS = [
         title: "The Year Data Learned to Think: Reflections on 2025",
         url: "Reflections_on_2025.html",
         tag: "AI & Data",
-        date: "Dec 1",
+        date: "Dec 1, 2025",
+        dateValue: "2025-12-01",
         time: "8 min",
-        description: "A look back at 2025: agentic AI, real-time analytics, and the governance work that mattered."
-    },
-    {
-        title: "Spring Data Allergy: An Evening at SumUp",
-        url: "Spring_Data_Allergy.html",
-        tag: "Meetup Recap",
-        date: "Apr 27",
-        time: "5 min",
-        description: "Recap of the Data Berlin meetup at SumUp: LLM pipelines, AI failures, and practical lessons."
-    },
-    {
-        title: "Opinionated Analysts Beat Accurate Analysts",
-        url: "Opinionated_vs_Accurate_Analysts.html",
-        tag: "Analytics",
-        date: "May 25",
-        time: "9 min",
-        description: "Why interpretation and defensible judgement matter more than technical correctness alone."
-    },
-    {
-        title: "Your KPIs Are Lying to You",
-        url: "Your_KPIs_Are_Lying_To_You.html",
-        tag: "KPI Governance",
-        date: "May 12",
-        time: "8 min",
-        description: "How a metric degrades from useful proxy to misleading signal?"
+        description: "A look back at 2025: agentic AI, real-time analytics, and the governance work that really mattered."
     }
 ];
 

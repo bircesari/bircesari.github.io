@@ -12,7 +12,7 @@
     <link rel="icon" href="../BS_Logo.png" type="image/png">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="On Perception, Representation, and What Gets Lost in the Chart">
+    <meta property="og:title" content="🔥 On Perception, Representation, and What Gets Lost in the Chart">
     <meta property="og:description" content="A heatwave, jazz, theatre, photography, and cinema. A week in Berlin read through the lens of cognitive science and data visualisation research.">
     <meta property="og:url" content="https://bircesari.github.io/blog/Heatwave_in_Data_Analytics.html">
     <meta property="og:site_name" content="Birce SARI">
@@ -75,6 +75,11 @@
             --secondary: #b39ddb;
             --bg-light: #ffffff;
             --text-light: #1e1e2f;
+            --surface-1: #f7f6f3;
+            --radius: 12px;
+            --text-muted: #888;
+            --text-primary: #1e1e2f;
+            --text-secondary: #6b7280;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -375,7 +380,7 @@
         <span class="read-time">~5 min read</span>
     </div>
 
-    <h1>On Perception, Representation, and What Gets Lost in the Chart</h1>
+    <h1>🔥 On Perception, Representation, and What Gets Lost in the Chart</h1>
 
     <p>A heatwave, jazz, theatre, photography, and cinema. A week in Berlin read through the lens of cognitive science and data visualisation research.</p>
 
@@ -391,6 +396,196 @@
 
     <p>That idea stayed with me longer than any single performance. Because in both analytics and art, meaning does not pre-exist the representation. It is constructed through it.</p>
 
+    <figure>
+        <h2 class="sr-only">Berlin heatwave June 22-28 2026: daily temperature, feels-like temperature, humidity, and air quality index</h2>
+        <div style="padding: 1rem 0 0.5rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 1.5rem;">
+                <div style="background: var(--surface-1); border-radius: var(--radius); padding: 0.75rem 1.25rem; flex: 1; min-width: 130px;">
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 0 0 4px;">Peak temperature</p>
+                    <p style="font-size: 22px; font-weight: 500; margin: 0; color: var(--text-primary);">40 °C</p>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0;">Sun 28 Jun</p>
+                </div>
+                <div style="background: var(--surface-1); border-radius: var(--radius); padding: 0.75rem 1.25rem; flex: 1; min-width: 130px;">
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 0 0 4px;">Peak feels-like</p>
+                    <p style="font-size: 22px; font-weight: 500; margin: 0; color: var(--text-primary);">43 °C</p>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0;">Sun 28 Jun</p>
+                </div>
+                <div style="background: var(--surface-1); border-radius: var(--radius); padding: 0.75rem 1.25rem; flex: 1; min-width: 130px;">
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 0 0 4px;">Min. humidity</p>
+                    <p style="font-size: 22px; font-weight: 500; margin: 0; color: var(--text-primary);">26 %</p>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0;">During peak heat</p>
+                </div>
+                <div style="background: var(--surface-1); border-radius: var(--radius); padding: 0.75rem 1.25rem; flex: 1; min-width: 130px;">
+                    <p style="font-size: 12px; color: var(--text-muted); margin: 0 0 4px;">Air quality (AQI)</p>
+                    <p style="font-size: 22px; font-weight: 500; margin: 0; color: var(--text-primary);">55</p>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0;">Moderate · ozone-led</p>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-secondary); margin-bottom: 0.75rem; align-items: center;">
+                <span style="display:flex;align-items:center;gap:5px;"><span style="width:24px;height:3px;background:#e34948;display:inline-block;border-radius:2px;"></span>Actual temp (°C)</span>
+                <span style="display:flex;align-items:center;gap:5px;"><span style="width:24px;height:3px;background:#eb6834;display:inline-block;border-radius:2px;border-top:3px dashed #eb6834;background:none;"></span>Feels-like (°C)</span>
+                <span style="display:flex;align-items:center;gap:5px;"><span style="width:24px;height:3px;background:#2a78d6;display:inline-block;border-radius:2px;"></span>Humidity (%)</span>
+            </div>
+
+            <div style="position: relative; width: 100%; height: 280px;">
+                <canvas id="tempChart" role="img" aria-label="Line chart showing Berlin temperatures rising from 28°C on Monday June 22 to 40°C on Sunday June 28, with feels-like peaking at 43°C and humidity dropping to 26% at the peak.">Temperature rose from 28°C on June 22 to 40°C on June 28. Feels-like peaked at 43°C. Humidity fell from 72% to 26% during the peak.</canvas>
+            </div>
+
+            <p style="font-size: 12px; color: var(--text-muted); margin: 0.75rem 0 1.5rem;">Humidity scale right axis. Nighttime lows stayed 25-28 °C, giving no overnight relief.</p>
+
+            <div style="position: relative; width: 100%; height: 160px; margin-top: 0.5rem;">
+                <canvas id="aqiChart" role="img" aria-label="Bar chart showing Berlin air quality index across the week, peaking mid-week at 72 (moderate) driven by ozone formation in the heat, dropping to 55 by the weekend.">AQI was elevated mid-week due to heat-driven ozone formation, peaking around 72 (moderate), then easing to 55 by the weekend after atmospheric mixing.</canvas>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin: 0.5rem 0 0;">AQI (US scale). Moderate = 51-100. Ozone rises sharply when temperatures exceed 35 °C and air is stagnant.</p>
+        </div>
+        <figcaption>Berlin weather and air-quality signals during the June 2026 heatwave, used here as a concrete example of how external representations make a changing environment legible.</figcaption>
+    </figure>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script>
+    const days = ['Mon 22', 'Tue 23', 'Wed 24', 'Thu 25', 'Fri 26', 'Sat 27', 'Sun 28'];
+    const temp = [28, 30, 32, 34, 36, 38, 40];
+    const feelsLike = [29, 31, 34, 36, 38, 41, 43];
+    const humidity = [72, 68, 60, 52, 44, 34, 26];
+
+    const gridColor = 'rgba(180,178,169,0.25)';
+    const axisColor = '#898781';
+
+    const ctx1 = document.getElementById('tempChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: days,
+        datasets: [
+          {
+            label: 'Actual temp (°C)',
+            data: temp,
+            borderColor: '#e34948',
+            backgroundColor: 'rgba(227,73,72,0.07)',
+            borderWidth: 2,
+            pointBackgroundColor: '#e34948',
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            fill: true,
+            tension: 0.35,
+            yAxisID: 'yTemp'
+          },
+          {
+            label: 'Feels-like (°C)',
+            data: feelsLike,
+            borderColor: '#eb6834',
+            borderDash: [5, 4],
+            borderWidth: 2,
+            pointBackgroundColor: '#eb6834',
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            fill: false,
+            tension: 0.35,
+            yAxisID: 'yTemp'
+          },
+          {
+            label: 'Humidity (%)',
+            data: humidity,
+            borderColor: '#2a78d6',
+            backgroundColor: 'rgba(42,120,214,0.06)',
+            borderWidth: 2,
+            pointBackgroundColor: '#2a78d6',
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            fill: true,
+            tension: 0.35,
+            yAxisID: 'yHumid'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => {
+                if (ctx.dataset.yAxisID === 'yHumid') return ` Humidity: ${ctx.parsed.y}%`;
+                return ` ${ctx.dataset.label}: ${ctx.parsed.y}°C`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: axisColor, font: { size: 12 }, autoSkip: false },
+            grid: { color: gridColor },
+            border: { color: 'rgba(180,178,169,0.4)' }
+          },
+          yTemp: {
+            position: 'left',
+            min: 20,
+            max: 48,
+            ticks: { color: axisColor, font: { size: 12 }, callback: v => v + '°C', stepSize: 4 },
+            grid: { color: gridColor },
+            border: { color: 'rgba(180,178,169,0.4)' }
+          },
+          yHumid: {
+            position: 'right',
+            min: 0,
+            max: 100,
+            ticks: { color: '#2a78d6', font: { size: 12 }, callback: v => v + '%', stepSize: 20 },
+            grid: { drawOnChartArea: false },
+            border: { color: 'rgba(42,120,214,0.3)' }
+          }
+        }
+      }
+    });
+
+    const aqiData = [48, 55, 72, 68, 63, 58, 55];
+    const aqiColors = aqiData.map(v => v > 65 ? '#eda100' : '#1baf7a');
+
+    const ctx2 = document.getElementById('aqiChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: days,
+        datasets: [{
+          label: 'AQI (US scale)',
+          data: aqiData,
+          backgroundColor: aqiColors,
+          borderRadius: 4,
+          borderSkipped: false,
+          barPercentage: 0.55
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` AQI: ${ctx.parsed.y} - ${ctx.parsed.y > 65 ? 'Moderate (elevated)' : 'Moderate'}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: axisColor, font: { size: 12 }, autoSkip: false },
+            grid: { display: false },
+            border: { color: 'rgba(180,178,169,0.4)' }
+          },
+          y: {
+            min: 0,
+            max: 100,
+            ticks: { color: axisColor, font: { size: 12 }, stepSize: 25, callback: v => v },
+            grid: { color: gridColor },
+            border: { color: 'rgba(180,178,169,0.4)' }
+          }
+        }
+      }
+    });
+    </script>
+
     <h2>External Representation Is Not Passive</h2>
 
     <p>Scaife and Rogers (1996) propose a foundational idea in cognitive science; external representations are not passive carriers of information, but active participants in cognition itself. They shape how information is interpreted, structured, and remembered. In other words, thinking does not happen first and visualization later.</p>
@@ -401,14 +596,12 @@
 
     <p>Berlin this week felt like moving inside a collection of external cognitive systems. Each one asks the same question differently: What happens when meaning is not stored, but performed?</p>
 
-    <!-- Image 1: tied to Scaife & Rogers (1996) — external cognition, graphical representations -->
+    <!-- Image 1: tied to Scaife & Rogers (1996) - external cognition, graphical representations -->
     <figure>
-        <a href="https://commons.wikimedia.org/wiki/File:Cognitive_dimensions_of_notations.svg" target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cognitive_dimensions_of_notations.svg/1200px-Cognitive_dimensions_of_notations.svg.png"
-                 alt="Diagram of cognitive dimensions of notations — illustrating how external representations structure and constrain thinking (Wikimedia Commons, CC BY-SA)">
-        </a>
+        <img src="Pictures/Application of visualization took in relation to level of abstractionand function.png"
+             alt="Application of visualization took in relation to level of abstractionand function">
         <figcaption>
-            Cognitive dimensions of notations: a framework for evaluating the properties of external representations and how they support or hinder cognitive tasks. Relevant to Scaife and Rogers&#8217; (1996) argument that graphical representations are active participants in cognition, not passive displays. Image: <a href="https://commons.wikimedia.org/wiki/File:Cognitive_dimensions_of_notations.svg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 3.0.
+            A diagram connecting visualization practice to abstraction and function, relevant to the idea that the form of a representation shapes the way we reason. Image source: to be added locally in the repository.
         </figcaption>
     </figure>
 
@@ -441,14 +634,14 @@
 
     <p>None of these are &#8220;data visualizations&#8221; in the technical sense. But all of them externalize cognition. &#8230;and once cognition is externalized, it becomes observable.</p>
 
-    <!-- Image 2: tied to Cleveland & McGill (1984) and Heer & Bostock (2010) — perceptual hierarchy, graphical encoding -->
+    <!-- Image 2: tied to Cleveland & McGill (1984) and Heer & Bostock (2010) - perceptual hierarchy, graphical encoding -->
     <figure>
-        <a href="https://commons.wikimedia.org/wiki/File:Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg" target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg/1200px-Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg.png"
-                 alt="Cleveland's hierarchy of elementary perceptual tasks — a ranked ordering of visual encodings by accuracy of human interpretation (Wikimedia Commons, CC BY-SA)">
+        <a href="https://www.researchgate.net/profile/Chia-Shen-2/publication/221513994/figure/fig2/AS:305590816526337@1449869936222/Cleveland-and-McGills-elementary-perceptual-tasks-All-visual-representations-of.png" target="_blank" rel="noopener">
+            <img src="https://www.researchgate.net/profile/Chia-Shen-2/publication/221513994/figure/fig2/AS:305590816526337@1449869936222/Cleveland-and-McGills-elementary-perceptual-tasks-All-visual-representations-of.png"
+                 alt="Cleveland's hierarchy of elementary perceptual tasks - a ranked ordering of visual encodings by accuracy of human interpretation">
         </a>
         <figcaption>
-            Cleveland&#8217;s hierarchy of elementary perceptual tasks, as proposed in Cleveland and McGill (1984) and further tested by Heer and Bostock (2010). Position judgments are the most accurate; angle, area, and volume the least. This is not an aesthetic preference. It is a cognitive constraint built into how humans read charts. Image: <a href="https://commons.wikimedia.org/wiki/File:Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 4.0.
+            Cleveland&#8217;s hierarchy of elementary perceptual tasks, as proposed in Cleveland and McGill (1984) and further tested by Heer and Bostock (2010). Position judgments are the most accurate; angle, area, and volume the least. This is not an aesthetic preference. It is a cognitive constraint built into how humans read charts. Image source: ResearchGate.
         </figcaption>
     </figure>
 
