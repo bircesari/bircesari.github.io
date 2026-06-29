@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>On Perception, Representation, and What Gets Lost in the Chart | Birce SARI</title>
+    <meta name="description" content="A heatwave, jazz, theatre, photography, and cinema. A week in Berlin read through the lens of cognitive science and data visualisation research.">
+    <meta name="keywords" content="data analyst, business intelligence, visual perception, cognition, data visualisation, Berlin, Birce Sari, sensemaking, external representation, analytical practice, graphical perception">
+    <meta name="author" content="Birce SARI">
+    <link rel="canonical" href="https://bircesari.github.io/blog/Heatwave_in_Data_Analytics.html">
+    <link rel="icon" href="../BS_Logo.png" type="image/png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="On Perception, Representation, and What Gets Lost in the Chart">
+    <meta property="og:description" content="A heatwave, jazz, theatre, photography, and cinema. A week in Berlin read through the lens of cognitive science and data visualisation research.">
+    <meta property="og:url" content="https://bircesari.github.io/blog/Heatwave_in_Data_Analytics.html">
+    <meta property="og:site_name" content="Birce SARI">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:published_time" content="2026-06-29">
+    <meta property="article:author" content="https://www.linkedin.com/in/bircesari">
+    <meta property="article:tag" content="Analytics">
+    <meta property="article:tag" content="Perception">
+    <meta property="article:tag" content="Data Visualisation">
+    <meta property="article:tag" content="Berlin">
+    <meta property="article:tag" content="Cognition">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="On Perception, Representation, and What Gets Lost in the Chart">
+    <meta name="twitter:description" content="A heatwave, jazz, theatre, photography, and cinema. A week in Berlin read through the lens of cognitive science and data visualisation research.">
+    <meta name="twitter:creator" content="@bircesari">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "On Perception, Representation, and What Gets Lost in the Chart",
+      "description": "A heatwave, jazz, theatre, photography, and cinema. A week in Berlin read through the lens of cognitive science and data visualisation research.",
+      "author": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io",
+        "sameAs": "https://www.linkedin.com/in/bircesari"
+      },
+      "datePublished": "2026-06-29",
+      "dateModified": "2026-06-29",
+      "url": "https://bircesari.github.io/blog/Heatwave_in_Data_Analytics.html",
+      "publisher": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io"
+      },
+      "keywords": ["Visual Perception","Cognition","Data Visualisation","Sensemaking","External Representation","Berlin","Analytical Practice","Graphical Perception"]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://bircesari.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bircesari.github.io/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "On Perception, Representation, and What Gets Lost in the Chart", "item": "https://bircesari.github.io/blog/Heatwave_in_Data_Analytics.html" }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #4dd0e1;
+            --secondary: #b39ddb;
+            --bg-light: #ffffff;
+            --text-light: #1e1e2f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.75;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover { opacity: 0.8; }
+
+        article {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .post-meta {
+            color: #888;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .read-time {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border-radius: 20px;
+            padding: 0.15rem 0.75rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            line-height: 1.25;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.85rem;
+            font-size: 1.35rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        .drop-cap::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            line-height: 0.9;
+            margin-right: 8px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary);
+            padding: 0.75rem 1.25rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+            background: #f5fdfe;
+            border-radius: 0 6px 6px 0;
+        }
+
+        figure {
+            margin: 0 0 2rem;
+            max-width: 100%;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.5rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        figcaption a {
+            color: #888;
+            text-decoration: underline;
+        }
+
+        ul.references-list {
+            margin-left: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul.references-list li {
+            font-size: 0.86rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        ul.references-list a {
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .hashtag {
+            background: #f0f9fa;
+            color: var(--primary);
+            border: 1px solid #c8eef2;
+            border-radius: 20px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .hashtag:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .recommended-readings {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .recommended-readings h3 {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+        }
+
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .rec-card {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .rec-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .rec-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .rec-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .rec-meta {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .share-section {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-buttons a {
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .share-linkedin { background: #0077b5; }
+        .share-twitter  { background: #1da1f2; }
+
+        footer {
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.65rem; }
+            article { padding: 0 1.25rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <span>Birce SARI &middot; Blog</span>
+    </div>
+</header>
+
+<article>
+
+    <div class="post-meta">
+        <span><i class="fas fa-calendar-alt"></i> 29 June 2026</span>
+        <span><i class="fas fa-map-marker-alt"></i> Berlin, DE</span>
+        <span><i class="fas fa-tag"></i> Analytics &middot; Perception &middot; Berlin</span>
+        <span class="read-time">~5 min read</span>
+    </div>
+
+    <h1>On Perception, Representation, and What Gets Lost in the Chart</h1>
+
+    <p>A heatwave, jazz, theatre, photography, and cinema. A week in Berlin read through the lens of cognitive science and data visualisation research.</p>
+
+    <p class="drop-cap">Berlin does not behave like a dataset that wants to be cleaned. It behaves more like a system that resists simplification while still demanding interpretation.</p>
+
+    <p>This week I moved through it slowly, and so did everyone else. A heatwave arrived mid-week and stayed. By the weekend, the German Weather Service had issued its highest-level heat warning, temperatures were grazing 41&#8201;&#176;C, and the nights refused to cool below the mid-twenties. Berlin in late June is not supposed to feel like this; the city has no institutional memory for it, and it showed. Parks emptied by midday. Streets reorganised themselves around shade.</p>
+
+    <p>Jazz improvisations that refused linearity. Theatre that questioned its own framing. A photography exhibition that revealed how meaning depends on selection rather than capture. Cinema that shifted emotional variables instead of defining them. Each venue is above sixty percent capacity, but because of the heat. Air conditioning is still rare enough in this city that wherever it existed, people gathered, and the cultural programme absorbed the overflow.</p>
+
+    <p>At some point, the experiences stopped being separate cultural events.</p>
+
+    <p>They became a study in perception and perception is never neutral. It is structured, limited, and culturally shaped and that week, it was also thermally mediated, one could sit still long enough to think. Scaife and Rogers (1996) argue that cognition is not confined to the mind alone but is distributed across external representations, where diagrams, images, and artefacts actively shape thinking rather than simply display it.</p>
+
+    <p>That idea stayed with me longer than any single performance. Because in both analytics and art, meaning does not pre-exist the representation. It is constructed through it.</p>
+
+    <h2>External Representation Is Not Passive</h2>
+
+    <p>Scaife and Rogers (1996) propose a foundational idea in cognitive science; external representations are not passive carriers of information, but active participants in cognition itself. They shape how information is interpreted, structured, and remembered. In other words, thinking does not happen first and visualization later.</p>
+
+    <p>Thinking happens through visualization. This becomes visible when moving through artistic environments.</p>
+
+    <p>A jazz performance does not present a fixed structure, it externalizes cognition in real time. A theatre stage does not represent meaning but distributes it across bodies, timing, silence, and tension.</p>
+
+    <p>Berlin this week felt like moving inside a collection of external cognitive systems. Each one asks the same question differently: What happens when meaning is not stored, but performed?</p>
+
+    <!-- Image 1: tied to Scaife & Rogers (1996) — external cognition, graphical representations -->
+    <figure>
+        <a href="https://commons.wikimedia.org/wiki/File:Cognitive_dimensions_of_notations.svg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cognitive_dimensions_of_notations.svg/1200px-Cognitive_dimensions_of_notations.svg.png"
+                 alt="Diagram of cognitive dimensions of notations — illustrating how external representations structure and constrain thinking (Wikimedia Commons, CC BY-SA)">
+        </a>
+        <figcaption>
+            Cognitive dimensions of notations: a framework for evaluating the properties of external representations and how they support or hinder cognitive tasks. Relevant to Scaife and Rogers&#8217; (1996) argument that graphical representations are active participants in cognition, not passive displays. Image: <a href="https://commons.wikimedia.org/wiki/File:Cognitive_dimensions_of_notations.svg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 3.0.
+        </figcaption>
+    </figure>
+
+    <h2>Visual Encoding Is Always a Choice, Never Neutral</h2>
+
+    <p>Cleveland and McGill (1984) showed that visual encodings differ in perceptual accuracy. Position is interpreted more accurately than length, length more accurately than angle, and so on. This hierarchy is not aesthetic. It is cognitive constraint. Different visual forms do not only communicate different values. They communicate different degrees of confidence, ambiguity, and interpretability.</p>
+
+    <p>In Berlin, this hierarchy was not theoretical; in other words, experiential.</p>
+
+    <p>A photograph in C/O Berlin did not only show an image. It framed uncertainty. A theatre performance did not resolve meaning. It intentionally distributed ambiguity. A film did not clarify emotion. It layered it. It is a feature of interpretation. And in lived experience, uncertainty is often where meaning becomes most active.</p>
+
+    <h2>Perception Becomes Stronger When It Is Distributed</h2>
+
+    <p>Heer and Bostock (2010) demonstrate that aggregated judgments across multiple observers can improve perceptual accuracy in visualization tasks. Individual perception is variable, but collective interpretation stabilizes meaning. This idea extends beyond data systems. It applies to culture itself.</p>
+
+    <p>One viewer sees composition. Many viewers produce pattern recognition across interpretation. As well as one analyst sees a dashboard. Many stakeholders create shared meaning through discussion, disagreement, and alignment.</p>
+
+    <p>Perception is not isolated. It is socially reinforced.</p>
+
+    <h2>Cognitive Systems Outside the Screen</h2>
+
+    <p>MacEachren (1990) describes cartographic visualization as a process of pattern discovery rather than simple representation. Maps, in this framing, are tools for reasoning rather than passive depictions of spatial data. This idea extends beyond geography.</p>
+
+    <p>It suggests that any structured visual or performative system can function as a cognitive environment.</p>
+
+    <p>Jazz becomes a system for testing non-linearity.
+    Theatre becomes a system for exploring framing effects.
+    Photography becomes a system for examining selection bias.
+    Cinema becomes a system for manipulating temporal perception.</p>
+
+    <p>None of these are &#8220;data visualizations&#8221; in the technical sense. But all of them externalize cognition. &#8230;and once cognition is externalized, it becomes observable.</p>
+
+    <!-- Image 2: tied to Cleveland & McGill (1984) and Heer & Bostock (2010) — perceptual hierarchy, graphical encoding -->
+    <figure>
+        <a href="https://commons.wikimedia.org/wiki/File:Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg/1200px-Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg.png"
+                 alt="Cleveland's hierarchy of elementary perceptual tasks — a ranked ordering of visual encodings by accuracy of human interpretation (Wikimedia Commons, CC BY-SA)">
+        </a>
+        <figcaption>
+            Cleveland&#8217;s hierarchy of elementary perceptual tasks, as proposed in Cleveland and McGill (1984) and further tested by Heer and Bostock (2010). Position judgments are the most accurate; angle, area, and volume the least. This is not an aesthetic preference. It is a cognitive constraint built into how humans read charts. Image: <a href="https://commons.wikimedia.org/wiki/File:Cleveland%27s_Hierarchy_of_Elementary_Perceptual_Tasks.svg" target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA 4.0.
+        </figcaption>
+    </figure>
+
+    <h2>What This Means for Analytical Practice</h2>
+
+    <p>The assumption in most analytical environments is that better models produce better understanding, but the research suggests something more fundamental. Understanding begins with perception, not computation.</p>
+
+    <p>Cleveland and McGill (1984) show that perception is structured. Scaife and Rogers (1996) state that cognition is distributed. According to MacEachren et al. (1990), uncertainty is encoded, not removed. Heer and Bostock (2010) also show that meaning stabilizes through aggregation.</p>
+
+    <p>Together, they describe something important; analytical truth is not only calculated. It is constructed through systems of representation, interpretation, and shared cognition.</p>
+
+    <p>This week did not produce conclusions, but it changed the way ambiguity feels. As well as in analytical work, that shift is often more important than resolution, because not all uncertainty should be removed. Some of them should be understood.</p>
+
+    <h3>References</h3>
+
+    <ul class="references-list">
+        <li>Cleveland, W.S. and McGill, R. (1984) &#8216;Graphical perception: Theory, experimentation, and application to the development of graphical methods&#8217;, <em>Journal of the American Statistical Association</em>, 79(387), pp. 531&#8211;554.</li>
+        <li>Heer, J. and Bostock, M. (2010) &#8216;Crowdsourcing graphical perception: Using Mechanical Turk to assess visualization design&#8217;, <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems</em>, pp. 203&#8211;212.</li>
+        <li>MacEachren, A.M. (1990) &#8216;A pattern identification approach to cartographic visualization&#8217;, <em>Cartographica</em>, 27(2), pp. 64&#8211;81.</li>
+        <li>Scaife, M. and Rogers, Y. (1996) &#8216;External cognition: how do graphical representations work?&#8217;, <em>International Journal of Human-Computer Studies</em>, 45(2), pp. 185&#8211;213.</li>
+    </ul>
+
+    <div class="hashtags" aria-label="Post tags">
+        <a class="hashtag" href="#">#DataVisualisation</a>
+        <a class="hashtag" href="#">#Analytics</a>
+        <a class="hashtag" href="#">#Perception</a>
+        <a class="hashtag" href="#">#Cognition</a>
+        <a class="hashtag" href="#">#Berlin</a>
+        <a class="hashtag" href="#">#Sensemaking</a>
+        <a class="hashtag" href="#">#ExternalCognition</a>
+        <a class="hashtag" href="#">#AnalyticalPractice</a>
+        <a class="hashtag" href="#">#BIStrategy</a>
+        <a class="hashtag" href="#">#GraphicalPerception</a>
+    </div>
+
+    <!-- Recommended Readings — powered by posts.js -->
+    <div class="recommended-readings">
+        <h3>You might also enjoy</h3>
+        <div class="rec-grid">
+            <!-- filled by posts.js at runtime -->
+        </div>
+    </div>
+
+    <div class="share-section">
+        <h3>Found this helpful? Share it!</h3>
+        <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://bircesari.github.io/blog/Heatwave_in_Data_Analytics.html" target="_blank" class="share-linkedin">
+                <i class="fab fa-linkedin"></i> Share on LinkedIn
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://bircesari.github.io/blog/Heatwave_in_Data_Analytics.html&text=On+Perception%2C+Representation%2C+and+What+Gets+Lost+in+the+Chart" target="_blank" class="share-twitter">
+                <i class="fab fa-twitter"></i> Share on Twitter
+            </a>
+        </div>
+    </div>
+
+</article>
+
+<footer>
+    <p>&copy; 2026 Birce SARI. All rights reserved.</p>
+</footer>
+
+<!-- Load shared post registry, then render recommendations -->
+<script src="posts.js"></script>
+<script>
+    renderRecommendations("Heatwave_in_Data_Analytics.html");
+</script>
+
+</body>
+</html>
