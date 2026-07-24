@@ -1,5 +1,14 @@
 window.BLOG_POSTS = [
     {
+        title: "My-way of Scandinavia",
+        url: "Myway_of_Scandinavia.html",
+        tag: "Travel",
+        date: "Jul 22, 2026",
+        dateValue: "2026-07-22",
+        time: "6 min",
+        description: "A road journal through Norway, Sweden, and Denmark that reflects on what it means to build things that outlast the people who made them."
+    },
+    {
         title: "On Perception, Representation, and What Gets Lost in the Chart",
         url: "Heatwave_in_Data_Analytics.html",
         tag: "Analytics",
