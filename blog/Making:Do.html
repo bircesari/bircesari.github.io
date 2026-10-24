@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Making Do | Birce SARI</title>
+    <meta name="description" content="What a year of small freelance projects taught me that eight years in a big company didn't. A CRM nobody typed into, a Google Ads account optimising towards nothing, and a company that wanted its weekends back.">
+    <meta name="keywords" content="Birce Sari, freelance data analyst, CRM, Google Ads, small business analytics, bricolage, resilience, problem solving, limited resources, analytical practice, Berlin">
+    <meta name="author" content="Birce SARI">
+    <link rel="canonical" href="https://bircesari.github.io/blog/Making:Do.html">
+    <link rel="icon" href="../BS_Logo.png" type="image/png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="🧰 Making Do">
+    <meta property="og:description" content="What a year of small freelance projects taught me that eight years in a big company didn't.">
+    <meta property="og:url" content="https://bircesari.github.io/blog/Making:Do.html">
+    <meta property="og:site_name" content="Birce SARI">
+    <meta property="og:locale" content="en_GB">
+    <meta property="article:published_time" content="2026-10-24">
+    <meta property="article:author" content="https://www.linkedin.com/in/bircesari">
+    <meta property="article:tag" content="Analytics">
+    <meta property="article:tag" content="Freelance">
+    <meta property="article:tag" content="Resilience">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Making Do",
+      "description": "What a year of small freelance projects taught me that eight years in a big company didn't. A CRM nobody typed into, a Google Ads account optimising towards nothing, and a company that wanted its weekends back.",
+      "author": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io",
+        "sameAs": "https://www.linkedin.com/in/bircesari"
+      },
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+    "url": "https://bircesari.github.io/blog/Making:Do.html",
+      "publisher": {
+        "@type": "Person",
+        "name": "Birce SARI",
+        "url": "https://bircesari.github.io"
+      },
+      "keywords": ["Freelance","Analytics","CRM","Google Ads","Small Business","Resilience","Problem Solving"]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://bircesari.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bircesari.github.io/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Making Do", "item": "https://bircesari.github.io/blog/Making:Do.html" }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #4dd0e1;
+            --secondary: #b39ddb;
+            --bg-light: #ffffff;
+            --text-light: #1e1e2f;
+            --surface-1: #f7f6f3;
+            --radius: 12px;
+            --text-muted: #888;
+            --text-primary: #1e1e2f;
+            --text-secondary: #6b7280;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.75;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover { opacity: 0.8; }
+
+        article {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .post-meta {
+            color: #888;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .read-time {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border-radius: 20px;
+            padding: 0.15rem 0.75rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            line-height: 1.25;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.85rem;
+            font-size: 1.35rem;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        .post-subtitle {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        .drop-cap::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            line-height: 0.9;
+            margin-right: 8px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        blockquote {
+            border-left: 4px solid var(--primary);
+            padding: 0.75rem 1.25rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+            background: #f5fdfe;
+            border-radius: 0 6px 6px 0;
+        }
+
+        figure {
+            margin: 0 0 2rem;
+            max-width: 100%;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.5rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        figcaption a {
+            color: #888;
+            text-decoration: underline;
+        }
+
+        ul.references-list {
+            margin-left: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul.references-list li {
+            font-size: 0.86rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        ul.references-list a {
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .hashtag {
+            background: #f0f9fa;
+            color: var(--primary);
+            border: 1px solid #c8eef2;
+            border-radius: 20px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .hashtag:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .recommended-readings {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .recommended-readings h3 {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            margin-top: 0;
+        }
+
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .rec-card {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .rec-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .rec-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .rec-title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .rec-meta {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .share-section {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem 2rem 0;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-buttons a {
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .share-linkedin { background: #0077b5; }
+
+        footer {
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.65rem; }
+            article { padding: 0 1.25rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <span>Birce SARI &middot; Blog</span>
+    </div>
+</header>
+
+<article>
+
+    <div class="post-meta">
+        <span><i class="fas fa-calendar-alt"></i> 24 October 2026</span>
+        <span><i class="fas fa-map-marker-alt"></i> Berlin, DE</span>
+        <span><i class="fas fa-tag"></i> Analytics </span>
+        <span class="read-time">~7 min read</span>
+    </div>
+
+    <h1>🧰 Making Do</h1>
+
+    <p class="post-subtitle">What a year of small freelance projects taught me that eight years in a big company didn't.</p>
+
+    <p class="drop-cap">Okay, confession first. When I started freelancing I thought my problem would be finding clients. It wasn't. My problem was that the clients I found didn't have any of the things I was used to working with.</p>
+
+    <p>Eight years at a big holding company spoils you a bit. You have a warehouse. You have IT. You have licences that someone else renews. If something breaks, you open a ticket and go get a coffee. I didn't realise how much of my "skill" was actually the building around me until the building was gone.</p>
+
+    <h2>The CRM</h2>
+
+    <p>The first project I took was a CRM cleanup for a small service company. They were paying for a CRM and using maybe a third of it. The rest of the customer history was in one colleague's head and on her phone.</p>
+
+    <p>I remember the first meeting very clearly, because I did the wrong thing. I came with a slide. Target architecture, data model, integration plan, the whole thing. The owner looked at it politely for about a minute and then asked: "and who is going to type all this?"</p>
+
+    <p>Nobody, was the answer. That was the actual project.</p>
+
+    <p>So I threw away the slide (well, I kept it, I'm not that brave) and we started again from her side of the desk. I cleaned the duplicates with a Python script, fixed the city names, which honestly took longer than it should have, and then asked her which three things she wished she had written down about her customers two years ago. We kept those three fields and hid the other forty. She uses it now. Not perfectly, but she uses it, and that was more than my slide would ever have achieved.</p>
+
+    <h2>The Google Ads account</h2>
+
+    <p>This one was a different kind of lesson. Small online business, small budget, and the owner had a feeling the ads weren't working but couldn't say why. It took me embarrassingly long to find it. The conversion was tracking a thank you page that didn't exist anymore after a website update. So Google was optimising, very diligently, towards nothing… for months.</p>
+
+    <p>Fixing it was the easy part. The hard part came after, when the owner wanted answers every week and the account produced maybe twenty conversions a month. Twenty! You can't do much statistics with twenty. I had to say "I don't know yet" more often than I was comfortable with. In a big company I could hide behind volume. Here there was nowhere to hide, and I think that was good for me, even if it didn't feel like it at the time.</p>
+
+    <p>One more thing from that account. When the budget is small, you actually read things. I went through the search terms report line by line, like reading letters, and found people clicking on the ads for things the business didn't even sell. A big agency would never have time for that. I had time, because I had nothing else to work with.</p>
+
+    <h2>The company with no data team</h2>
+
+    <p>The third one I still think about. A small company where the owner did all the reporting himself, every month, on weekends. Sales from the invoicing tool, costs from bank CSVs, stock in a Google Sheet that four people edited in four different ways. He didn't really want a dashboard. He wanted his weekends back.</p>
+
+    <p>We ended up with a small scheduled script, a one page data dictionary (which caused more discussion than the script, of course) and a report with five numbers on it. Five. I have built more than fifty executive dashboards in my life, and I'm not sure any of them was opened as often as this one page.</p>
+
+    <h2>Where the theory came in, late</h2>
+
+    <p>Months later, reading for something else, I found Baker and Nelson's (2005) paper on bricolage, about how small firms survive by combining whatever is lying around instead of waiting for the right resources. I laughed a bit, because it described my year better than I could. Lévi-Strauss (1966) had the word first, the bricoleur who works with what's already in the drawer. I didn't know I was doing bricolage. I thought I was just improvising because there was no budget.</p>
+
+    <p>I don't want to make this sound romantic though. Working with almost nothing is tiring. Mullainathan and Shafir (2013) write about how scarcity makes you tunnel on what's urgent, and I saw that in every one of these companies, and honestly in myself too. There were weeks when I fixed today's problem in a way I knew would cause next month's problem, because there was no time to do it properly. Resilience sounds nice in a LinkedIn post. In real life it's mostly being tired and doing it anyway, and then slowly getting faster.</p>
+
+    <p>But I did get faster. And I think I got better at something I can't fully name yet. Seeing the shape of a problem before reaching for a tool, maybe. Asking what a number is for before building it. Being okay with a messy first version.</p>
+
+    <p>Would I go back to the big company setup? Probably yes, if I'm honest. I miss the warehouse. But I would bring this with me, whatever "this" turns out to be…</p>
+
+    <h3>References</h3>
+    <ul class="references-list">
+        <li>Baker, T. and Nelson, R.E. (2005) 'Creating something from nothing: Resource construction through entrepreneurial bricolage', <em>Administrative Science Quarterly</em>, 50(3), pp. 329–366.</li>
+        <li>Lévi-Strauss, C. (1966) <em>The Savage Mind</em>. Chicago: University of Chicago Press.</li>
+        <li>Mullainathan, S. and Shafir, E. (2013) <em>Scarcity: Why Having Too Little Means So Much</em>. New York: Times Books.</li>
+    </ul>
+
+    <div class="hashtags" aria-label="Post tags">
+        <a class="hashtag" href="#">#Freelance</a>
+        <a class="hashtag" href="#">#Analytics</a>
+        <a class="hashtag" href="#">#CRM</a>
+        <a class="hashtag" href="#">#GoogleAds</a>
+        <a class="hashtag" href="#">#SmallBusiness</a>
+        <a class="hashtag" href="#">#Resilience</a>
+        <a class="hashtag" href="#">#ProblemSolving</a>
+    </div>
+
+    <!-- Recommended Readings, powered by posts.js -->
+    <div class="recommended-readings">
+        <h3>You might also enjoy</h3>
+        <div class="rec-grid">
+            <!-- filled by posts.js at runtime -->
+        </div>
+    </div>
+
+    <div class="share-section">
+        <h3>Found this helpful? Share it!</h3>
+        <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://bircesari.github.io/blog/Making:Do.html" target="_blank" class="share-linkedin">
+                <i class="fab fa-linkedin"></i> Share on LinkedIn
+            </a>
+        </div>
+    </div>
+
+</article>
+
+<footer>
+    <p>&copy; 2026 Birce SARI. All rights reserved.</p>
+</footer>
+<script src="posts.js"></script>
+<script>
+    renderRecommendations("Making:Do.html");
+</script>
+
+</body>
+</html>

@@ -1,5 +1,14 @@
 window.BLOG_POSTS = [
     {
+        title: "Making Do",
+        url: "Making:Do.html",
+        tag: "Freelance & Analytics",
+        date: "Oct 24, 2026",
+        dateValue: "2026-10-24",
+        time: "7 min",
+        description: "What a year of small freelance projects taught me about practical analytics, limited resources, and making do."
+    },
+    {
         title: "My-way of Scandinavia",
         url: "Myway_of_Scandinavia.html",
         tag: "Travel",
@@ -98,7 +107,7 @@ window.renderRecommendations = function(currentUrl) {
             <div class="rec-tag">${p.tag}</div>
             <p class="rec-title">${p.title}</p>
             <p class="rec-desc">${p.description}</p>
-            <span class="rec-meta">${p.date} · ${p.time} read</span>
+            <span class="rec-meta">${p.time ? `${p.date} · ${p.time} read` : p.date}</span>
         </a>
     `).join("");
 };
